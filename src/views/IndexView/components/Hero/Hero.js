@@ -14,7 +14,9 @@ const Hero = () => {
   });
 
   return (
-    <Grid container spacing={4}>
+    //TODO: za full screen po visini je dodat props minHeight={'80vh'}
+    // nisam siguran zasto 80 radi posao, a treba da bude 100 (kad se stavi 100 onda je previse)
+    <Grid container spacing={4} minHeight={'80vh'}>
       <Grid item container alignItems={'center'} xs={12} md={6}>
         <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
           <Box marginBottom={2}>
