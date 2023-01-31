@@ -1,8 +1,8 @@
 {
-  "name": "thefront-js--gatsbyjs",
-  "author": "maccarian",
-  "email": "hi@maccarianagency.com",
-  "version": "4.8.0",
+  "name": "bishop-games",
+  "author": "Bishop Games",
+  "email": "office@bishop.games",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "develop": "gatsby develop",
