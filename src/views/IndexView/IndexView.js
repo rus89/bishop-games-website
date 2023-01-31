@@ -5,16 +5,9 @@ import Main from 'layouts/Main';
 import Container from 'components/Container';
 //TODO: proveriti ovo
 import {
-  About,
-  Contact,
-  Faq,
-  Features,
   Hero,
-  Partners,
-  Pricings,
-  Reviews,
   Services,
-  Users,
+  Workflow
 } from './components';
 
 const IndexView = () => {
@@ -30,7 +23,7 @@ const IndexView = () => {
           paddingTop: 13,
         }}
       >
-        <Container>
+        <Container >
           <Hero />
         </Container>
         <Box
@@ -54,9 +47,13 @@ const IndexView = () => {
       <Container paddingTop={'0 !important'}>
         <Services />
       </Container>
-      {/* <Container maxWidth={1} paddingTop={'0 !important'}>
-        <Partners />
-      </Container> */}
+      <Container maxWidth={1} paddingTop={'0 !important'}
+        sx={{
+          backgroundColor: theme.palette.alternate.main,
+          width: '100%'
+        }}>
+        <Workflow />
+      </Container>
       <Box
         position={'relative'}
         sx={{
@@ -68,7 +65,7 @@ const IndexView = () => {
             <Contact />
           </Container> */}
           <Container paddingTop={'0 !important'}>
-            <About />
+            {/* <About /> */}
           </Container>
         </Box>
         <Box
@@ -94,7 +91,7 @@ const IndexView = () => {
       </Container> */}
       <Box bgcolor={'alternate.main'}>
         <Container>
-          <Reviews />
+          {/* <Reviews /> */}
         </Container>
       </Box>
       {/* <Container>
