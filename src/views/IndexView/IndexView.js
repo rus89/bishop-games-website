@@ -3,6 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
+//TODO: proveriti ovo
 import {
   About,
   Contact,
@@ -53,9 +54,9 @@ const IndexView = () => {
       <Container paddingTop={'0 !important'}>
         <Services />
       </Container>
-      <Container maxWidth={1} paddingTop={'0 !important'}>
+      {/* <Container maxWidth={1} paddingTop={'0 !important'}>
         <Partners />
-      </Container>
+      </Container> */}
       <Box
         position={'relative'}
         sx={{
@@ -63,9 +64,9 @@ const IndexView = () => {
         }}
       >
         <Box>
-          <Container>
+          {/* <Container>
             <Contact />
-          </Container>
+          </Container> */}
           <Container paddingTop={'0 !important'}>
             <About />
           </Container>
@@ -88,18 +89,18 @@ const IndexView = () => {
           ></path>
         </Box>
       </Box>
-      <Container paddingTop={'0 !important'}>
+      {/* <Container paddingTop={'0 !important'}>
         <Users />
-      </Container>
+      </Container> */}
       <Box bgcolor={'alternate.main'}>
         <Container>
           <Reviews />
         </Container>
       </Box>
-      <Container>
+      {/* <Container>
         <Features />
-      </Container>
-      <Box
+      </Container> */}
+      {/* <Box
         position={'relative'}
         sx={{
           backgroundColor: theme.palette.alternate.main,
@@ -130,7 +131,7 @@ const IndexView = () => {
             d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
           ></path>
         </Box>
-      </Box>
+      </Box> */}
     </Main>
   );
 };
