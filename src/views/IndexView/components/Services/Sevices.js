@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { alpha, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -79,35 +78,17 @@ const Services = () => {
   const theme = useTheme();
   return (
     <Box>
-      <Box marginBottom={4}>
-        <Box marginBottom={2}>
-          <Typography
-            variant="h4"
-            color="text.primary"
-            align={'center'}
-            gutterBottom
-            sx={{
-              fontWeight: 700,
-            }}
-          >
-            Build accessible React apps with speed
-          </Typography>
-          <Typography
-            variant="h6"
-            component="p"
-            color="text.secondary"
-            sx={{ fontWeight: 400 }}
-            align={'center'}
-          >
-            Build a beautiful, modern website with flexible, fully customizable,
-            atomic MUI components.
-          </Typography>
-        </Box>
-      </Box>
       <Grid container spacing={2}>
         {mock.map((item, i) => (
           <Grid item xs={12} md={4} key={i}>
-            <Box width={1} height={1}>
+            <Box
+              width={1}
+              height={1}
+              data-aos={'fade-up'}
+              data-aos-delay={i * 100}
+              data-aos-offset={100}
+              data-aos-duration={600}
+            >
               <Box
                 display={'flex'}
                 flexDirection={'column'}

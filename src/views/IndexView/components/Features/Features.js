@@ -1,10 +1,7 @@
-/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import { useTheme } from '@mui/material/styles';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
 import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
@@ -32,6 +29,7 @@ const mock = [
 
 const Features = () => {
   const theme = useTheme();
+  const { mode } = theme.palette;
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
@@ -48,59 +46,58 @@ const Features = () => {
   return (
     <Box>
       <Grid container spacing={4} direction={isMd ? 'row' : 'column-reverse'}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} data-aos={isMd ? 'fade-right' : 'fade-up'}>
           <Box marginBottom={4}>
-            <Typography sx={{ fontWeight: 700 }} variant={'h4'} gutterBottom>
-              The powerful and flexible theme for all kinds of businesses
+            <Typography variant={'h4'} gutterBottom sx={{ fontWeight: 700 }}>
+              Stay focused on your business. Let us handle the design.
             </Typography>
-            <Typography variant={'h6'} component={'p'} color={'text.secondary'}>
-              Whether you're creating a subscription service, an on-demand
-              marketplace, an e-commerce store, or a portfolio showcase,
-              theFront helps you create the best possible product for your
-              users.
+            <Typography component={'p'} color={'text.secondary'}>
+              You have a business to run. Stop worring about cross-browser bugs,
+              designing new pages, keeping your components up to date. Let us do
+              that for you.
             </Typography>
           </Box>
-          <Grid container spacing={2}>
-            {mock.map((item, i) => (
-              <Grid key={i} item xs={12} md={4}>
-                <Typography variant="h4" color={'primary'} gutterBottom>
-                  <VisibilitySensor
-                    onChange={(isVisible) => setViewPortVisibility(isVisible)}
-                    delayedCall
-                  >
-                    <CountUp
-                      duration={2}
-                      end={viewPortEntered ? item.title : 0}
-                      start={0}
-                      suffix={item.suffix}
-                    />
-                  </VisibilitySensor>
-                </Typography>
-                <Typography color="text.secondary" component="p">
-                  {item.subtitle}
-                </Typography>
-              </Grid>
-            ))}
-          </Grid>
+          <Box>
+            <Grid container spacing={2}>
+              {mock.map((item, i) => (
+                <Grid key={i} item xs={12} md={4}>
+                  <Typography variant="h4" color={'primary'} gutterBottom>
+                    <Box fontWeight={600}>
+                      <VisibilitySensor
+                        onChange={(isVisible) =>
+                          setViewPortVisibility(isVisible)
+                        }
+                        delayedCall
+                      >
+                        <CountUp
+                          duration={2}
+                          end={viewPortEntered ? item.title : 0}
+                          start={0}
+                          suffix={item.suffix}
+                        />
+                      </VisibilitySensor>
+                    </Box>
+                  </Typography>
+                  <Typography component="p">{item.subtitle}</Typography>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
         </Grid>
-        <Grid
-          item
-          container
-          justifyContent="center"
-          alignItems="center"
-          xs={12}
-          md={6}
-          sx={{
-            display: { xs: 'none', md: 'flex' },
-          }}
-        >
-          <Box component={Card} boxShadow={4} height={1} width={1}>
+        <Grid item container justifyContent={'center'} xs={12} md={6}>
+          <Box height={1} width={1} maxHeight={800}>
             <Box
-              component={CardMedia}
-              height={1}
+              component={'img'}
+              loading="lazy"
+              src={
+                mode === 'light'
+                  ? 'https://assets.maccarianagency.com/svg/illustrations/illustration1.svg'
+                  : 'https://assets.maccarianagency.com/svg/illustrations/illustration1--dark.svg'
+              }
+              height={{ xs: 'auto', md: 1 }}
+              maxHeight={{ xs: 300, md: 1 }}
               width={1}
-              minHeight={300}
-              image="https://assets.maccarianagency.com/backgrounds/img4.jpg"
+              maxWidth={1}
             />
           </Box>
         </Grid>
