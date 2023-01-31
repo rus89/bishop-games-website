@@ -11,12 +11,14 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
   const {
-    landings: landingPages,
-    secondary: secondaryPages,
-    company: companyPages,
-    account: accountPages,
-    portfolio: portfolioPages,
-    blog: blogPages,
+    services: services,
+    portfolio: portfolio,
+    workflow: workflow,
+    testimonials: testimonials,
+    stats: stats,
+    ourTeam: ourTeam,
+    faq: faq,
+    blog: blog,
   } = pages;
 
   return (
@@ -35,6 +37,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       >
         <Box
           component={'img'}
+          //TODO: promeniti ikonicu za logo
           src={
             mode === 'light' && !colorInvert
               ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
@@ -47,49 +50,65 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box>
           <NavItem
-            title={'Landings'}
-            id={'landing-pages'}
-            items={landingPages}
+            title={'Services'}
+            id={'services'}
+            items={services}
             colorInvert={colorInvert}
           />
         </Box>
         <Box marginLeft={4}>
           <NavItem
-            title={'Company'}
-            id={'company-pages'}
-            items={companyPages}
+            title={'Workflow'}
+            id={'workflow'}
+            items={workflow}
             colorInvert={colorInvert}
           />
         </Box>
         <Box marginLeft={4}>
           <NavItem
-            title={'Account'}
-            id={'account-pages'}
-            items={accountPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Pages'}
-            id={'secondary-pages'}
-            items={secondaryPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Blog'}
-            id={'blog-pages'}
-            items={blogPages}
+            title={'Testimonials'}
+            id={'testimonials'}
+            items={testimonials}
             colorInvert={colorInvert}
           />
         </Box>
         <Box marginLeft={4}>
           <NavItem
             title={'Portfolio'}
-            id={'portfolio-pages'}
-            items={portfolioPages}
+            id={'portfolio'}
+            items={portfolio}
+            colorInvert={colorInvert}
+          />
+        </Box>
+        <Box marginLeft={4}>
+          <NavItem
+            title={'Our Team'}
+            id={'ourTeam'}
+            items={ourTeam}
+            colorInvert={colorInvert}
+          />
+        </Box>
+        <Box marginLeft={4}>
+          <NavItem
+            title={'Stats'}
+            id={'stats'}
+            items={stats}
+            colorInvert={colorInvert}
+          />
+        </Box>
+        <Box marginLeft={4}>
+          <NavItem
+            title={'FAQ'}
+            id={'faq'}
+            items={faq}
+            colorInvert={colorInvert}
+          />
+        </Box>
+        <Box marginLeft={4}>
+          <NavItem
+            title={'Blog'}
+            id={'blog'}
+            items={blog}
             colorInvert={colorInvert}
           />
         </Box>
@@ -102,7 +121,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             href="https://mui.com/store/items/the-front-landing-page/"
             size="large"
           >
-            Buy now
+            Contact Us
           </Button>
         </Box>
       </Box>
