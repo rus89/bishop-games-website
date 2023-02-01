@@ -11,22 +11,22 @@ import Container from 'components/Container';
 
 const mockLeftGrid = [
   {
-    image: '../../../../../images/portfolio/portfolio_1.jpg',
+    image: '../../../../../images/portfolio/1.jpg',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     title: 'Lorem ipsum dolor sit amet,',
   },
   {
-    image: '../../../../../images/portfolio/portfolio_2.jpg',
+    image: '../../../../../images/portfolio/2.jpg',
     description: 'Excepteur sint occaecat cupidatat non proident',
     title: 'Consectetur adipiscing elit',
   },
   {
-    image: '../../../../../images/portfolio/portfolio_3.jpg',
+    image: '../../../../../images/portfolio/3.jpg',
     description: 'Eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
     title: 'Labore et dolore magna aliqua',
   },
   {
-    image: '../../../../../images/portfolio/portfolio_4.jpg',
+    image: '../../../../../images/portfolio/4.jpg',
     description:
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem',
     title: 'Eiusmod tempor incididunt',
@@ -34,46 +34,46 @@ const mockLeftGrid = [
 ];
 const mockMiddleGrid = [
   {
-    image: '../../../../../images/portfolio/portfolio_5.jpg',
+    image: '../../../../../images/portfolio/5.jpg',
     description: 'At vero eos et accusamus et iusto odio dignissimos ducimus',
     title: 'Sed ut perspiciatis',
   },
   {
-    image: '../../../../../images/portfolio/portfolio_6.png',
+    image: '../../../../../images/portfolio/6.jpg',
     description:
       'Qui blanditiis praesentium voluptatum deleniti atque corrupti',
     title: 'Unde omnis iste natus',
   },
   {
-    image: '../../../../../images/portfolio/portfolio_7.jpg',
+    image: '../../../../../images/portfolio/1.jpg',
     description:
       'On the other hand, we denounce with righteous indignation and dislike',
     title: 'Sit voluptatem',
   },
   {
-    image: '../../../../../images/portfolio/portfolio_8.jpg',
+    image: '../../../../../images/portfolio/2.jpg',
     description: 'Quos dolores et quas molestias excepturi',
     title: 'Accusantium doloremque',
   }
 ];
 const mockRightGrid = [
   {
-    image: '../../../../../images/portfolio/portfolio_9.jpg',
+    image: '../../../../../images/portfolio/3.jpg',
     description: 'Et harum quidem rerum facilis est et expedita distinctio',
     title: 'Totam rem aperiam',
   },
   {
-    image: '../../../../../images/portfolio/portfolio_10.jpg',
+    image: '../../../../../images/portfolio/4.jpg',
     description: 'Nam libero tempore, cum soluta nobis est eligendi optio',
     title: 'Uae ab illo inventore',
   },
   {
-    image: '../../../../../images/portfolio/portfolio_11.jpg',
+    image: '../../../../../images/portfolio/5.jpg',
     description: 'Itaque earum rerum hic tenetur a sapiente delectus',
     title: 'Beatae vitae dicta',
   },
   {
-    image: '../../../../../images/portfolio/portfolio_12.jpg',
+    image: '../../../../../images/portfolio/6.jpg',
     description:
       'On the other hand, we denounce with righteous indignation and dislike',
     title: 'Nemo enim ipsam',
