@@ -5,3 +5,4 @@ export { default as Portfolio } from './Portfolio';
 export { default as Reviews } from './Reviews';
 export { default as Stats } from './Stats';
 export { default as Team } from './Team';
+export { default as Faq } from './Faq';

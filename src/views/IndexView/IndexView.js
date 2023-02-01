@@ -11,7 +11,8 @@ import {
   Portfolio,
   Reviews,
   Stats,
-  Team
+  Team,
+  Faq
 } from './components';
 
 const IndexView = () => {
@@ -167,6 +168,9 @@ const IndexView = () => {
       {/* NOTE: Ideja
       
        */}
+      <Container paddingTop={'0 !important'}>
+        <Faq />
+      </Container>
 
     </Main>
   );

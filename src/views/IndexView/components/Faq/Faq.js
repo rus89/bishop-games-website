@@ -1,99 +1,109 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Container from 'components/Container';
 
-const mock = [
-  {
-    title: 'Share Requirements',
-    subtitle:
-      'You provide details about the services you\'re looking for, ideal budget, and timeline.',
-  },
-  {
-    title: 'We Identify Best-Fits',
-    subtitle:
-      'We anonymize your project brief and send it to the service providers who meet your requirements.',
-  },
-  {
-    title: 'Get Matched',
-    subtitle:
-      'We introduce you to 1-4 best-fit service providers via email within 24 hours of the free consultation.',
-  },
-  {
-    title: 'Begin Discussions',
-    subtitle:
-      'You take it from there. Typically, companies will reach out to schedule introductory calls within a few days of connecting.',
-  },
-  {
-    title: 'Share Requirements',
-    subtitle:
-      'You provide details about the services you\'re looking for, ideal budget, and timeline.',
-  },
-  {
-    title: 'We Identify Best-Fits',
-    subtitle:
-      'We anonymize your project brief and send it to the service providers who meet your requirements.',
-  },
-  {
-    title: 'Get Matched',
-    subtitle:
-      'We introduce you to 1-4 best-fit service providers via email within 24 hours of the free consultation.',
-  },
-  {
-    title: 'Begin Discussions',
-    subtitle:
-      'You take it from there. Typically, companies will reach out to schedule introductory calls within a few days of connecting.',
-  },
-];
-
-const Faq = () => {
+const FaqGroupItem = ({ title, items }) => {
   const theme = useTheme();
-
   return (
     <Box>
-      <Grid container spacing={4}>
-        {mock.map((item, i) => (
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={3}
+      <Box marginBottom={2}>
+        <Typography fontWeight={700} variant={'h5'}>
+          {title}
+        </Typography>
+      </Box>
+      <Box>
+        {items.map((item, i) => (
+          <Box
+            component={Accordion}
             key={i}
-            data-aos={'fade-up'}
-            data-aos-delay={i * 100}
-            data-aos-offset={100}
-            data-aos-duration={600}
+            padding={1}
+            marginBottom={i === item.length - 1 ? 0 : 2}
+            borderRadius={`${theme.spacing(1)} !important`}
+            sx={{
+              '&::before': {
+                display: 'none',
+              },
+            }}
           >
-            <Box display={'flex'} flexDirection={'column'}>
-              <Box display={'flex'} alignItems={'center'} marginBottom={1}>
-                <Box
-                  borderRadius={'100%'}
-                  bgcolor={'secondary.main'}
-                  marginRight={2}
-                  width={40}
-                  height={40}
-                  display={'flex'}
-                  justifyContent={'center'}
-                  alignItems={'center'}
-                >
-                  <Typography
-                    variant={'h6'}
-                    sx={{ fontWeight: 600, color: theme.palette.common.white }}
-                  >
-                    ?
-                  </Typography>
-                </Box>
-                <Typography variant={'h6'} gutterBottom fontWeight={500}>
-                  {item.title}
-                </Typography>
-              </Box>
-              <Typography color="text.secondary">{item.subtitle}</Typography>
+            <Box
+              component={AccordionSummary}
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id={`panel1a-header--${i}`}
+            >
+              <Typography fontWeight={600}>{item.title}</Typography>
             </Box>
-          </Grid>
+            <AccordionDetails>
+              <Typography color="text.secondary">{item.subtitle}</Typography>
+            </AccordionDetails>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Box>
+  );
+};
+
+FaqGroupItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.array.isRequired,
+};
+
+const Faq = () => {
+  return (
+    <Container data-aos={'fade-up'}>
+      <Box marginBottom={8}>
+        <Typography
+          variant="h2"
+          color="text.primary"
+          align={'center'}
+          gutterBottom
+          sx={{
+            fontWeight: 700,
+          }}
+        >
+          FAQ
+        </Typography>
+        <Box marginBottom={6}>
+          <FaqGroupItem
+            title={'Basics'}
+            items={[
+              {
+                title: 'Can I purchase a gift certificate?',
+                subtitle:
+                  'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+              },
+              {
+                title: 'What is your return policy?',
+                subtitle:
+                  'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+              },
+              {
+                title: 'Do you sell gift cards?',
+                subtitle:
+                  'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+              },
+              {
+                title: 'Can I change plans later on?',
+                subtitle:
+                  'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+              },
+              {
+                title: 'Is this a subscription service?',
+                subtitle:
+                  'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+              },
+            ]}
+          />
+        </Box>
+      </Box>
+    </Container>
   );
 };
 
