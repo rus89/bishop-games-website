@@ -8,7 +8,8 @@ import {
   Hero,
   Services,
   Workflow,
-  Portfolio
+  Portfolio,
+  Reviews
 } from './components';
 
 const IndexView = () => {
@@ -124,12 +125,37 @@ const IndexView = () => {
       </Box> */}
 
       {/* Testimonials */}
+      {/* NOTE: Ideja
+      https://thefront.maccarianagency.com/e-learning
+      https://thefront.maccarianagency.com/service
+      https://thefront.maccarianagency.com/web-basic
+      https://thefront.maccarianagency.com/coworking
+       */}
+      <Container maxWidth={1} paddingTop={'0 !important'}
+        sx={{
+          backgroundColor: theme.palette.alternate.main
+        }}>
+        <Reviews />
+      </Container>
 
       {/* Stats */}
+      {/* NOTE: Ideja
+      https://thefront.maccarianagency.com/e-learning
+      https://thefront.maccarianagency.com/job-listing
+       */}
 
       {/* Our Team */}
+      {/* NOTE: ideja
+      https://thefront.maccarianagency.com/startup
+      https://thefront.maccarianagency.com/desktop-app
+      https://thefront.maccarianagency.com/expo
+      https://thefront.maccarianagency.com/service
+       */}
 
       {/* FAQ */}
+      {/* NOTE: Ideja
+      
+       */}
 
     </Main>
   );
