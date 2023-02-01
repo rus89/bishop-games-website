@@ -12,8 +12,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const { mode } = theme.palette;
   const {
     services: services,
-    portfolio: portfolio,
     workflow: workflow,
+    portfolio: portfolio,
     testimonials: testimonials,
     stats: stats,
     ourTeam: ourTeam,
@@ -66,14 +66,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         </Box>
         <Box marginLeft={4}>
           <NavItem
-            title={'Testimonials'}
-            id={'testimonials'}
-            items={testimonials}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
             title={'Portfolio'}
             id={'portfolio'}
             items={portfolio}
@@ -82,9 +74,9 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         </Box>
         <Box marginLeft={4}>
           <NavItem
-            title={'Our Team'}
-            id={'ourTeam'}
-            items={ourTeam}
+            title={'Testimonials'}
+            id={'testimonials'}
+            items={testimonials}
             colorInvert={colorInvert}
           />
         </Box>
@@ -93,6 +85,14 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             title={'Stats'}
             id={'stats'}
             items={stats}
+            colorInvert={colorInvert}
+          />
+        </Box>
+        <Box marginLeft={4}>
+          <NavItem
+            title={'Our Team'}
+            id={'ourTeam'}
+            items={ourTeam}
             colorInvert={colorInvert}
           />
         </Box>
@@ -118,7 +118,8 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             color="primary"
             component="a"
             target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
+            //TODO: izvuci ovaj podatak sa 1 mesta
+            href="mailto:office@bishop.games"
             size="large"
           >
             Contact Us

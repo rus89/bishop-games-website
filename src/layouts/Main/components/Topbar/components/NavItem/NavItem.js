@@ -22,11 +22,12 @@ const NavItem = ({ title, id, items, colorInvert = false }) => {
         alignItems={'center'}
         aria-describedby={id}
         sx={{ cursor: 'pointer' }}
-        onClick={(e) => handleClick(e, id)}
+        // onClick={(e) => handleClick(e, id)}
       >
         <Typography
           fontWeight={400}
           color={linkColor}
+          href={items.href}
         >
           {title}
         </Typography>

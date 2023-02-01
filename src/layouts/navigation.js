@@ -6,49 +6,49 @@ const pages = {
   services: [
     {
       title: 'Services',
-      href: '#services',
-    }
-  ],
-  portfolio: [
-    {
-      title: 'Portfolio',
-      href: '#portfolio',
+      href: '/Services',
     }
   ],
   workflow: [
     {
       title: 'Workflow',
-      href: '#workflow',
+      href: '/Workflow',
+    }
+  ],
+  portfolio: [
+    {
+      title: 'Portfolio',
+      href: '/Portfolio',
     }
   ],
   testimonials: [
     {
       title: 'Testimonials',
-      href: '#testimonials',
+      href: '/Testimonials',
     }
   ],
   stats: [
     {
       title: 'Stats',
-      href: '#stats',
+      href: '/Stats',
     }
   ],
   ourTeam: [
     {
       title: 'Our Team',
-      href: '#ourTeam',
+      href: '/OurTeam',
     }
   ],
   faq: [
     {
       title: 'FAQ',
-      href: '#faq',
+      href: '/Faq',
     }
   ],
   blog: [
     {
       title: 'Blog',
-      href: '#blog',
+      href: '/blog',
     }
   ],
 };
