@@ -10,7 +10,8 @@ import {
   Workflow,
   Portfolio,
   Reviews,
-  Stats
+  Stats,
+  Team
 } from './components';
 
 const IndexView = () => {
@@ -155,6 +156,12 @@ const IndexView = () => {
       https://thefront.maccarianagency.com/expo
       https://thefront.maccarianagency.com/service
        */}
+      <Container maxWidth={1} paddingTop={'0 !important'}
+        sx={{
+          backgroundColor: theme.palette.alternate.main
+        }}>
+        <Team />
+      </Container>
 
       {/* FAQ */}
       {/* NOTE: Ideja
