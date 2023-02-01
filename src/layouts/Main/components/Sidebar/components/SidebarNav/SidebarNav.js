@@ -11,12 +11,14 @@ const SidebarNav = ({ pages }) => {
   const { mode } = theme.palette;
 
   const {
-    landings: landingPages,
-    secondary: secondaryPages,
-    company: companyPages,
-    account: accountPages,
-    portfolio: portfolioPages,
-    blog: blogPages,
+    services: services,
+    workflow: workflow,
+    portfolio: portfolio,
+    testimonials: testimonials,
+    stats: stats,
+    ourTeam: ourTeam,
+    faq: faq,
+    blog: blog,
   } = pages;
 
   return (
@@ -26,9 +28,10 @@ const SidebarNav = ({ pages }) => {
           display={'flex'}
           component="a"
           href="/"
-          title="theFront"
+          title="Bishop Games"
           width={{ xs: 100, md: 120 }}
         >
+          {/* TODO: promeniti logo */}
           <Box
             component={'img'}
             src={
@@ -43,33 +46,28 @@ const SidebarNav = ({ pages }) => {
       </Box>
       <Box paddingX={2} paddingY={2}>
         <Box>
-          <NavItem title={'Landings'} items={landingPages} />
+          <NavItem title={'Services'} items={services} />
         </Box>
         <Box>
-          <NavItem title={'Company'} items={companyPages} />
+          <NavItem title={'Workflow'} items={workflow} />
         </Box>
         <Box>
-          <NavItem title={'Pages'} items={secondaryPages} />
+          <NavItem title={'Portfolio'} items={portfolio} />
         </Box>
         <Box>
-          <NavItem title={'Account'} items={accountPages} />
+          <NavItem title={'Testimonials'} items={testimonials} />
         </Box>
         <Box>
-          <NavItem title={'Blog'} items={blogPages} />
+          <NavItem title={'Stats'} items={stats} />
         </Box>
         <Box>
-          <NavItem title={'Portfolio'} items={portfolioPages} />
+          <NavItem title={'Our Team'} items={ourTeam} />
         </Box>
-        <Box marginTop={2}>
-          <Button
-            size={'large'}
-            variant="outlined"
-            fullWidth
-            component="a"
-            href="/docs/introduction"
-          >
-            Documentation
-          </Button>
+        <Box>
+          <NavItem title={'FAQ'} items={faq} />
+        </Box>
+        <Box>
+          <NavItem title={'Blog'} items={blog} />
         </Box>
         <Box marginTop={1}>
           <Button
@@ -79,9 +77,9 @@ const SidebarNav = ({ pages }) => {
             fullWidth
             component="a"
             target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
+            href="mailto:office@bishop.games"
           >
-            Purchase now
+            Contact Us
           </Button>
         </Box>
       </Box>
