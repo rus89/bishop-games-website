@@ -9,7 +9,8 @@ import {
   Services,
   Workflow,
   Portfolio,
-  Reviews
+  Reviews,
+  Stats
 } from './components';
 
 const IndexView = () => {
@@ -143,6 +144,9 @@ const IndexView = () => {
       https://thefront.maccarianagency.com/e-learning
       https://thefront.maccarianagency.com/job-listing
        */}
+      <Container paddingTop={'0 !important'}>
+        <Stats />
+      </Container>
 
       {/* Our Team */}
       {/* NOTE: ideja
