@@ -144,7 +144,7 @@ const mock = [
 const Services = () => {
   const theme = useTheme();
   return (
-    <Container>
+    <Container data-aos={'fade-up'}>
       <Box marginBottom={8}>
         <Typography
           variant="h2"
