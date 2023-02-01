@@ -107,7 +107,7 @@ const Stats = () => {
   return (
     <Container>
       <Box>
-        <Box marginBottom={4}>
+        <Box marginBottom={8}>
           <Typography
             variant="h2"
             color="text.primary"

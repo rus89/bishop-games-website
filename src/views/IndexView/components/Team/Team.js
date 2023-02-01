@@ -26,9 +26,9 @@ const mock = [
 
 const Team = () => {
   return (
-    <Container>
+    <Container data-aos={'fade-up'}>
       <Box zIndex={2} position={'relative'}>
-        <Box marginBottom={4}>
+        <Box marginBottom={8}>
           <Typography
             variant="h2"
             color="text.primary"
