@@ -7,7 +7,8 @@ import Container from 'components/Container';
 import {
   Hero,
   Services,
-  Workflow
+  Workflow,
+  Portfolio
 } from './components';
 
 const IndexView = () => {
@@ -27,7 +28,7 @@ const IndexView = () => {
         <Container >
           <Hero />
         </Container>
-        <Box
+        {/* <Box
           component={'svg'}
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -43,14 +44,14 @@ const IndexView = () => {
             fill={theme.palette.background.paper}
             d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
           ></path>
-        </Box>
+        </Box> */}
       </Box>
 
       {/* Services */}
       <Container paddingTop={'0 !important'}>
         <Services />
       </Container>
-      <Box
+      {/* <Box
         component={'svg'}
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -66,17 +67,19 @@ const IndexView = () => {
           fill={theme.palette.alternate.main}
           d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
         ></path>
-      </Box>
+      </Box> */}
 
       {/* workflow */}
+      {/* TODO: videti zasto se ovaj container ne poklapa sa prethodnim u services */}
       <Container maxWidth={1} paddingTop={'0 !important'}
         sx={{
-          backgroundColor: theme.palette.alternate.main,
-          width: '100%'
+          backgroundColor: theme.palette.alternate.main
         }}>
+        {/* NOTE: ideja za prikaz https://thefront.maccarianagency.com/cloud-hosting */}
         <Workflow />
       </Container>
-      <Box
+      {/* TODO: ovaj kod ispod se ponavlja neprestano */}
+      {/* <Box
         component={'svg'}
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -92,10 +95,42 @@ const IndexView = () => {
           fill={theme.palette.background.paper}
           d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
         ></path>
-      </Box>
+      </Box> */}
+
+      {/* Portfolio */}
+      <Container paddingTop={'0 !important'}>
+        {/* NOTE: ideje za prikaz
+        https://thefront.maccarianagency.com/home
+        https://thefront.maccarianagency.com/rental
+         */}
+        <Portfolio />
+      </Container>
+      {/* <Box
+        component={'svg'}
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        viewBox="0 0 1920 100.1"
+        sx={{
+          width: '100%',
+          marginBottom: theme.spacing(-1),
+        }}
+      >
+        <path
+          fill={theme.palette.alternate.main}
+          d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
+        ></path>
+      </Box> */}
+
+      {/* Testimonials */}
+
+      {/* Stats */}
 
       {/* Our Team */}
-      
+
+      {/* FAQ */}
+
     </Main>
   );
 };
