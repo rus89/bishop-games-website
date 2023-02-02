@@ -41,7 +41,13 @@ const Team = () => {
             Our power
           </Typography>
         </Box>
-        <Grid container spacing={2} align={'center'}>
+        <Grid
+          container
+          spacing={2}
+          align={'center'}
+          alignItems={'center'}
+          justifyContent="center"
+        >
           {mock.map((item, i) => (
             <Grid
               item
