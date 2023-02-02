@@ -88,8 +88,7 @@ const Workflow = () => {
   };
 
   return (
-    <Container
-      data-aos={'fade-up'}>
+    <Container data-aos={'fade-up'}>
       <Box marginBottom={8}>
         <Typography
           variant="h2"

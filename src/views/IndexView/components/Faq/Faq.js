@@ -70,7 +70,10 @@ const Faq = () => {
         >
           FAQ
         </Typography>
-        <Box marginBottom={6}>
+        <Box
+          marginBottom={6}
+          data-aos={'fade-up'}
+          data-aos-delay={100}>
           <FaqGroupItem
             title={'Basics'}
             items={[

@@ -5,9 +5,6 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import Container from 'components/Container';
-// import useMediaQuery from '@mui/material/useMediaQuery';
-// import ImageList from '@mui/material/ImageList';
-// import ImageListItem from '@mui/material/ImageListItem';
 
 const mockLeftGrid = [
   {
@@ -87,6 +84,8 @@ const Column = ({ data }) => {
     <Box>
       {data.map((item, i) => (
         <Box
+          data-aos={'fade-up'}
+          data-aos-delay={i * 100}
           key={i}
           sx={{
             marginBottom: { xs: 2, sm: 3 },
@@ -178,7 +177,7 @@ const Portfolio = () => {
   // const isMd = useMediaQuery(theme.breakpoints.up('md'), {
   //   defaultMatches: true,
   // });
-  
+
   return (
     <Container data-aos={'fade-up'}>
       <Box marginBottom={8}>

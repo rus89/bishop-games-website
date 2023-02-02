@@ -60,7 +60,12 @@ const Team = () => {
               data-aos-offset={100}
               data-aos-duration={600}
             >
-              <Box component={Card} boxShadow={0} bgcolor={'transparent'}>
+              <Box
+                component={Card}
+                boxShadow={0}
+                bgcolor={'transparent'}
+                data-aos={'fade-up'}
+                data-aos-delay={i * 100}>
                 <Box
                   component={CardMedia}
                   borderRadius={2}

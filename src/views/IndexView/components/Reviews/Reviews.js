@@ -20,45 +20,51 @@ const mock = [
     avatar: 'https://media.licdn.com/dms/image/C5603AQHJSEbt13Yy1Q/profile-displayphoto-shrink_800_800/0/1652286766669?e=1680739200&v=beta&t=PpW88MJJvmSz0v83RRyJaXQZUW01JwN76XLCPf3wl94',
   },
   {
+    feedback: 'I\'ve known Milan for several years now, and I can honestly say that it\'s a real privilege to call him a friend. We first met when he came to the company where I was the team leader. He was a fresh and promising Unity developer at the time, and even though we never cooperated directly on a project I knew for sure that he was a talented professional. He worked closely as a consultant with the lead developer from my team, and helped him with several Unity projects. Even then, he exhibited traits that a good leader should possess. He is a true professional in his respective field, he has integrity and patience necessary for coping with the team leader duties. I was thrilled to hear that he was offered a well deserved position in the company, and not at all surprised, since he is a logical choice for such a responsible job. Milan is one of the most organized and disciplined people I know, and yet manages to retain a cheerful spirit and a playful disposition. He is a necessary ingredient for a successful team and therefore successful company. In my humble opinion, anyone who hires him is a lucky person. ',
+    name: 'Aleksandra Stankovic',
+    title: 'ASO Consultant at Phiture',
+    avatar: '',
+  },
+  {
     feedback:
       'Brilliant job! Anica is an excellent illustrator and very easy to communicate with, she took all directions on board',
     name: 'senoritajoellit',
-    title: 'Customer',
+    title: 'Fiverr CLient',
     avatar: 'https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/b2faa14e02e2479c5052c38b04fed940-1588352182470/e5b5a999-1afe-4062-963c-2a4159cfe513.jpg',
   },
   {
     feedback:
       'Anica was so kind and very professional. I love the work that she has done. She took my character description and brought it to life',
     name: 'jeffreygrech',
-    title: 'Customer',
+    title: 'Fiverr Client',
     avatar: 'https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d142664d4558f4fe520cbd67fb4a6597-1600574416499/382a9c29-40df-4980-8e77-55ad2375861d.jpg',
   },
   {
     feedback:
       'She did it again! Excellent job! She understood the idea right away and got it exactly the way I wanted it to. Placing a new order soon!',
     name: 'ksiitari',
-    title: 'Customer',
+    title: 'Fiverr Client',
     avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',
   },
   {
     feedback:
       'Anica was a pleasure to work with and more than skilled for the task. She is thoughtful, easy to work with, and required minimal supervision. We would definitely rehire her for any future work. Well done, Anica. Thank you for a great experience!',
     name: 'Clara Bertoletti',
-    title: 'Customer',
+    title: 'Upwork Client',
     avatar: 'https://assets.maccarianagency.com/avatars/img4.jpg',
   },
   {
     feedback:
       'Working with Anica has been a pleasure for me. Along with her undeniable talent, Anica has been an absolute joy to corporate with. She is definitely one of the most talented freelancers I have worked with - creative, responsible, communicative, and a great executor. Her final assets are always polished and clean, and she took feedback and direction well. If I had the chance to work with her again in the future, I would definitely hire her!',
     name: 'Jhon Anderson',
-    title: 'Customer',
+    title: 'Upwork Client',
     avatar: 'https://assets.maccarianagency.com/avatars/img5.jpg',
   },
   {
     feedback:
       'Anica is definitely one of the top talent on Upwork when it comes to illustrations and art, I was really lucky to find her for my project. She excelled in all given tasks, surprised me with her proactivity in making my ideas better with her expert advices. Everything was within given timeframes, communication though different stages of the process so changes were made on the fly which made everything more fluent, more efficient and painless for everyone. Will definitely have her as one of the main candidates for my future projects.',
     name: 'Chary Smith',
-    title: 'Customer',
+    title: 'Upwork Client',
     avatar: 'https://assets.maccarianagency.com/avatars/img6.jpg',
   },
 ];
@@ -67,9 +73,11 @@ const Reviews = () => {
   const theme = useTheme();
 
   return (
-    <Container data-aos={'fade-up'}>
-      <Box>
-        <Box marginBottom={4}>
+    <Container
+      data-aos={'fade-up'}
+      data-aos-delay={500}>
+      <Box marginBottom={8}>
+        <Box>
           <Box display={'flex'} justifyContent={'center'}>
             {[1, 2, 3, 4, 5].map((item) => (
               <Box key={item} color={theme.palette.secondary.main}>
@@ -128,7 +136,10 @@ const Reviews = () => {
                 },
               }}
             >
-              <Box p={2}>
+              <Box
+                p={2}
+                data-aos={'fade-up'}
+                data-aos-delay={i * 100}>
                 <Box marginBottom={2}>
                   <ListItem component="div" disableGutters sx={{ padding: 0 }}>
                     <ListItemAvatar>

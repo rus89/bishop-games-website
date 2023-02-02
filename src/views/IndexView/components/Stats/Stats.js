@@ -119,9 +119,9 @@ const Stats = () => {
   };
 
   return (
-    <Container>
-      <Box>
-        <Box marginBottom={8}>
+    <Container data-aos={'fade-up'}>
+      <Box marginBottom={8}>
+        <Box>
           <Typography
             variant="h2"
             color="text.primary"

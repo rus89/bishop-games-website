@@ -80,6 +80,7 @@ const Hero = () => {
           display={'flex'}
           justifyContent={'center'}
           alignItems={'center'}
+          data-aos={isMd ? 'fade-left' : 'fade-up'}
         >
           <Box height={1} width={1} maxWidth={500}>
             <Box
