@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
@@ -7,10 +7,13 @@ import Card from '@mui/material/Card';
 import Avatar from '@mui/material/Avatar';
 import { useTheme } from '@mui/material/styles';
 import Container from 'components/Container';
+import VisibilitySensor from 'react-visibility-sensor';
+import CountUp from 'react-countup';
 
 const mock = [
   {
-    number: '1000+',
+    number: '1000',
+    suffix: '+',
     title: 'Online courses',
     subtitle: 'Choose from over 1000+ online video courses.',
     icon: (
@@ -32,7 +35,8 @@ const mock = [
     ),
   },
   {
-    number: '800+',
+    number: '800',
+    suffix: '+',
     title: 'Expert instructors',
     subtitle: 'Expert instructors to make sure courses are well.',
     icon: (
@@ -54,7 +58,8 @@ const mock = [
     ),
   },
   {
-    number: '100K+',
+    number: '100',
+    suffix: '%',
     title: 'Active students',
     subtitle: '100K+ Active students arround the world.',
     icon: (
@@ -78,7 +83,8 @@ const mock = [
     ),
   },
   {
-    number: '400+',
+    number: '400',
+    suffix: '+',
     title: 'Free resources',
     subtitle: 'Free resources for all students arround the world.',
     icon: (
@@ -103,6 +109,14 @@ const mock = [
 
 const Stats = () => {
   const theme = useTheme();
+  const [viewPortEntered, setViewPortEntered] = useState(false);
+  const setViewPortVisibility = (isVisible) => {
+    if (viewPortEntered) {
+      return;
+    }
+
+    setViewPortEntered(isVisible);
+  };
 
   return (
     <Container>
@@ -147,14 +161,26 @@ const Stats = () => {
                     >
                       {item.icon}
                     </Box>
-                    <Typography
-                      variant={'h4'}
-                      color={'primary'}
-                      gutterBottom
-                      sx={{ fontWeight: 700 }}
+                    <VisibilitySensor
+                      onChange={(isVisible) =>
+                        setViewPortVisibility(isVisible)
+                      }
+                      delayedCall
                     >
-                      {item.number}
-                    </Typography>
+                      <Typography
+                        variant={'h4'}
+                        color={'primary'}
+                        gutterBottom
+                        sx={{ fontWeight: 700 }}
+                      >
+                        <CountUp
+                          duration={1}
+                          end={viewPortEntered ? item.number : 0}
+                          start={0}
+                          suffix={item.suffix}
+                        />
+                      </Typography>
+                    </VisibilitySensor>
                     <Typography
                       variant={'h6'}
                       gutterBottom
