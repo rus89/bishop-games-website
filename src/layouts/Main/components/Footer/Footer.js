@@ -4,11 +4,23 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-import { useTheme } from '@mui/material/styles';
+import { useStaticQuery, graphql } from 'gatsby';
 
+//TODO: srediti ovo
 const Footer = () => {
-  const theme = useTheme();
-  const { mode } = theme.palette;
+
+  const data = useStaticQuery(graphql`
+  query {
+    site {
+      siteMetadata {
+        description
+        email
+        siteUrl
+        title
+      }
+    }
+  }
+  `);
 
   return (
     <Grid container spacing={2}>
@@ -29,11 +41,7 @@ const Footer = () => {
           >
             <Box
               component={'img'}
-              src={
-                mode === 'light'
-                  ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                  : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-              }
+              src={'../../../../../images/logo/logo_v2.png'}
               height={1}
               width={1}
             />
@@ -50,27 +58,16 @@ const Footer = () => {
                 Home
               </Link>
             </Box>
-            <Box marginTop={1} marginRight={2}>
-              <Link
-                underline="none"
-                component="a"
-                href="/docs/introduction"
-                color="text.primary"
-                variant={'subtitle2'}
-              >
-                Documentation
-              </Link>
-            </Box>
             <Box marginTop={1}>
               <Button
-                variant="outlined"
+                component={'a'}
+                variant="contained"
                 color="primary"
-                component="a"
-                target="blank"
-                href="https://mui.com/store/items/the-front-landing-page/"
-                size="small"
+                size="large"
+                href={data.site.siteMetadata.email}
+                target={'_blank'}
               >
-                Purchase now
+                Contact Us
               </Button>
             </Box>
           </Box>
@@ -83,7 +80,7 @@ const Footer = () => {
           color="text.secondary"
           gutterBottom
         >
-          &copy; theFront. 2021, Maccarian. All rights reserved
+          &copy; {data.site.siteMetadata.title} | {new Date().getFullYear()} | All Rights Reserved
         </Typography>
         <Typography
           align={'center'}
@@ -91,10 +88,7 @@ const Footer = () => {
           color="text.secondary"
           component={'p'}
         >
-          When you visit or interact with our sites, services or tools, we or
-          our authorised service providers may use cookies for storing
-          information to help provide you with a better, faster and safer
-          experience and for marketing purposes.
+          {data.site.siteMetadata.description}
         </Typography>
       </Grid>
     </Grid>
