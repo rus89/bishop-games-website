@@ -29,7 +29,7 @@ const mock = [
     feedback:
       'Brilliant job! Anica is an excellent illustrator and very easy to communicate with, she took all directions on board',
     name: 'senoritajoellit',
-    title: 'Fiverr CLient',
+    title: 'Fiverr Client',
     avatar: 'https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/b2faa14e02e2479c5052c38b04fed940-1588352182470/e5b5a999-1afe-4062-963c-2a4159cfe513.jpg',
   },
   {
@@ -51,21 +51,21 @@ const mock = [
       'Anica was a pleasure to work with and more than skilled for the task. She is thoughtful, easy to work with, and required minimal supervision. We would definitely rehire her for any future work. Well done, Anica. Thank you for a great experience!',
     name: 'Clara Bertoletti',
     title: 'Upwork Client',
-    avatar: 'https://assets.maccarianagency.com/avatars/img4.jpg',
+    avatar: 'https://assets.maccarianagency.com/avatars/img5.jpg',
   },
   {
     feedback:
       'Working with Anica has been a pleasure for me. Along with her undeniable talent, Anica has been an absolute joy to corporate with. She is definitely one of the most talented freelancers I have worked with - creative, responsible, communicative, and a great executor. Her final assets are always polished and clean, and she took feedback and direction well. If I had the chance to work with her again in the future, I would definitely hire her!',
     name: 'Jhon Anderson',
     title: 'Upwork Client',
-    avatar: 'https://assets.maccarianagency.com/avatars/img5.jpg',
+    avatar: 'https://assets.maccarianagency.com/avatars/img4.jpg',
   },
   {
     feedback:
       'Anica is definitely one of the top talent on Upwork when it comes to illustrations and art, I was really lucky to find her for my project. She excelled in all given tasks, surprised me with her proactivity in making my ideas better with her expert advices. Everything was within given timeframes, communication though different stages of the process so changes were made on the fly which made everything more fluent, more efficient and painless for everyone. Will definitely have her as one of the main candidates for my future projects.',
     name: 'Chary Smith',
     title: 'Upwork Client',
-    avatar: 'https://assets.maccarianagency.com/avatars/img6.jpg',
+    avatar: 'https://assets.maccarianagency.com/avatars/img1.jpg',
   },
 ];
 
@@ -77,7 +77,7 @@ const Reviews = () => {
       data-aos={'fade-up'}
       data-aos-delay={500}>
       <Box marginBottom={8}>
-        <Box>
+        <Box marginBottom={4}>
           <Box display={'flex'} justifyContent={'center'}>
             {[1, 2, 3, 4, 5].map((item) => (
               <Box key={item} color={theme.palette.secondary.main}>
