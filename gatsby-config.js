@@ -10,8 +10,8 @@ module.exports = {
   ],
   siteMetadata: {
     title: 'Bishop Games - Your favorite game development studio',
-    siteUrl: 'www.bishop.games',
+    siteUrl: 'https://www.bishop.games',
     email: 'office@bishop.games',
-    description: 'A full-service game development studio specializing in Unity game programming, game art, and the complete game development lifecycle',
+    description: 'A full-service game development studio specializing in Unity game programming, game art, and the complete game development lifecycle'
   },
 };
