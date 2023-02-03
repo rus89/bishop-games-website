@@ -1,15 +1,14 @@
 export const light = {
-  mode: 'light',
-  cardShadow: 'rgba(23, 70, 161, .11)',
-  divider: 'rgba(0, 0, 0, 0.12)',
-  text: {
-    primary: '#1e2022',
-    secondary: '#677788',
+  alternate: {
+    main: '#f7faff',
+    dark: '#edf1f7',
   },
+  cardShadow: 'rgba(23, 70, 161, .11)',
+  mode: 'light',
   primary: {
-    main: '#DF2A41',
-    light: '#DF2A41',
-    dark: '#910D1F',
+    main: '#377dff',
+    light: '#467de3',
+    dark: '#2f6ad9',
     contrastText: '#fff',
   },
   secondary: {
@@ -18,10 +17,11 @@ export const light = {
     dark: '#FF9800',
     contrastText: 'rgba(0, 0, 0, 0.87)',
   },
-  alternate: {
-    main: '#f7faff',
-    dark: '#edf1f7',
+  text: {
+    primary: '#1e2022',
+    secondary: '#677788',
   },
+  divider: 'rgba(0, 0, 0, 0.12)',
   background: {
     paper: '#ffffff',
     default: '#ffffff',
@@ -31,17 +31,16 @@ export const light = {
 };
 
 export const dark = {
-  mode: 'dark',
-  cardShadow: 'rgba(0, 0, 0, .11)',
-  divider: 'rgba(255, 255, 255, 0.12)',
-  text: {
-    primary: '#EEEEEF',
-    secondary: '#AEB0B4',
+  alternate: {
+    main: '#1a2138',
+    dark: '#151a30',
   },
+  cardShadow: 'rgba(0, 0, 0, .11)',
   common: {
     black: '#000',
     white: '#fff',
   },
+  mode: 'dark',
   primary: {
     main: '#1976d2',
     light: '#2196f3',
@@ -54,10 +53,11 @@ export const dark = {
     dark: '#DBBE01',
     contrastText: 'rgba(0, 0, 0, 0.87)',
   },
-  alternate: {
-    main: '#1a2138',
-    dark: '#151a30',
+  text: {
+    primary: '#EEEEEF',
+    secondary: '#AEB0B4',
   },
+  divider: 'rgba(255, 255, 255, 0.12)',
   background: {
     paper: '#222B45',
     default: '#222B45',
