@@ -7,9 +7,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import ListItemText from '@mui/material/ListItemText';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import Container from 'components/Container';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import { useTheme } from '@mui/material/styles';
 
 const mock = [
@@ -17,11 +18,17 @@ const mock = [
     name: 'Anica Smiljković',
     title: 'Artist',
     avatar: '../../../../../images/team/Anica.jpeg',
+    linkedin: 'https://www.linkedin.com/in/anica-smiljkovic/',
+    facebook: 'https://www.facebook.com/anica.smiljkovic.7',
+    instagram: 'https://www.instagram.com/anicaa_bishop/',
   },
   {
     name: 'Milan Rusimov',
     title: 'Game Developer',
     avatar: '../../../../../images/team/Milan.jpg',
+    linkedin: 'https://www.linkedin.com/in/rusimovmilan/',
+    facebook: 'https://www.facebook.com/milan.rusimov',
+    instagram: 'https://www.instagram.com/rus89__/',
   }
 ];
 
@@ -83,9 +90,7 @@ const Team = () => {
               <Box
                 component={Card}
                 boxShadow={0}
-                bgcolor={'transparent'}
-                data-aos={'fade-up'}
-                data-aos-delay={i * 100}>
+                bgcolor={'transparent'}>
                 <Box
                   component={CardMedia}
                   borderRadius={2}
@@ -101,20 +106,33 @@ const Team = () => {
                     primaryTypographyProps={{ fontWeight: 700 }}
                   />
                   <Box marginTop={1}>
-                    <IconButton
-                      aria-label="facebook"
-                      size={'small'}
-                      color={'primary'}
-                    >
-                      <FacebookIcon />
-                    </IconButton>
-                    <IconButton
-                      aria-label="twitter"
-                      size={'small'}
-                      color={'primary'}
-                    >
-                      <TwitterIcon />
-                    </IconButton>
+                    <a href={item.linkedin} target='_blank' rel='noreferrer'>
+                      <IconButton
+                        aria-label="linkedin"
+                        size={'small'}
+                        color={'primary'}
+                      >
+                        <LinkedInIcon />
+                      </IconButton>
+                    </a>
+                    <a href={item.facebook} target='_blank' rel='noreferrer'>
+                      <IconButton
+                        aria-label="facebook"
+                        size={'small'}
+                        color={'primary'}
+                      >
+                        <FacebookIcon />
+                      </IconButton>
+                    </a>
+                    <a href={item.instagram} target='_blank' rel='noreferrer'>
+                      <IconButton
+                        aria-label="instagram"
+                        size={'small'}
+                        color={'primary'}
+                      >
+                        <InstagramIcon />
+                      </IconButton>
+                    </a>
                   </Box>
                 </CardContent>
               </Box>
