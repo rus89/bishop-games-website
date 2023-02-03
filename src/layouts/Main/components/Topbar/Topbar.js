@@ -6,6 +6,7 @@ import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import { NavItem } from './components';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
@@ -19,6 +20,19 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
     faq: faq,
     blog: blog,
   } = pages;
+
+  const data = useStaticQuery(graphql`
+query {
+  site {
+    siteMetadata {
+      description
+      email
+      siteUrl
+      title
+    }
+  }
+}
+`);
 
   return (
     <Box
@@ -112,8 +126,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             color="primary"
             component="a"
             target="blank"
-            //TODO: izvuci ovaj podatak sa 1 mesta
-            href="mailto:office@bishop.games"
+            href={'mailto:' + data.site.siteMetadata.email}
             size="large"
           >
             Contact Us

@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Typed from 'typed.js';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const Hero = () => {
   const theme = useTheme();
@@ -30,6 +31,19 @@ const Hero = () => {
 
     return () => typedJS.destroy();
   }, []);
+
+  const data = useStaticQuery(graphql`
+  query {
+    site {
+      siteMetadata {
+        description
+        email
+        siteUrl
+        title
+      }
+    }
+  }
+  `);
 
   return (
     //TODO: za full screen po visini je dodat props minHeight={'80vh'}
@@ -82,8 +96,7 @@ const Hero = () => {
               color="primary"
               size="large"
               fullWidth={isMd ? false : true}
-              //TODO promeniti ovo da povlaci podatke iz nekog skladista a ne hard code
-              href={'mailto:office@bishop.games'}
+              href={'mailto:' + data.site.siteMetadata.email}
               target={'_blank'}
             >
               Contact Us
