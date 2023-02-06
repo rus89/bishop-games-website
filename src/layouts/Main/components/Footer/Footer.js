@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import { useStaticQuery, graphql } from 'gatsby';
+import {StaticImage} from 'gatsby-plugin-image';
 
 //TODO: srediti ovo
 const Footer = () => {
@@ -39,12 +40,9 @@ const Footer = () => {
             title="theFront"
             width={80}
           >
-            <Box
-              component={'img'}
-              src={'../../../../../images/logo/logo_v2.png'}
-              height={1}
-              width={1}
-            />
+            <StaticImage
+              src='../../../../images/logo/logo_v2.png'
+              alt='logo image' />
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
             <Box marginTop={1} marginRight={2}>
