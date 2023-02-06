@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import NavItem from './components/NavItem';
+import { StaticImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const SidebarNav = () => {
@@ -28,11 +29,13 @@ const SidebarNav = () => {
           title="Bishop Games"
           width={{ xs: 100, md: 120 }}
         >
-          <Box
-            component={'img'}
-            src={'../../../../../images/logo/logo_v2.png'}
-            height={1}
-            width={1}
+          <StaticImage
+            src='../../../../../../images/logo/logo_v2.png'
+            alt='logo image'
+            style={{
+              height: '40%',
+              width: '40%',
+            }}
           />
         </Box>
       </Box>
