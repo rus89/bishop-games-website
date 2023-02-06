@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import TopLayout from './TopLayout';
 
 export const wrapRootElement = ({ element }) => {
-  return <TopLayout>{element}</TopLayout>;
+  return (
+    <StrictMode>
+      <TopLayout>{element}</TopLayout>
+    </StrictMode>
+  );
 };
