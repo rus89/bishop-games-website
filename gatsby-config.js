@@ -7,6 +7,9 @@ module.exports = {
     'gatsby-plugin-mui-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-resolve-src',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-anchor-links',
       options: {
