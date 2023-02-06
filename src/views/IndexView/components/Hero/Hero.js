@@ -51,7 +51,7 @@ const Hero = () => {
     <Box>
       <Grid container spacing={4}
         sx={{
-          minHeight: '100vh',
+          minHeight: '80vh',
           height: '100%',
         }}>
         <Grid
