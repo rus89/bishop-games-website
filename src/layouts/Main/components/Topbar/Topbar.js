@@ -8,18 +8,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { NavItem } from './components';
 import { graphql, useStaticQuery } from 'gatsby';
 
-const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
+const Topbar = ({ onSidebarOpen }) => {
   const theme = useTheme();
-  const {
-    services: services,
-    workflow: workflow,
-    portfolio: portfolio,
-    testimonials: testimonials,
-    stats: stats,
-    ourTeam: ourTeam,
-    faq: faq,
-    blog: blog,
-  } = pages;
 
   const data = useStaticQuery(graphql`
 query {
@@ -45,79 +35,64 @@ query {
         display={'flex'}
         component="a"
         href="/"
-        title="theFront"
+        title="Bishop Games"
         width={{ xs: 100, md: 120 }}
       >
         <Box
           component={'img'}
           src={'../../../../../images/logo/logo_v2.png'}
-          height={1}
-          width={1}
+          height={0.4}
+          width={0.4}
         />
       </Box>
+      {/* //TODO: ovo treba napraviti dinamicki mozda da se itemi i id povlace iz nekog fajla kako se kod ne bi menjao svaki put kada se doda ili oduzme neka komponenta */}
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box>
           <NavItem
             title={'Services'}
             id={'services'}
-            items={services}
-            colorInvert={colorInvert}
           />
         </Box>
         <Box marginLeft={4}>
           <NavItem
             title={'Workflow'}
             id={'workflow'}
-            items={workflow}
-            colorInvert={colorInvert}
           />
         </Box>
         <Box marginLeft={4}>
           <NavItem
             title={'Portfolio'}
             id={'portfolio'}
-            items={portfolio}
-            colorInvert={colorInvert}
           />
         </Box>
         <Box marginLeft={4}>
           <NavItem
             title={'Testimonials'}
             id={'testimonials'}
-            items={testimonials}
-            colorInvert={colorInvert}
           />
         </Box>
         <Box marginLeft={4}>
           <NavItem
             title={'Stats'}
             id={'stats'}
-            items={stats}
-            colorInvert={colorInvert}
           />
         </Box>
         <Box marginLeft={4}>
           <NavItem
             title={'Our Team'}
             id={'ourTeam'}
-            items={ourTeam}
-            colorInvert={colorInvert}
           />
         </Box>
         <Box marginLeft={4}>
           <NavItem
             title={'FAQ'}
             id={'faq'}
-            items={faq}
-            colorInvert={colorInvert}
           />
         </Box>
         <Box marginLeft={4}>
           <NavItem
             title={'Blog'}
             id={'blog'}
-            items={blog}
-            colorInvert={colorInvert}
           />
         </Box>
         <Box marginLeft={4}>
@@ -154,8 +129,6 @@ query {
 
 Topbar.propTypes = {
   onSidebarOpen: PropTypes.func,
-  pages: PropTypes.object,
-  colorInvert: PropTypes.bool,
 };
 
 export default Topbar;

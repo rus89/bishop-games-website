@@ -1,25 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { useTheme } from '@mui/material/styles';
-
 import NavItem from './components/NavItem';
+import { graphql, useStaticQuery } from 'gatsby';
 
-const SidebarNav = ({ pages }) => {
-  const theme = useTheme();
-  const { mode } = theme.palette;
-
-  const {
-    services: services,
-    workflow: workflow,
-    portfolio: portfolio,
-    testimonials: testimonials,
-    stats: stats,
-    ourTeam: ourTeam,
-    faq: faq,
-    blog: blog,
-  } = pages;
+const SidebarNav = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    site {
+      siteMetadata {
+        description
+        email
+        siteUrl
+        title
+      }
+    }
+  }
+  `);
 
   return (
     <Box>
@@ -31,14 +28,9 @@ const SidebarNav = ({ pages }) => {
           title="Bishop Games"
           width={{ xs: 100, md: 120 }}
         >
-          {/* TODO: promeniti logo */}
           <Box
             component={'img'}
-            src={
-              mode === 'light'
-                ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-            }
+            src={'../../../../../images/logo/logo_v2.png'}
             height={1}
             width={1}
           />
@@ -46,28 +38,52 @@ const SidebarNav = ({ pages }) => {
       </Box>
       <Box paddingX={2} paddingY={2}>
         <Box>
-          <NavItem title={'Services'} items={services} />
+          <NavItem
+            title={'Services'}
+            id={'services'}
+          />
         </Box>
         <Box>
-          <NavItem title={'Workflow'} items={workflow} />
+          <NavItem
+            title={'Workflow'}
+            id={'workflow'}
+          />
         </Box>
         <Box>
-          <NavItem title={'Portfolio'} items={portfolio} />
+          <NavItem
+            title={'Portfolio'}
+            id={'portfolio'}
+          />
         </Box>
         <Box>
-          <NavItem title={'Testimonials'} items={testimonials} />
+          <NavItem
+            title={'Testimonials'}
+            id={'testimonials'}
+          />
         </Box>
         <Box>
-          <NavItem title={'Stats'} items={stats} />
+          <NavItem
+            title={'Stats'}
+            id={'stats'}
+          />
         </Box>
         <Box>
-          <NavItem title={'Our Team'} items={ourTeam} />
+          <NavItem
+            title={'Our Team'}
+            id={'ourTeam'}
+          />
         </Box>
         <Box>
-          <NavItem title={'FAQ'} items={faq} />
+          <NavItem
+            title={'FAQ'}
+            id={'faq'}
+          />
         </Box>
         <Box>
-          <NavItem title={'Blog'} items={blog} />
+          <NavItem
+            title={'Blog'}
+            id={'blog'}
+          />
         </Box>
         <Box marginTop={1}>
           <Button
@@ -77,7 +93,7 @@ const SidebarNav = ({ pages }) => {
             fullWidth
             component="a"
             target="blank"
-            href="mailto:office@bishop.games"
+            href={'mailto:' + data.site.siteMetadata.email}
           >
             Contact Us
           </Button>
@@ -88,7 +104,6 @@ const SidebarNav = ({ pages }) => {
 };
 
 SidebarNav.propTypes = {
-  pages: PropTypes.object.isRequired,
 };
 
 export default SidebarNav;

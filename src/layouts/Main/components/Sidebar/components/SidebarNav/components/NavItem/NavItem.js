@@ -2,29 +2,25 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
-const NavItem = ({ title, items }) => {
-
-  const handleClick = (event) => {
-
-  };
+const NavItem = ({ title, id }) => {
 
   return (
     <Box>
       <Box
-        marginBottom={2}
         display={'flex'}
         alignItems={'center'}
-        sx={{
-          cursor: 'pointer'
-        }}
-        onClick={(e) => handleClick(e)}
+        aria-describedby={id}
+        sx={{ cursor: 'pointer' }}
       >
         <Typography
           fontWeight={400}
           color={'text.primary'}
         >
-          {title}
+          <AnchorLink to={'/#' + id}>
+            {title}
+          </AnchorLink>
         </Typography>
       </Box>
     </Box>
@@ -32,9 +28,8 @@ const NavItem = ({ title, items }) => {
 };
 
 NavItem.propTypes = {
-  items: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
-  onClose: PropTypes.func,
+  id: PropTypes.string.isRequired,
 };
 
 export default NavItem;

@@ -7,6 +7,13 @@ module.exports = {
     'gatsby-plugin-mui-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-resolve-src',
+    {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        offset: -50,
+        duration: 1000
+      }
+    },
   ],
   siteMetadata: {
     title: 'Bishop Games - Your favorite game development studio',
