@@ -48,14 +48,14 @@ const SidebarNav = () => {
         </Box>
         <Box>
           <NavItem
-            title={'Workflow'}
-            id={'workflow'}
+            title={'Portfolio'}
+            id={'portfolio'}
           />
         </Box>
         <Box>
           <NavItem
-            title={'Portfolio'}
-            id={'portfolio'}
+            title={'Workflow'}
+            id={'workflow'}
           />
         </Box>
         <Box>

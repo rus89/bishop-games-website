@@ -57,14 +57,14 @@ query {
         </Box>
         <Box marginLeft={4}>
           <NavItem
-            title={'Workflow'}
-            id={'workflow'}
+            title={'Portfolio'}
+            id={'portfolio'}
           />
         </Box>
         <Box marginLeft={4}>
           <NavItem
-            title={'Portfolio'}
-            id={'portfolio'}
+            title={'Workflow'}
+            id={'workflow'}
           />
         </Box>
         <Box marginLeft={4}>

@@ -45,22 +45,22 @@ const IndexView = () => {
         <Services />
       </Container>
 
-      {/* Workflow */}
+      {/* Portfolio */}
       <Container
-        id='workflow'
-        maxWidth={1}
+        id='portfolio'
         paddingTop={'0 !important'}
         sx={{
           backgroundColor: theme.palette.alternate.main
         }}>
-        <Workflow />
+        <Portfolio />
       </Container>
 
-      {/* Portfolio */}
+      {/* Workflow */}
       <Container
-        id='portfolio'
+        id='workflow'
+        maxWidth={1}
         paddingTop={'0 !important'}>
-        <Portfolio />
+        <Workflow />
       </Container>
 
       {/* Testimonials */}
