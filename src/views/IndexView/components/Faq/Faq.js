@@ -132,6 +132,9 @@ const Faq = () => {
           >
             FAQ
           </Typography>
+          <Typography variant="h6" align={'center'} color={'text.secondary'}>
+            You ask, we answer - it&apos;s like having a cheat sheet for game development!
+          </Typography>
         </Box>
         <Box
           marginBottom={6}

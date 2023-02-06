@@ -148,70 +148,73 @@ const Stats = () => {
           >
             Our numbers speak for us
           </Typography>
+          <Typography variant="h6" align={'center'} color={'text.secondary'}>
+            Our stats speak for themselves, we're the real deal!
+          </Typography>
         </Box>
-        <Box>
-          <Grid container spacing={4}>
-            {mock.map((item, i) => (
-              <Grid item xs={12} sm={6} md={3} key={i}>
-                <Box
-                  component={Card}
-                  padding={4}
-                  borderRadius={2}
-                  width={1}
-                  height={1}
-                  data-aos={'fade-up'}
-                  data-aos-delay={i * 100}
-                  data-aos-offset={100}
-                  data-aos-duration={600}
-                  variant={'outlined'}
-                >
-                  <Box display={'flex'} flexDirection={'column'}>
-                    <Box
-                      component={Avatar}
-                      width={50}
-                      height={50}
-                      marginBottom={2}
-                      bgcolor={theme.palette.primary.main}
-                      color={theme.palette.background.paper}
-                    >
-                      {item.icon}
-                    </Box>
-                    <VisibilitySensor
-                      onChange={(isVisible) =>
-                        setViewPortVisibility(isVisible)
-                      }
-                      delayedCall
-                    >
-                      <Typography
-                        variant={'h4'}
-                        color={'primary'}
-                        gutterBottom
-                        sx={{ fontWeight: 700 }}
-                      >
-                        <CountUp
-                          duration={1}
-                          end={viewPortEntered ? item.number : 0}
-                          start={0}
-                          suffix={item.suffix}
-                        />
-                      </Typography>
-                    </VisibilitySensor>
-                    <Typography
-                      variant={'h6'}
-                      gutterBottom
-                      sx={{ fontWeight: 500 }}
-                    >
-                      {item.title}
-                    </Typography>
-                    <Typography color="text.secondary">
-                      {item.subtitle}
-                    </Typography>
+      </Box>
+      <Box>
+        <Grid container spacing={4}>
+          {mock.map((item, i) => (
+            <Grid item xs={12} sm={6} md={3} key={i}>
+              <Box
+                component={Card}
+                padding={4}
+                borderRadius={2}
+                width={1}
+                height={1}
+                data-aos={'fade-up'}
+                data-aos-delay={i * 100}
+                data-aos-offset={100}
+                data-aos-duration={600}
+                variant={'outlined'}
+              >
+                <Box display={'flex'} flexDirection={'column'}>
+                  <Box
+                    component={Avatar}
+                    width={50}
+                    height={50}
+                    marginBottom={2}
+                    bgcolor={theme.palette.primary.main}
+                    color={theme.palette.background.paper}
+                  >
+                    {item.icon}
                   </Box>
+                  <VisibilitySensor
+                    onChange={(isVisible) =>
+                      setViewPortVisibility(isVisible)
+                    }
+                    delayedCall
+                  >
+                    <Typography
+                      variant={'h4'}
+                      color={'primary'}
+                      gutterBottom
+                      sx={{ fontWeight: 700 }}
+                    >
+                      <CountUp
+                        duration={1}
+                        end={viewPortEntered ? item.number : 0}
+                        start={0}
+                        suffix={item.suffix}
+                      />
+                    </Typography>
+                  </VisibilitySensor>
+                  <Typography
+                    variant={'h6'}
+                    gutterBottom
+                    sx={{ fontWeight: 500 }}
+                  >
+                    {item.title}
+                  </Typography>
+                  <Typography color="text.secondary">
+                    {item.subtitle}
+                  </Typography>
                 </Box>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
       </Box>
     </Container>
   );

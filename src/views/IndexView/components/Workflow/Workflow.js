@@ -117,6 +117,9 @@ const Workflow = () => {
           >
             Our Workflow
           </Typography>
+          <Typography variant="h6" align={'center'} color={'text.secondary'}>
+            Streamline your success with our smooth and efficient workflow!
+          </Typography>
         </Box>
       </Box>
       <Box width={1}

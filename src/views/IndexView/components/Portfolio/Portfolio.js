@@ -205,6 +205,9 @@ const Portfolio = () => {
           >
             Our Portfolio
           </Typography>
+          <Typography variant="h6" align={'center'} color={'text.secondary'}>
+            Discover our knockout portfolio that packs a punch!
+          </Typography>
         </Box>
       </Box>
       <Box>

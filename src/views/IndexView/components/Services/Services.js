@@ -174,7 +174,7 @@ const Services = () => {
             Our Services
           </Typography>
           <Typography variant="h6" align={'center'} color={'text.secondary'}>
-            We don't like to praise ourselves, but we know what we do
+            We don&apos;t like to praise ourselves, but we know what we do
           </Typography>
         </Box>
       </Box>
