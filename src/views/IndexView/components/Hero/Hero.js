@@ -60,14 +60,14 @@ const Hero = () => {
           xs={12}
           md={6}
           sx={{
-            backgroundColor: alpha(theme.palette.background.paper, 0.5),
+            backgroundImage: `linear-gradient(90deg, ${theme.palette.background.level1}, transparent)`,
             padding: 15,
           }}>
           <Box>
             <Box marginBottom={2}>
               <Typography
                 variant="h2"
-                color="text.primary"
+                color="background.level2"
                 sx={{
                   fontWeight: 700,
                 }}
@@ -76,14 +76,8 @@ const Hero = () => {
                 <Typography
                   component={'span'}
                   variant={'inherit'}
-                  color={'primary'}
+                  color={'text.ternary'}
                   ref={typedJSRef}
-                  sx={{
-                    background: `linear-gradient(180deg, transparent 82%, ${alpha(
-                      theme.palette.secondary.main,
-                      0.3,
-                    )} 0%)`,
-                  }}
                 >
                 </Typography>
               </Typography>
@@ -92,7 +86,7 @@ const Hero = () => {
               <Typography
                 variant="h6"
                 component="p"
-                color="text.secondary"
+                color="background.level2"
                 sx={{ fontWeight: 400 }}
               >
                 Get a stunning and fully functional game developed for your brand with our expert team.
