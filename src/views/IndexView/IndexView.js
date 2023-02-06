@@ -20,121 +20,54 @@ const IndexView = () => {
 
   return (
     <Main>
-      {/* Hero */}
       <Box
-        position={'relative'}
+        loading="lazy"
         sx={{
-          backgroundColor: theme.palette.alternate.main,
-          marginTop: -13,
-          paddingTop: 13,
+          marginTop: 4,
+          objectFit: 'cover',
+          width: '100%',
+          height: '100%',
+          backgroundRepeat: 'no-repeat',
+          backgroundImage: 'url("../../../../../images/hero/hero.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
         }}
       >
-        <Container >
-          <Hero />
-        </Container>
-        {/* <Box
-          component={'svg'}
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          viewBox="0 0 1920 100.1"
-          sx={{
-            width: '100%',
-            marginBottom: theme.spacing(-1),
-          }}
-        >
-          <path
-            fill={theme.palette.background.paper}
-            d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
-          ></path>
-        </Box> */}
+        {/* <Container > */}
+        <Hero />
+        {/* </Container> */}
       </Box>
 
       {/* Services */}
-      <Container paddingTop={'0 !important'}>
+      <Container
+        id='services'
+        paddingTop={'0 !important'} >
         <Services />
       </Container>
-      {/* <Box
-        component={'svg'}
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-        x="0px"
-        y="0px"
-        viewBox="0 0 1920 100.1"
-        sx={{
-          width: '100%',
-          marginBottom: theme.spacing(-1),
-        }}
-      >
-        <path
-          fill={theme.palette.alternate.main}
-          d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
-        ></path>
-      </Box> */}
 
-      {/* workflow */}
-      {/* TODO: videti zasto se ovaj container ne poklapa sa prethodnim u services */}
-      <Container maxWidth={1} paddingTop={'0 !important'}
+      {/* Workflow */}
+      <Container
+        id='workflow'
+        maxWidth={1}
+        paddingTop={'0 !important'}
         sx={{
           backgroundColor: theme.palette.alternate.main
         }}>
-        {/* NOTE: ideja za prikaz https://thefront.maccarianagency.com/cloud-hosting */}
         <Workflow />
       </Container>
-      {/* TODO: ovaj kod ispod se ponavlja neprestano */}
-      {/* <Box
-        component={'svg'}
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-        x="0px"
-        y="0px"
-        viewBox="0 0 1920 100.1"
-        sx={{
-          width: '100%',
-          marginBottom: theme.spacing(-1),
-        }}
-      >
-        <path
-          fill={theme.palette.background.paper}
-          d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
-        ></path>
-      </Box> */}
 
       {/* Portfolio */}
-      <Container paddingTop={'0 !important'}>
-        {/* NOTE: ideje za prikaz
-        https://thefront.maccarianagency.com/home
-        https://thefront.maccarianagency.com/rental
-         */}
+      <Container
+        id='portfolio'
+        paddingTop={'0 !important'}>
         <Portfolio />
       </Container>
-      {/* <Box
-        component={'svg'}
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-        x="0px"
-        y="0px"
-        viewBox="0 0 1920 100.1"
-        sx={{
-          width: '100%',
-          marginBottom: theme.spacing(-1),
-        }}
-      >
-        <path
-          fill={theme.palette.alternate.main}
-          d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
-        ></path>
-      </Box> */}
 
       {/* Testimonials */}
-      {/* NOTE: Ideja
-      https://thefront.maccarianagency.com/e-learning
-      https://thefront.maccarianagency.com/service
-      https://thefront.maccarianagency.com/web-basic
-      https://thefront.maccarianagency.com/coworking
-       */}
-      <Container maxWidth={1} paddingTop={'0 !important'}
+      <Container
+        id='testimonials'
+        maxWidth={1}
+        paddingTop={'0 !important'}
         sx={{
           backgroundColor: theme.palette.alternate.main
         }}>
@@ -142,22 +75,17 @@ const IndexView = () => {
       </Container>
 
       {/* Stats */}
-      {/* NOTE: Ideja
-      https://thefront.maccarianagency.com/e-learning
-      https://thefront.maccarianagency.com/job-listing
-       */}
-      <Container paddingTop={'0 !important'}>
+      <Container
+        id='stats'
+        paddingTop={'0 !important'}>
         <Stats />
       </Container>
 
       {/* Our Team */}
-      {/* NOTE: ideja
-      https://thefront.maccarianagency.com/startup
-      https://thefront.maccarianagency.com/desktop-app
-      https://thefront.maccarianagency.com/expo
-      https://thefront.maccarianagency.com/service
-       */}
-      <Container maxWidth={1} paddingTop={'0 !important'}
+      <Container
+        id='ourTeam'
+        maxWidth={1}
+        paddingTop={'0 !important'}
         sx={{
           backgroundColor: theme.palette.alternate.main
         }}>
@@ -165,10 +93,9 @@ const IndexView = () => {
       </Container>
 
       {/* FAQ */}
-      {/* NOTE: Ideja
-      
-       */}
-      <Container paddingTop={'0 !important'}>
+      <Container
+        id='faq'
+        paddingTop={'0 !important'}>
         <Faq />
       </Container>
 
