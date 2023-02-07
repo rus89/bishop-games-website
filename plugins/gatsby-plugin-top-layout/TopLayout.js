@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
@@ -63,11 +63,9 @@ export default function TopLayout(props) {
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
         <link rel="canonical" href="https://www.bishop.games" />
       </Helmet>
-      <StrictMode>
-        <Page>
-          {props.children}
-        </Page>
-      </StrictMode>
+      <Page>
+        {props.children}
+      </Page>
     </React.Fragment>
   );
 }
