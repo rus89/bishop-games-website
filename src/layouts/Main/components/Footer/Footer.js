@@ -37,7 +37,7 @@ const Footer = () => {
             display={'flex'}
             component="a"
             href="/"
-            title="theFront"
+            title="Bishop Games"
             width={80}
           >
             <Box
@@ -66,7 +66,7 @@ const Footer = () => {
                 variant="contained"
                 color="primary"
                 size="large"
-                href={data.site.siteMetadata.email}
+                href={'mailto:' + data.site.siteMetadata.email}
                 target={'_blank'}
               >
                 Contact Us
