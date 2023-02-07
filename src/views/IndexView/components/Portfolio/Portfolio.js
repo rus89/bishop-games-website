@@ -8,22 +8,22 @@ import Container from 'components/Container';
 
 const mockLeftGrid = [
   {
-    image: '../../../../../images/portfolio/1.jpg',
+    image: '../../../../../images/portfolio/1.png',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     title: 'Lorem ipsum dolor sit amet,',
   },
   {
-    image: '../../../../../images/portfolio/2.jpg',
+    image: '../../../../../images/portfolio/2.png',
     description: 'Excepteur sint occaecat cupidatat non proident',
     title: 'Consectetur adipiscing elit',
   },
   {
-    image: '../../../../../images/portfolio/3.jpg',
+    image: '../../../../../images/portfolio/3.png',
     description: 'Eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
     title: 'Labore et dolore magna aliqua',
   },
   {
-    image: '../../../../../images/portfolio/4.jpg',
+    image: '../../../../../images/portfolio/4.png',
     description:
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem',
     title: 'Eiusmod tempor incididunt',
@@ -31,46 +31,46 @@ const mockLeftGrid = [
 ];
 const mockMiddleGrid = [
   {
-    image: '../../../../../images/portfolio/5.jpg',
+    image: '../../../../../images/portfolio/5.png',
     description: 'At vero eos et accusamus et iusto odio dignissimos ducimus',
     title: 'Sed ut perspiciatis',
   },
   {
-    image: '../../../../../images/portfolio/6.jpg',
+    image: '../../../../../images/portfolio/6.png',
     description:
       'Qui blanditiis praesentium voluptatum deleniti atque corrupti',
     title: 'Unde omnis iste natus',
   },
   {
-    image: '../../../../../images/portfolio/1.jpg',
+    image: '../../../../../images/portfolio/7.png',
     description:
       'On the other hand, we denounce with righteous indignation and dislike',
     title: 'Sit voluptatem',
   },
   {
-    image: '../../../../../images/portfolio/2.jpg',
+    image: '../../../../../images/portfolio/8.png',
     description: 'Quos dolores et quas molestias excepturi',
     title: 'Accusantium doloremque',
   }
 ];
 const mockRightGrid = [
   {
-    image: '../../../../../images/portfolio/3.jpg',
+    image: '../../../../../images/portfolio/9.png',
     description: 'Et harum quidem rerum facilis est et expedita distinctio',
     title: 'Totam rem aperiam',
   },
   {
-    image: '../../../../../images/portfolio/4.jpg',
+    image: '../../../../../images/portfolio/10.png',
     description: 'Nam libero tempore, cum soluta nobis est eligendi optio',
     title: 'Uae ab illo inventore',
   },
   {
-    image: '../../../../../images/portfolio/5.jpg',
+    image: '../../../../../images/portfolio/11.png',
     description: 'Itaque earum rerum hic tenetur a sapiente delectus',
     title: 'Beatae vitae dicta',
   },
   {
-    image: '../../../../../images/portfolio/6.jpg',
+    image: '../../../../../images/portfolio/12.png',
     description:
       'On the other hand, we denounce with righteous indignation and dislike',
     title: 'Nemo enim ipsam',
@@ -124,43 +124,6 @@ const Column = ({ data }) => {
                   theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
               }}
             />
-            <Box
-              position={'absolute'}
-              bottom={'-100%'}
-              left={0}
-              right={0}
-              padding={4}
-              bgcolor={'background.paper'}
-              className={'portfolio-massonry__main-item'}
-              sx={{ transition: 'bottom 0.3s ease 0s' }}
-            >
-              <Box
-                component={'svg'}
-                preserveAspectRatio="none"
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                viewBox="0 0 1920 100.1"
-                sx={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  transform: 'translateY(-90%)',
-                  zIndex: 2,
-                  width: 1,
-                }}
-              >
-                <path
-                  fill={theme.palette.background.paper}
-                  d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
-                ></path>
-              </Box>
-              <Typography variant={'h6'} fontWeight={700} gutterBottom>
-                {item.title}
-              </Typography>
-              <Typography>{item.description}</Typography>
-            </Box>
           </Box>
         </Box>
       ))}
@@ -223,36 +186,6 @@ const Portfolio = () => {
           </Grid>
         </Grid>
       </Box>
-
-      {/* <Box>
-        <ImageList
-          variant="quilted"
-          cols={3}
-          rowHeight={isMd ? 300 : 220}
-          gap={isMd ? 16 : 8}
-        >
-          {photosToShow.map((item, i) => (
-            <ImageListItem
-              key={i}
-              cols={isMd ? item.cols || 1 : 3}
-              rows={isMd ? item.rows || 1 : 1}
-            >
-              <img
-                height={'100%'}
-                width={'100%'}
-                src={item.image}
-                alt="..."
-                loading="lazy"
-                style={{
-                  objectFit: 'cover',
-                  cursor: 'poiner',
-                  borderRadius: 8,
-                }}
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </Box> */}
     </Container>
   );
 };
