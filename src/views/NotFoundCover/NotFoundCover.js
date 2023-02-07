@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+import { graphql, useStaticQuery } from 'gatsby';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
 
@@ -14,6 +15,18 @@ const NotFoundCover = () => {
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
+  const data = useStaticQuery(graphql`
+query {
+  site {
+    siteMetadata {
+      description
+      email
+      siteUrl
+      title
+    }
+  }
+}
+`);
 
   return (
     <Main>
@@ -55,7 +68,9 @@ const NotFoundCover = () => {
                     Oops! Looks like you followed a bad link.
                     <br />
                     If you think this is a problem with us, please{' '}
-                    <Link href={''} underline="none">
+                    <Link
+                      href={'mailto:' + data.site.siteMetadata.email}
+                      underline="none">
                       tell us
                     </Link>
                   </Typography>
