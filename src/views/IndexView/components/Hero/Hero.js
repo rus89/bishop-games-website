@@ -1,12 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useRef, useEffect } from 'react';
-import { alpha, useTheme } from '@mui/material/styles';
+import React from 'react';
+import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import Typed from 'typed.js';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const Hero = () => {
@@ -14,23 +13,6 @@ const Hero = () => {
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
-
-  const typedJSRef = useRef(null);
-
-  // Setting up typedJS
-  useEffect(() => {
-    const typedJS = new Typed(typedJSRef.current, {
-      strings: ['idea into a full-potential game.', 'vision into a full-service game.', 'concept into a top-performing game.', 'brand from unknown to world-class with a custom game.', 'concept into a stunning game reality.'],
-      typeSpeed: 40,
-      backSpeed: 40,
-      backDelay: 1000,
-      startDelay: 500,
-      loop: true,
-      showCursor: false,
-    });
-
-    return () => typedJS.destroy();
-  }, []);
 
   const data = useStaticQuery(graphql`
   query {
@@ -77,8 +59,8 @@ const Hero = () => {
                   component={'span'}
                   variant={'inherit'}
                   color={'text.ternary'}
-                  ref={typedJSRef}
                 >
+                  idea into a full-potential game.
                 </Typography>
               </Typography>
             </Box>
