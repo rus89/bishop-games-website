@@ -48,6 +48,7 @@ const IndexView = () => {
       {/* Portfolio */}
       <Container
         id='portfolio'
+        maxWidth={1}
         paddingTop={'0 !important'}
         sx={{
           backgroundColor: theme.palette.alternate.main
@@ -58,7 +59,6 @@ const IndexView = () => {
       {/* Workflow */}
       <Container
         id='workflow'
-        maxWidth={1}
         paddingTop={'0 !important'}>
         <Workflow />
       </Container>
