@@ -141,7 +141,6 @@ const Faq = () => {
           data-aos={'fade-up'}
           data-aos-delay={100}>
           <FaqGroupItem
-            title={'Basics'}
             items={faqs}
           />
         </Box>
