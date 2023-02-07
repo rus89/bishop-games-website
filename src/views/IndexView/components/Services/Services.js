@@ -53,7 +53,7 @@ const mock = [
     ),
   },
   {
-    title: 'Game programming',
+    title: 'Game Programming',
     subtitle:
       'You have a great art, we make it alive',
     icon: (
