@@ -12,12 +12,14 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { useTheme } from '@mui/material/styles';
+import Anica from 'images/team/Anica.webp';
+import Milan from 'images/team/Milan.webp';
 
 const mock = [
   {
     name: 'Anica Smiljković',
     title: 'Artist',
-    avatar: '../../../../../images/team/Anica.jpeg',
+    avatar: Anica,
     linkedin: 'https://www.linkedin.com/in/anica-smiljkovic/',
     facebook: 'https://www.facebook.com/anica.smiljkovic.7',
     instagram: 'https://www.instagram.com/anicaa_bishop/',
@@ -25,7 +27,7 @@ const mock = [
   {
     name: 'Milan Rusimov',
     title: 'Game Developer',
-    avatar: '../../../../../images/team/Milan.jpg',
+    avatar: Milan,
     linkedin: 'https://www.linkedin.com/in/rusimovmilan/',
     facebook: 'https://www.facebook.com/milan.rusimov',
     instagram: 'https://www.instagram.com/rus89__/',

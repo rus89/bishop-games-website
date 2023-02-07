@@ -3,6 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
+import HeroImage from 'images/hero/hero.webp';
 //TODO: proveriti ovo
 import {
   Hero,
@@ -28,14 +29,12 @@ const IndexView = () => {
           width: '100%',
           height: '100%',
           backgroundRepeat: 'no-repeat',
-          backgroundImage: 'url("../../../../../images/hero/hero.png")',
+          backgroundImage: `url("${HeroImage}")`,
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
         }}
       >
-        {/* <Container > */}
         <Hero />
-        {/* </Container> */}
       </Box>
 
       {/* Services */}

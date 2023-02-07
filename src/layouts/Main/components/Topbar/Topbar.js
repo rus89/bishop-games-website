@@ -4,9 +4,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-import { StaticImage } from 'gatsby-plugin-image';
 import { NavItem } from './components';
 import { graphql, useStaticQuery } from 'gatsby';
+import LogoImage from 'images/logo/logo.webp';
 
 const Topbar = ({ onSidebarOpen }) => {
   const theme = useTheme();
@@ -38,8 +38,9 @@ query {
         title="Bishop Games"
         width={{ xs: 100, md: 120 }}
       >
-        <StaticImage
-          src='../../../../images/logo/logo_v2.png'
+        <Box
+          component='img'
+          src={LogoImage}
           alt='logo image'
           style={{
             height: '40%',

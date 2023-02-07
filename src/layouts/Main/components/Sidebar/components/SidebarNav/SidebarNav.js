@@ -2,8 +2,8 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import NavItem from './components/NavItem';
-import { StaticImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
+import LogoImage from 'images/logo/logo.webp';
 
 const SidebarNav = () => {
   const data = useStaticQuery(graphql`
@@ -29,8 +29,9 @@ const SidebarNav = () => {
           title="Bishop Games"
           width={{ xs: 100, md: 120 }}
         >
-          <StaticImage
-            src='../../../../../../images/logo/logo_v2.png'
+          <Box
+            component={'img'}
+            src={LogoImage}
             alt='logo image'
             style={{
               height: '40%',

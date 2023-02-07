@@ -5,25 +5,37 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import Container from 'components/Container';
+import Portfolio1 from 'images/portfolio/1.webp';
+import Portfolio2 from 'images/portfolio/2.webp';
+import Portfolio3 from 'images/portfolio/3.webp';
+import Portfolio4 from 'images/portfolio/4.webp';
+import Portfolio5 from 'images/portfolio/5.webp';
+import Portfolio6 from 'images/portfolio/6.webp';
+import Portfolio7 from 'images/portfolio/7.webp';
+import Portfolio8 from 'images/portfolio/8.webp';
+import Portfolio9 from 'images/portfolio/9.webp';
+import Portfolio10 from 'images/portfolio/10.webp';
+import Portfolio11 from 'images/portfolio/11.webp';
+import Portfolio12 from 'images/portfolio/12.webp';
 
 const mockLeftGrid = [
   {
-    image: '../../../../../images/portfolio/1.png',
+    image: Portfolio1,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     title: 'Lorem ipsum dolor sit amet,',
   },
   {
-    image: '../../../../../images/portfolio/2.png',
+    image: Portfolio2,
     description: 'Excepteur sint occaecat cupidatat non proident',
     title: 'Consectetur adipiscing elit',
   },
   {
-    image: '../../../../../images/portfolio/3.png',
+    image: Portfolio3,
     description: 'Eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
     title: 'Labore et dolore magna aliqua',
   },
   {
-    image: '../../../../../images/portfolio/4.png',
+    image: Portfolio4,
     description:
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem',
     title: 'Eiusmod tempor incididunt',
@@ -31,46 +43,46 @@ const mockLeftGrid = [
 ];
 const mockMiddleGrid = [
   {
-    image: '../../../../../images/portfolio/5.png',
+    image: Portfolio5,
     description: 'At vero eos et accusamus et iusto odio dignissimos ducimus',
     title: 'Sed ut perspiciatis',
   },
   {
-    image: '../../../../../images/portfolio/6.png',
+    image: Portfolio6,
     description:
       'Qui blanditiis praesentium voluptatum deleniti atque corrupti',
     title: 'Unde omnis iste natus',
   },
   {
-    image: '../../../../../images/portfolio/7.png',
+    image: Portfolio7,
     description:
       'On the other hand, we denounce with righteous indignation and dislike',
     title: 'Sit voluptatem',
   },
   {
-    image: '../../../../../images/portfolio/8.png',
+    image: Portfolio8,
     description: 'Quos dolores et quas molestias excepturi',
     title: 'Accusantium doloremque',
   }
 ];
 const mockRightGrid = [
   {
-    image: '../../../../../images/portfolio/9.png',
+    image: Portfolio9,
     description: 'Et harum quidem rerum facilis est et expedita distinctio',
     title: 'Totam rem aperiam',
   },
   {
-    image: '../../../../../images/portfolio/10.png',
+    image: Portfolio10,
     description: 'Nam libero tempore, cum soluta nobis est eligendi optio',
     title: 'Uae ab illo inventore',
   },
   {
-    image: '../../../../../images/portfolio/11.png',
+    image: Portfolio11,
     description: 'Itaque earum rerum hic tenetur a sapiente delectus',
     title: 'Beatae vitae dicta',
   },
   {
-    image: '../../../../../images/portfolio/12.png',
+    image: Portfolio12,
     description:
       'On the other hand, we denounce with righteous indignation and dislike',
     title: 'Nemo enim ipsam',
@@ -114,7 +126,7 @@ const Column = ({ data }) => {
               height={1}
               width={1}
               src={item.image}
-              alt="..."
+              alt={item.description}
               maxHeight={{ xs: 400, sm: 600, md: 1 }}
               sx={{
                 transition: 'transform .7s ease !important',
