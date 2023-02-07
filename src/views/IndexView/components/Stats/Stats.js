@@ -12,10 +12,10 @@ import CountUp from 'react-countup';
 
 const mock = [
   {
-    number: '1000',
+    number: '100',
     suffix: '+',
-    title: 'Online courses',
-    subtitle: 'Choose from over 1000+ online video courses.',
+    title: 'Projects',
+    subtitle: 'We worked on over 100+ different projects.',
     icon: (
       <svg
         height={24}
@@ -35,10 +35,10 @@ const mock = [
     ),
   },
   {
-    number: '800',
+    number: '50',
     suffix: '+',
-    title: 'Expert instructors',
-    subtitle: 'Expert instructors to make sure courses are well.',
+    title: 'Clients',
+    subtitle: 'We had over 50+ happy clients.',
     icon: (
       <svg
         height={24}
@@ -60,8 +60,8 @@ const mock = [
   {
     number: '100',
     suffix: '%',
-    title: 'Active students',
-    subtitle: '100K+ Active students arround the world.',
+    title: 'Positive Feedback',
+    subtitle: 'Our clients are 100% happy with our work',
     icon: (
       <svg
         height={24}
@@ -83,10 +83,10 @@ const mock = [
     ),
   },
   {
-    number: '400',
+    number: '15',
     suffix: '+',
-    title: 'Free resources',
-    subtitle: 'Free resources for all students arround the world.',
+    title: 'Combined Experience',
+    subtitle: 'We have separate experiences but best work combined.',
     icon: (
       <svg
         height={24}
