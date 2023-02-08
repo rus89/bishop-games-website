@@ -28,8 +28,6 @@ const Hero = () => {
   `);
 
   return (
-    //TODO: za full screen po visini je dodat props minHeight={'80vh'}
-    // nisam siguran zasto 80 radi posao, a treba da bude 100 (kad se stavi 100 onda je previse)
     <Box>
       <Grid container spacing={4}
         sx={{
@@ -58,7 +56,7 @@ const Hero = () => {
                 <Typography
                   component={'span'}
                   variant={'inherit'}
-                  color={'text.ternary'}
+                  color={'primary.light'}
                 >
                   idea into a full-potential game.
                 </Typography>
