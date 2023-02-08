@@ -7,34 +7,90 @@ import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
+import Avatar from '@mui/material/Avatar';
+import Grid from '@mui/material/Grid';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
 
 import Container from 'components/Container';
 
 const steps = [
   {
     label: 'Ideation & Conceptualization',
-    description: 'At the beginning of the game development process, it\'s important for you, the client, to be involved in generating and evaluating game ideas. This is your opportunity to share your vision and provide input on what you would like to see in the game. During this step, you\'ll work with the development team to create a high-level concept for the game. This concept will provide a roadmap for the rest of the development process and ensure that the final product meets your expectations. By taking an active role in the ideation and conceptualization stage, you\'ll have a greater level of control over the outcome of the project and can help ensure its success.',
+    description: '- Collaborative effort between you and us at the start of game development process' +
+      '- Vital for you to be involved in generating and evaluating game ideas' +
+      '- Opportunity for you to share vision and provide input on game features' +
+      '- High level game concept created to serve as roadmap for rest of development process' +
+      '- Increased control for you over outcome of project by participating in this stage' +
+      '- Concept ensures final product meets your expectations' +
+      '- Investment well spent with peace of mind of being on the same page with us' +
+      '- Seamless and enjoyable experience for you' +
+      '- Involvement in ideation and conceptualization leads to a final product that you envision',
   },
   {
     label: 'Defining Requirements',
     description:
-      'The second step of the game development process is all about clarifying your goals, needs, and expectations for the project. This step is critical in ensuring that everyone involved has a shared understanding of what you want to achieve with the project. By defining your requirements at the outset, you\'ll help guide the development team and ensure that the project stays on track. This step is an opportunity for you to communicate exactly what you\'re looking for, and for the development team to ask questions and gather any additional information they need. By working together in this step, you\'ll help ensure that the final product meets your expectations and delivers the results you\'re looking for.',
+      '- Detailed understanding of your vision and requirements' +
+      '- Identification of game features and functionality' +
+      '- Prioritization of features and functionality based on importance and feasibility' +
+      '- Development of a comprehensive game design document by us' +
+      '- Clear definition of project scope and timeline' +
+      '- Communication of project requirements to development team by us' +
+      '- Regular review and update of project requirements by us' +
+      '- Ensuring project stays on track and meets your expectations.',
   },
   {
     label: 'Planning & Design',
-    description: 'The third step in the game development process is all about putting together the game design and outlining the development plan. During this step, the development team will work with you to determine the budget, timeline, and resources needed to bring your game to life. You\'ll play an important role in this step by providing input on your priorities and helping to set the parameters for the project. By working together to outline the development plan, you\'ll help ensure that the project stays on track and that all stakeholders have a shared understanding of what is expected and when. This step is critical in laying the foundation for a successful project and setting the stage for the rest of the development process.',
+    description:
+      '- Collaborative effort between you and us to create a detailed game plan' +
+      '- Development of detailed game design documents by us' +
+      '- Finalization of project scope, timeline and budget' +
+      '- Creation of detailed production schedules and milestones' +
+      '- Allocation of resources for development and testing' +
+      '- Development of detailed game mechanics and systems' +
+      '- Creation of detailed game asset lists and budgets' +
+      '- Communication of project plan to development team by us' +
+      '- Regular review and update of project plan by us.',
   },
   {
     label: 'Development',
-    description: 'The next step in the game development process is where the magic really happens: the game is brought to life! During this phase, the development team will be using various tools and technologies such as Unity, C#, and others to build your game. This step is critical in delivering the final product, and the development team will be working hard to ensure that everything is working as it should. As the client, you\'ll play an important role in this phase by providing feedback and offering guidance as needed. The development team will also be performing thorough testing and debugging to ensure that the game is functioning correctly. By working together during this phase, you\'ll help ensure that the final product meets your expectations and delivers the results you\'re looking for.',
+    description:
+      '- Implementation of game mechanics and systems by development team' +
+      '- Creation of game assets by game artist' +
+      '- Integration of game assets into the game' +
+      '- Development of user interface and menu systems' +
+      '- Regular progress updates and demonstrations to you' +
+      '- Testing and debugging of the game' +
+      '- Refining game play and fixing any issues' +
+      '- Implementation of feedback from you and the development team' +
+      '- Ensuring the project stays on track and meets timeline and budget.',
   },
   {
     label: 'Testing & Quality Assurance',
-    description: 'The penultimate step in the game development process is all about making sure the game is ready for prime time. This step involves thoroughly testing the game to identify and fix any bugs or issues that could impact the player experience. As the client, you\'ll play a critical role in this step by providing feedback and working with the development team to make sure everything is working as it should. The development team will be using various testing tools and techniques to simulate real-world use cases and uncover any issues that need to be addressed. By working together during this step, you\'ll help ensure that the final product is as polished and bug-free as possible, which will help increase player satisfaction and encourage positive reviews and ratings. This step is critical in preparing the game for release and setting the stage for success.',
+    description:
+      '- Thorough testing of the game by QA team' +
+      '- Identification and fixing of any bugs or issues' +
+      '- Verification of game features and functionality' +
+      '- Performance and compatibility testing' +
+      '- User acceptance testing by you' +
+      '- Regular progress updates and demonstrations to you' +
+      '- Refinement of game play based on feedback from you and QA team' +
+      '- Documentation of all bugs and issues' +
+      '- Finalization of all game elements prior to release.',
   },
   {
     label: 'Release & Maintenance',
-    description: 'Finally, the moment you\'ve been waiting for! The last step in the game development process is the release of the game to the market. This is the point where you, as the client, can see the results of all your hard work and investment come to life. You\'ll finally be able to share the game with your audience and see how they respond. Of course, the work doesn\'t end there. Ongoing maintenance and updates are necessary to keep the game running smoothly and address any issues that arise. As the client, you\'ll continue to play a key role in this process by providing feedback and working with the development team to prioritize updates and improvements. With your ongoing support and collaboration, you can help ensure that the game remains a top-performing, engaging experience for your players.',
+    description:
+      '- Final preparations for game release by us' +
+      '- Coordination with platform owners for game release' +
+      '- Marketing and promotion of the game' +
+      '- Monitoring of game performance and user feedback' +
+      '- Maintenance and support of the game' +
+      '- Regular updates and bug fixes' +
+      '- Addition of new content and features based on user feedback and demand' +
+      '- Communication with you regarding game performance and future plans' +
+      '- Continuous improvement of the game experience for players.',
   },
 ];
 
@@ -86,7 +142,6 @@ const Workflow = () => {
       </Box>
       <Box width={1}
         component={Card}
-        padding={8}
         borderRadius={2}
       >
         <Stepper nonLinear activeStep={activeStep}>
@@ -144,8 +199,52 @@ const Workflow = () => {
         </Stepper>
         <div>
           <React.Fragment>
-            <Box sx={{ mt: 2, mb: 1, p: 2 }}>
-              <Typography>{steps[activeStep].description}</Typography>
+            <Box sx={{ mt: 2, mb: 1, p: 2 }} justifyContent={'center'} align={'center'}>
+              <Grid container spacing={1}>
+                {steps[activeStep].description.split('-').slice(1).map((item, i) => (
+                  <Grid item xs={12} sm={6} key={i}>
+                    <Box
+                      component={ListItem}
+                      disableGutters
+                      width={'auto'}
+                      padding={0}
+                    >
+                      <Box
+                        component={ListItemAvatar}
+                        minWidth={'auto !important'}
+                        marginRight={2}
+                      >
+                        <Box
+                          component={Avatar}
+                          bgcolor={theme.palette.secondary.main}
+                          width={20}
+                          height={20}
+                        >
+                          <svg
+                            width={12}
+                            height={12}
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </Box>
+                      </Box>
+                      <ListItemText primary={item} />
+                    </Box>
+                  </Grid>
+                ))}
+              </Grid>
+              {/* {steps[activeStep].description.split('-').slice(1).map((item, i) => (
+                <ListItem disablePadding key={i}>
+                  <ListItemText primary={'-' + item} />
+                </ListItem>
+              ))} */}
             </Box>
           </React.Fragment>
         </div>
