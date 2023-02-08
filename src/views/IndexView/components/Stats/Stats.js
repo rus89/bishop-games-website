@@ -176,7 +176,7 @@ const Stats = () => {
                     height={50}
                     marginBottom={2}
                     bgcolor={theme.palette.primary.main}
-                    color={theme.palette.background.paper}
+                    color={theme.palette.background.default}
                   >
                     {item.icon}
                   </Box>
