@@ -111,7 +111,7 @@ const Workflow = () => {
         <Box>
           <Box display={'flex'} justifyContent={'center'}>
             {[1, 2, 3, 4, 5].map((item) => (
-              <Box key={item} color={theme.palette.secondary.main}>
+              <Box key={item} color={theme.palette.warning.light}>
                 <svg
                   width={18}
                   height={18}
@@ -216,7 +216,7 @@ const Workflow = () => {
                       >
                         <Box
                           component={Avatar}
-                          bgcolor={theme.palette.secondary.main}
+                          bgcolor={theme.palette.warning.light}
                           width={20}
                           height={20}
                         >

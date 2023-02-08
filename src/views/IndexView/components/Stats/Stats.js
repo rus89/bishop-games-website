@@ -85,7 +85,7 @@ const mock = [
   {
     number: '15',
     suffix: '+',
-    title: 'Combined Experience',
+    title: 'Years of Experience',
     subtitle: 'We have separate experiences but best work combined.',
     icon: (
       <svg
@@ -124,7 +124,7 @@ const Stats = () => {
         <Box>
           <Box display={'flex'} justifyContent={'center'}>
             {[1, 2, 3, 4, 5].map((item) => (
-              <Box key={item} color={theme.palette.secondary.main}>
+              <Box key={item} color={theme.palette.warning.light}>
                 <svg
                   width={18}
                   height={18}
