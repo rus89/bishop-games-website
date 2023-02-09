@@ -29,7 +29,7 @@ const Main = ({ children, bgcolor = 'transparent' }) => {
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 38,
+    threshold: 0,
   });
 
   return (
