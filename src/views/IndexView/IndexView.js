@@ -99,6 +99,17 @@ const IndexView = () => {
         <Faq />
       </Container>
 
+      {/* Box between FAQ and Footer */}
+      <Box
+        maxWidth={1}
+        width={1}
+        margin={'0 auto'}
+        paddingX={2}
+        paddingY={{ xs: 4, sm: 6, md: 8 }}
+        sx={{
+          backgroundImage: `linear-gradient(0deg, ${theme.palette.text.primary}, transparent)`,
+        }}>
+      </Box>
     </Main>
   );
 };
