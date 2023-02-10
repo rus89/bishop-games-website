@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
 import AppBar from '@mui/material/AppBar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Container from 'components/Container';
@@ -55,11 +54,12 @@ const Main = ({ children, bgcolor = 'transparent' }) => {
       />
       <main>
         {children}
-        <Divider />
       </main>
-      <Container paddingY={4}>
-        <Footer />
-      </Container>
+      <Box backgroundColor={theme.palette.text.primary}>
+        <Container paddingY={4}>
+          <Footer />
+        </Container>
+      </Box>
     </Box>
   );
 };

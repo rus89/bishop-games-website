@@ -2,9 +2,9 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import { useStaticQuery, graphql } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import LogoImage from 'images/logo/logo.webp';
 
 //TODO: srediti ovo
@@ -35,31 +35,22 @@ const Footer = () => {
         >
           <Box
             display={'flex'}
-            component="a"
-            href="/"
-            title="Bishop Games"
-            width={80}
+            width={{ xs: 100, md: 120 }}
           >
-            <Box
-              component={'img'}
-              src={LogoImage}
-              alt='logo image'
-              height={1}
-              width={1}
-            />
+            <AnchorLink
+              to={'/#hero'}
+              title={'Bishop Games'}>
+              <Box
+                component='img'
+                src={LogoImage}
+                alt='logo image'
+                style={{
+                  width: '40%',
+                }}
+              />
+            </AnchorLink>
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
-            <Box marginTop={1} marginRight={2}>
-              <Link
-                underline="none"
-                component="a"
-                href="/"
-                color="text.primary"
-                variant={'subtitle2'}
-              >
-                Home
-              </Link>
-            </Box>
             <Box marginTop={1}>
               <Button
                 component={'a'}
@@ -79,18 +70,10 @@ const Footer = () => {
         <Typography
           align={'center'}
           variant={'subtitle2'}
-          color="text.secondary"
+          color="alternate.main"
           gutterBottom
         >
           &copy; {data.site.siteMetadata.title} | {new Date().getFullYear()} | All Rights Reserved
-        </Typography>
-        <Typography
-          align={'center'}
-          variant={'caption'}
-          color="text.secondary"
-          component={'p'}
-        >
-          {data.site.siteMetadata.description}
         </Typography>
       </Grid>
     </Grid>
