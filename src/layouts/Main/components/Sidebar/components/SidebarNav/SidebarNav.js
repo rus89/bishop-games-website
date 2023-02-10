@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import NavItem from './components/NavItem';
 import { graphql, useStaticQuery } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import LogoImage from 'images/logo/logo.webp';
 
 const SidebarNav = () => {
@@ -24,71 +25,55 @@ const SidebarNav = () => {
       <Box width={1} paddingX={2} paddingY={1}>
         <Box
           display={'flex'}
-          component="a"
-          href="/"
-          title="Bishop Games"
           width={{ xs: 100, md: 120 }}
         >
-          <Box
-            component={'img'}
-            src={LogoImage}
-            alt='logo image'
-            style={{
-              height: '40%',
-              width: '40%',
-            }}
-          />
+          <AnchorLink
+            to={'/#hero'}
+            title={'Bishop Games'}>
+            <Box
+              component={'img'}
+              src={LogoImage}
+              alt='logo image'
+              style={{
+                width: '40%',
+              }}
+            />
+          </AnchorLink>
         </Box>
       </Box>
       <Box paddingX={2} paddingY={2}>
-        <Box>
-          <NavItem
-            title={'Services'}
-            id={'services'}
-          />
-        </Box>
-        <Box>
-          <NavItem
-            title={'Portfolio'}
-            id={'portfolio'}
-          />
-        </Box>
-        <Box>
-          <NavItem
-            title={'Workflow'}
-            id={'workflow'}
-          />
-        </Box>
-        <Box>
-          <NavItem
-            title={'Testimonials'}
-            id={'testimonials'}
-          />
-        </Box>
-        <Box>
-          <NavItem
-            title={'Stats'}
-            id={'stats'}
-          />
-        </Box>
-        <Box>
-          <NavItem
-            title={'Our Team'}
-            id={'ourTeam'}
-          />
-        </Box>
-        <Box>
-          <NavItem
-            title={'FAQ'}
-            id={'faq'}
-          />
-        </Box>
-        <Box>
-          <NavItem
-            title={'Blog'}
-            id={'blog'}
-          />
-        </Box>
+        <NavItem
+          title={'Services'}
+          id={'services'}
+        />
+        <NavItem
+          title={'Portfolio'}
+          id={'portfolio'}
+        />
+        <NavItem
+          title={'Workflow'}
+          id={'workflow'}
+        />
+        <NavItem
+          title={'Testimonials'}
+          id={'testimonials'}
+        />
+        <NavItem
+          title={'Stats'}
+          id={'stats'}
+        />
+        <NavItem
+          title={'Our Team'}
+          id={'ourTeam'}
+        />
+        <NavItem
+          title={'FAQ'}
+          id={'faq'}
+        />
+        <NavItem
+          title={'Blog'}
+          id={'blog'}
+        />
         <Box marginTop={1}>
           <Button
             size={'large'}
