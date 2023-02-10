@@ -22,6 +22,7 @@ const IndexView = () => {
   return (
     <Main>
       <Box
+        id={'hero'}
         loading="lazy"
         sx={{
           marginTop: 4,
