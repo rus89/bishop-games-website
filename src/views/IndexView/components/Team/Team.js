@@ -66,7 +66,7 @@ const Team = () => {
                 fontWeight: 700,
               }}
             >
-              Our Team
+              Team
             </Typography>
             <Typography variant="h6" align={'center'} color={'text.secondary'}>
               We may be small, but our team packs a punch with their skills and dedication.

@@ -62,7 +62,7 @@ const SidebarNav = () => {
           id={'stats'}
         />
         <NavItem
-          title={'Our Team'}
+          title={'Team'}
           id={'ourTeam'}
         />
         <NavItem
