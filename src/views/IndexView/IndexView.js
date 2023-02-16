@@ -3,8 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import HeroImage from 'images/hero/hero.webp';
-//TODO: proveriti ovo
+import { StaticImage } from 'gatsby-plugin-image';
 import {
   Hero,
   Services,
@@ -23,19 +22,36 @@ const IndexView = () => {
     <Main>
       <Box
         id={'hero'}
-        loading="lazy"
+        minHeight={'80vh'}
         sx={{
-          marginTop: 4,
-          objectFit: 'cover',
-          width: '100%',
-          height: '100%',
-          backgroundRepeat: 'no-repeat',
-          backgroundImage: `url("${HeroImage}")`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center center',
+          position: 'relative',
         }}
       >
-        <Hero />
+        <StaticImage
+          src='../../images/hero/hero.webp'
+          style={{
+            objectFit: 'cover',
+            width: '100%',
+            minHeight: '80vh',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+          }} />
+        <Box
+          padding={{xs: '2rem', sm: '4rem', md: '8rem'}}
+          maxWidth={{xs: 1, lg: '50%'}}
+          sx={{
+            position: 'absolute',
+            top: '0%',
+            height: '100%',
+            backgroundImage: `linear-gradient(90deg, ${theme.palette.background.level1}, transparent)`,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'baseline',
+          }}>
+          <Hero />
+        </Box>
       </Box>
 
       {/* Services */}
