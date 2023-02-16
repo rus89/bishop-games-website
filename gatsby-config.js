@@ -37,6 +37,26 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/icon/icon.png'
       },
+    },{
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: [
+          'G-ZF9N01F105',
+        ],
+        gtagConfig: {
+          optimize_id: '',
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+          exclude: ['/preview/**', '/do-not-track/me/too/'],
+          // Defaults to https://www.googletagmanager.com
+          origin: 'YOUR_SELF_HOSTED_ORIGIN',
+          delayOnRouteUpdate: 0,
+        },
+      },
     },
     'gatsby-plugin-offline',
   ],
