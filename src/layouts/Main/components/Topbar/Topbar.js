@@ -7,7 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { NavItem } from './components';
 import { graphql, useStaticQuery } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import LogoImage from 'images/logo/logo.webp';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Topbar = ({ onSidebarOpen }) => {
   const theme = useTheme();
@@ -39,10 +39,9 @@ query {
         <AnchorLink
           to={'/#hero'}
           title={'Bishop Games'}>
-          <Box
-            component='img'
-            src={LogoImage}
-            alt='logo image'
+          <StaticImage
+            src='../../../../images/logo/logo.webp'
+            alt='logo'
             style={{
               width: '40%',
             }}
