@@ -24,6 +24,20 @@ module.exports = {
         duration: 1000
       }
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Bishop Games',
+        short_name: 'Bishop Games',
+        description: 'Your favorite game development studio',
+        lang: 'en',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#f16a22',
+        display: 'minimal-ui',
+        icon: 'src/images/icon/icon.png'
+      },
+    },
   ],
   siteMetadata: {
     title: 'Bishop Games - Your favorite game development studio',

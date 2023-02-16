@@ -4,11 +4,6 @@ import { Helmet } from 'react-helmet';
 
 import Page from '../../src/components/Page';
 
-import Favicon from '/favicon.ico';
-import Favicon16 from '/favicon-16x16.png';
-import Favicon32 from '/favicon-32x32.png';
-import AppleTouchIcon from '/apple-touch-icon.png';
-
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'aos/dist/aos.css';
@@ -18,17 +13,11 @@ export default function TopLayout(props) {
     <React.Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <link rel="shortcut icon" href={Favicon} />
-        <link rel="apple-touch-icon" sizes="180x180" href={AppleTouchIcon} />
-        <link rel="icon" type="image/png" sizes="32x32" href={Favicon32} />
-        <link rel="icon" type="image/png" sizes="16x16" href={Favicon16} />
-        <link rel="manifest" href="../../site.webmanifest" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <title>Bishop Games - Your favorite game development studio</title>
-        <meta name="theme-color" content="#ffffff" />
         <meta
           name="description"
           content='A full-service game development studio specializing in Unity game programming, game art, and the complete game development lifecycle'
