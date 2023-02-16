@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useStaticQuery, graphql } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import LogoImage from 'images/logo/logo.webp';
+import { StaticImage } from 'gatsby-plugin-image';
 
 //TODO: srediti ovo
 const Footer = () => {
@@ -40,10 +40,9 @@ const Footer = () => {
             <AnchorLink
               to={'/#hero'}
               title={'Bishop Games'}>
-              <Box
-                component='img'
-                src={LogoImage}
-                alt='logo image'
+              <StaticImage
+                src='../../../../images/logo/logo.webp'
+                alt='logo'
                 style={{
                   width: '40%',
                 }}
