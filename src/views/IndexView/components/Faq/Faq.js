@@ -94,7 +94,7 @@ const FaqGroupItem = ({ title, items }) => {
 };
 
 FaqGroupItem.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   items: PropTypes.array.isRequired,
 };
 
