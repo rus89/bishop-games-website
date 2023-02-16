@@ -38,6 +38,7 @@ module.exports = {
         icon: 'src/images/icon/icon.png'
       },
     },
+    'gatsby-plugin-offline',
   ],
   siteMetadata: {
     title: 'Bishop Games - Your favorite game development studio',
