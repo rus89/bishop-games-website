@@ -43,7 +43,7 @@ query {
             src='../../../../images/logo/logo.webp'
             alt='logo'
             style={{
-              width: '40%',
+              width: '48px',
             }}
           />
         </AnchorLink>
