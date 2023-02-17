@@ -103,6 +103,7 @@ const Team = () => {
                   height={1}
                   minHeight={320}
                   image={item.avatar}
+                  loading='lazy'
                 />
                 <CardContent>
                   <ListItemText

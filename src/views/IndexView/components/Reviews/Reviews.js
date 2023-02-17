@@ -110,6 +110,7 @@ const Reviews = () => {
                 <ListItem component="div" disableGutters sx={{ padding: 0 }}>
                   <ListItemAvatar>
                     <Avatar src={item.avatar} />
+                      loading='lazy'/>
                   </ListItemAvatar>
                   <ListItemText
                     sx={{ margin: 0 }}
