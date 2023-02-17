@@ -93,6 +93,12 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }, { userAgent: '*', disallow: ['/accounts', '/admin'] }]
       }
     },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        output: '/sitemap.xml',
+      },
+    },
     'gatsby-plugin-offline',
   ],
   siteMetadata: {
