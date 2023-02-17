@@ -2762,6 +2762,11 @@ accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.8:
     mime-types "~2.1.34"
     negotiator "0.6.3"
 
+accessible-nprogress@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.npmjs.org/accessible-nprogress/-/accessible-nprogress-2.1.2.tgz"
+  integrity sha512-reIwMbbt+ZGOmQLWPXGcPf5X1F4fzsZAekY9alCxpekxizRhQMAd/QInaA8k7WtwTcGMzD9hnYswGLcaJDRY/A==
+
 acorn-import-assertions@^1.7.6:
   version "1.8.0"
   resolved "https://registry.npmjs.org/acorn-import-assertions/-/acorn-import-assertions-1.8.0.tgz"
@@ -6060,6 +6065,14 @@ gatsby-plugin-material-ui@^4.1.0:
   dependencies:
     "@emotion/cache" "^11.4.0"
     "@emotion/server" "^11.4.0"
+
+gatsby-plugin-nprogress@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.npmjs.org/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-5.6.0.tgz"
+  integrity sha512-rosJh+4P5PURp8vZQe+2W+x+4BOcwvPIkK+FDlKco44ExNUik4ey81eA5HrNd0liQSRs00wUxNfVKHMX4y8AGA==
+  dependencies:
+    "@babel/runtime" "^7.20.13"
+    accessible-nprogress "^2.1.2"
 
 gatsby-plugin-offline@^6.6.0:
   version "6.6.0"

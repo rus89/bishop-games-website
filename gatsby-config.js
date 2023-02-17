@@ -79,6 +79,12 @@ module.exports = {
         selfHostedOrigin: 'https://www.googletagmanager.com',
       },
     },
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: '#f16a22',
+      },
+    },
     'gatsby-plugin-offline',
   ],
   siteMetadata: {
