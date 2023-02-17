@@ -37,7 +37,8 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/icon/icon.png'
       },
-    },{
+    },
+    {
       resolve: 'gatsby-plugin-google-gtag',
       options: {
         trackingIds: [
@@ -52,8 +53,7 @@ module.exports = {
           head: false,
           respectDNT: true,
           exclude: ['/preview/**', '/do-not-track/me/too/'],
-          // Defaults to https://www.googletagmanager.com
-          origin: 'YOUR_SELF_HOSTED_ORIGIN',
+          origin: 'https://www.googletagmanager.com',
           delayOnRouteUpdate: 0,
         },
       },
