@@ -14,6 +14,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 
 import Container from 'components/Container';
+import { List } from '@mui/material';
 
 const steps = [
   {
@@ -174,7 +175,7 @@ const Workflow = () => {
               }}
             >
               <React.Fragment>
-                <StepButton onClick={handleStep(index)}>
+                <StepButton onClick={handleStep(index)} alt={step.label}>
                   {isMd ? step.label : ''}
                 </StepButton>
                 {index === steps.length - 1 ? null : (
@@ -200,7 +201,7 @@ const Workflow = () => {
         <div>
           <React.Fragment>
             <Box sx={{ mt: 2, mb: 1, p: 2 }} justifyContent={'center'} align={'center'}>
-              <Grid container spacing={1}>
+              <Grid container spacing={1} component={List}>
                 {steps[activeStep].description.split('-').slice(1).map((item, i) => (
                   <Grid item xs={12} sm={6} key={i}>
                     <Box
@@ -208,6 +209,7 @@ const Workflow = () => {
                       disableGutters
                       width={'auto'}
                       padding={0}
+                      key={i}
                     >
                       <Box
                         component={ListItemAvatar}
@@ -240,11 +242,6 @@ const Workflow = () => {
                   </Grid>
                 ))}
               </Grid>
-              {/* {steps[activeStep].description.split('-').slice(1).map((item, i) => (
-                <ListItem disablePadding key={i}>
-                  <ListItemText primary={'-' + item} />
-                </ListItem>
-              ))} */}
             </Box>
           </React.Fragment>
         </div>
