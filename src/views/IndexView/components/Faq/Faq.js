@@ -78,7 +78,7 @@ const FaqGroupItem = ({ title, items }) => {
             <Box
               component={AccordionSummary}
               expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
+              aria-controls={item.question}
               id={`panel1a-header--${i}`}
             >
               <Typography fontWeight={600}>{item.question}</Typography>
