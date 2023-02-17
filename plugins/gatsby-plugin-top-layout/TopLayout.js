@@ -53,8 +53,8 @@ export default function TopLayout(props) {
         <meta name="twitter:creator" content="@rusimovmilan" />
         <meta name="twitter:site" content="@bishopgames" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
         <link rel="canonical" href="https://www.bishop.games" />
       </Helmet>
       <Page>
