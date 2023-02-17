@@ -64,12 +64,12 @@ module.exports = {
         id: 'GTM-K4F2VB2',
         includeInDevelopment: false,
         defaultDataLayer: { platform: 'gatsby' },
-  
+
         // Specify optional GTM environment details.
         gtmAuth: 'YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING',
         gtmPreview: 'YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME',
         dataLayerName: 'YOUR_DATA_LAYER_NAME',
-  
+
         // Name of the event that is triggered
         // on every Gatsby route change.
         //
@@ -84,6 +84,14 @@ module.exports = {
       options: {
         color: '#f16a22',
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.bishop.games',
+        sitemap: 'https://www.bishop.games/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }, { userAgent: '*', disallow: ['/accounts', '/admin'] }]
+      }
     },
     'gatsby-plugin-offline',
   ],
