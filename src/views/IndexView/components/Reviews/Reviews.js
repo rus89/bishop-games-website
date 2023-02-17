@@ -109,7 +109,9 @@ const Reviews = () => {
               <CardActions sx={{ paddingBottom: 2 }}>
                 <ListItem component="div" disableGutters sx={{ padding: 0 }}>
                   <ListItemAvatar>
-                    <Avatar src={item.avatar} />
+                    <Avatar
+                      src={item.avatar}
+                      alt={item.name}
                       loading='lazy'/>
                   </ListItemAvatar>
                   <ListItemText
