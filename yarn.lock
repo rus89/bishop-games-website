@@ -11546,11 +11546,6 @@ typed-array-length@^1.0.4:
     for-each "^0.3.3"
     is-typed-array "^1.1.9"
 
-typed.js@^2.0.12:
-  version "2.0.12"
-  resolved "https://registry.npmjs.org/typed.js/-/typed.js-2.0.12.tgz"
-  integrity sha512-lyACZh1cu+vpfYY3DG/bvsGLXXbdoDDpWxmqta10IQUdMXisMXOEyl+jos+YT9uBbzK4QaKYBjT3R0kTJO0Slw==
-
 typedarray-to-buffer@^3.1.5:
   version "3.1.5"
   resolved "https://registry.npmjs.org/typedarray-to-buffer/-/typedarray-to-buffer-3.1.5.tgz"
@@ -11761,11 +11756,6 @@ vary@^1, vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
-
-video-worker@^2.1.5:
-  version "2.1.5"
-  resolved "https://registry.npmjs.org/video-worker/-/video-worker-2.1.5.tgz"
-  integrity sha512-lX6mywHsMeo2fB8smiaffQYpkcBaQh63oVrAsGekAOoIE5dv39YchJhZ6rresiNcJHy+Hv59dd+1yZs08jnFXA==
 
 walk-up-path@^1.0.0:
   version "1.0.0"
