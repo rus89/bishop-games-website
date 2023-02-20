@@ -30,8 +30,9 @@ const IndexView = () => {
         <StaticImage
           src='../../images/hero/hero.webp'
           alt='hero image'
+          loading='eager'
+          objectFit='cover'
           style={{
-            objectFit: 'cover',
             width: '100%',
             minHeight: '80vh',
             backgroundRepeat: 'no-repeat',

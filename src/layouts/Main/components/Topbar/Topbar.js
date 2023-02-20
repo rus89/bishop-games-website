@@ -42,6 +42,7 @@ query {
           <StaticImage
             src='../../../../images/logo/logo.webp'
             alt='logo'
+            loading='eager'
             style={{
               width: '48px',
             }}
