@@ -112,7 +112,9 @@ const Reviews = () => {
                     <Avatar
                       src={item.avatar}
                       alt={item.name}
-                      loading='lazy'/>
+                      imgProps={{
+                        loading: 'lazy',
+                      }}/>
                   </ListItemAvatar>
                   <ListItemText
                     sx={{ margin: 0 }}
