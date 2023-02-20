@@ -7572,13 +7572,6 @@ isobject@^3.0.1:
   resolved "https://registry.npmjs.org/isobject/-/isobject-3.0.1.tgz"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
-jarallax@^2.1.3:
-  version "2.1.3"
-  resolved "https://registry.npmjs.org/jarallax/-/jarallax-2.1.3.tgz"
-  integrity sha512-d8+mAnxc2bN/d/PPzG9fl4I5Pbx81dxZTxmjueER2659XD5CfZF7ZCm4sHRx4aEESF/QTesuwT2766Aj+Ne3Ww==
-  dependencies:
-    video-worker "^2.1.5"
-
 javascript-stringify@^2.0.1:
   version "2.1.0"
   resolved "https://registry.npmjs.org/javascript-stringify/-/javascript-stringify-2.1.0.tgz"
