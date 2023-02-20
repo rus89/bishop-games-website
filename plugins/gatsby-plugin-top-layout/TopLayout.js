@@ -11,7 +11,7 @@ import 'aos/dist/aos.css';
 export default function TopLayout(props) {
   return (
     <React.Fragment>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: 'en' }}>
         <meta charSet="utf-8" />
         <meta
           name="viewport"
