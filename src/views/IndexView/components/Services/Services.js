@@ -197,10 +197,7 @@ const Services = () => {
                 >
                   {item.icon}
                 </Box>
-                <Typography
-                  variant={'h6'}
-                  gutterBottom
-                  sx={{ fontWeight: 500 }}
+                <Typography variant="body1" fontSize={'1.25rem'} fontWeight={500} color={'text.secondary'} gutterBottom
                 >
                   {item.title}
                 </Typography>

@@ -198,11 +198,7 @@ const Stats = () => {
                       />
                     </Typography>
                   </VisibilitySensor>
-                  <Typography
-                    variant={'h6'}
-                    gutterBottom
-                    sx={{ fontWeight: 500 }}
-                  >
+                  <Typography variant="body1" fontSize={'1.25rem'} fontWeight={500} color={'text.secondary'}>
                     {item.title}
                   </Typography>
                   <Typography color="text.secondary">

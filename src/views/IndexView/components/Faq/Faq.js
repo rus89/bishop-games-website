@@ -64,15 +64,10 @@ const faqs = [
   },
 ];
 
-const FaqGroupItem = ({ title, items }) => {
+const FaqGroupItem = ({ items }) => {
   const theme = useTheme();
   return (
     <Box>
-      <Box marginBottom={2}>
-        <Typography fontWeight={700} variant={'h5'}>
-          {title}
-        </Typography>
-      </Box>
       <Box>
         {items.map((item, i) => (
           <Box
@@ -148,9 +143,9 @@ const Faq = () => {
             development!
           </Typography>
         </Box>
-        <Box marginBottom={6} data-aos={'fade-up'} data-aos-delay={100}>
-          <FaqGroupItem items={faqs} />
-        </Box>
+      </Box>
+      <Box marginBottom={6} data-aos={'fade-up'} data-aos-delay={100}>
+        <FaqGroupItem items={faqs} />
       </Box>
     </Container>
   );
