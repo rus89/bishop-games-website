@@ -71,16 +71,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-tagmanager',
-      options: {
-        id: 'GTM-K4F2VB2',
-        includeInDevelopment: false,
-        defaultDataLayer: { platform: 'gatsby' },
-        enableWebVitalsTracking: true,
-        selfHostedOrigin: 'https://www.googletagmanager.com',
-      },
-    },
-    {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         color: '#f16a22',
