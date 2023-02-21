@@ -21,7 +21,7 @@ const mock = [
     name: 'Callum Godfrey',
     title: 'Head of Casual Mobile Games at Kwalee',
     avatar:
-      'https://media.licdn.com/dms/image/C5603AQHJSEbt13Yy1Q/profile-displayphoto-shrink_800_800/0/1652286766669?e=1680739200&v=beta&t=PpW88MJJvmSz0v83RRyJaXQZUW01JwN76XLCPf3wl94',
+      'https://media.pocketgamer.biz/2022/5/116749/callum-godfrey-r225x225.jpg',
   },
   {
     feedback:
@@ -29,7 +29,7 @@ const mock = [
     name: 'Aleksandra Stankovic',
     title: 'ASO Consultant at Phiture',
     avatar:
-      'https://media.licdn.com/dms/image/C4E03AQF4ZXwtPBkrdQ/profile-displayphoto-shrink_100_100/0/1533649910197?e=1681344000&v=beta&t=JAqYgluzt-n07O-wDILn0V5RI3j5VbEXw-3BxgQXcVY',
+      'https://phiture.com/wp-content/uploads/2021/11/Product-Sale-Social-Media-Post-300x300.png',
   },
   {
     feedback:
