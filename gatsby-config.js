@@ -45,17 +45,8 @@ module.exports = {
         trackingIds: [
           'G-ZF9N01F105',
         ],
-        gtagConfig: {
-          optimize_id: '',
-          anonymize_ip: true,
-          cookie_expires: 0,
-        },
         pluginConfig: {
           head: false,
-          respectDNT: true,
-          exclude: ['/preview/**', '/do-not-track/me/too/'],
-          origin: 'https://www.googletagmanager.com',
-          delayOnRouteUpdate: 0,
         },
       },
     },
