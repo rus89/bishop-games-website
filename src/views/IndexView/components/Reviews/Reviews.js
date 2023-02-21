@@ -74,7 +74,7 @@ const Reviews = () => {
           >
             Our customers are our biggest fans.
           </Typography>
-          <Typography variant="h6" align={'center'} color={'text.secondary'}>
+          <Typography variant="body1" fontSize={'1.25rem'} fontWeight={500} fontStyle={'italic'} align={'center'} color={'text.secondary'}>
             We don't like to brag, but we don't mind letting our customers do it
             for us.
           </Typography>

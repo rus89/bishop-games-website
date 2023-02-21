@@ -137,7 +137,7 @@ const Workflow = () => {
           >
             Our Workflow
           </Typography>
-          <Typography variant="h6" align={'center'} color={'text.secondary'}>
+          <Typography variant="body1" fontSize={'1.25rem'} fontWeight={500} fontStyle={'italic'} align={'center'} color={'text.secondary'}>
             Streamline your success with our smooth and efficient workflow!
           </Typography>
         </Box>

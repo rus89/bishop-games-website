@@ -148,7 +148,7 @@ const Stats = () => {
           >
             Our numbers speak for us
           </Typography>
-          <Typography variant="h6" align={'center'} color={'text.secondary'}>
+          <Typography variant="body1" fontSize={'1.25rem'} fontWeight={500} fontStyle={'italic'} align={'center'} color={'text.secondary'}>
             Our stats speak for themselves, we're the real deal!
           </Typography>
         </Box>

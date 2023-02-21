@@ -143,7 +143,7 @@ const Faq = () => {
           >
             FAQ
           </Typography>
-          <Typography variant="h6" align={'center'} color={'text.secondary'}>
+          <Typography variant="body1" fontSize={'1.25rem'} fontWeight={500} fontStyle={'italic'} align={'center'} color={'text.secondary'}>
             You ask, we answer - it&apos;s like having a cheat sheet for game
             development!
           </Typography>

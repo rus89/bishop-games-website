@@ -68,7 +68,7 @@ const Team = () => {
             >
               Team
             </Typography>
-            <Typography variant="h6" align={'center'} color={'text.secondary'}>
+            <Typography variant="body1" fontSize={'1.25rem'} fontWeight={500} fontStyle={'italic'} align={'center'} color={'text.secondary'}>
               We may be small, but our team packs a punch with their skills and
               dedication.
             </Typography>

@@ -169,7 +169,7 @@ const Services = () => {
           >
             Our Services
           </Typography>
-          <Typography variant="h6" align={'center'} color={'text.secondary'}>
+          <Typography variant="body1" fontSize={'1.25rem'} fontWeight={500} fontStyle={'italic'} align={'center'} color={'text.secondary'}>
             We don&apos;t like to praise ourselves, but we know what we do
           </Typography>
         </Box>
