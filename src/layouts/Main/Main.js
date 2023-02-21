@@ -42,19 +42,11 @@ const Main = ({ children, bgcolor = 'transparent' }) => {
         elevation={trigger ? 1 : 0}
       >
         <Container paddingY={1}>
-          <Topbar
-            onSidebarOpen={handleSidebarOpen}
-          />
+          <Topbar onSidebarOpen={handleSidebarOpen} />
         </Container>
       </AppBar>
-      <Sidebar
-        onClose={handleSidebarClose}
-        open={open}
-        variant="temporary"
-      />
-      <main>
-        {children}
-      </main>
+      <Sidebar onClose={handleSidebarClose} open={open} variant="temporary" />
+      <main>{children}</main>
       <Box backgroundColor={theme.palette.text.primary}>
         <Container paddingY={4}>
           <Footer />

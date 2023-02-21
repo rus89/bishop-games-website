@@ -14,16 +14,16 @@ const Hero = () => {
   });
 
   const data = useStaticQuery(graphql`
-  query {
-    site {
-      siteMetadata {
-        description
-        email
-        siteUrl
-        title
+    query {
+      site {
+        siteMetadata {
+          description
+          email
+          siteUrl
+          title
+        }
       }
     }
-  }
   `);
 
   return (
@@ -36,7 +36,7 @@ const Hero = () => {
             fontWeight: 700,
           }}
         >
-          Transform your {' '}
+          Transform your{' '}
           <Typography
             component={'span'}
             variant={'inherit'}
@@ -53,7 +53,8 @@ const Hero = () => {
           color="background.level2"
           sx={{ fontWeight: 400 }}
         >
-          Get a stunning and fully functional game developed for your brand with our expert team.
+          Get a stunning and fully functional game developed for your brand with
+          our expert team.
         </Typography>
       </Box>
       <Box

@@ -10,8 +10,7 @@ import Container from 'components/Container';
 const mock = [
   {
     title: 'Full Game Development',
-    subtitle:
-      'You have an idea, we create a real game',
+    subtitle: 'You have an idea, we create a real game',
     icon: (
       <svg
         height={24}
@@ -32,8 +31,7 @@ const mock = [
   },
   {
     title: 'Game Art',
-    subtitle:
-      'You have a great code, we provide a great art',
+    subtitle: 'You have a great code, we provide a great art',
     icon: (
       <svg
         height={24}
@@ -54,8 +52,7 @@ const mock = [
   },
   {
     title: 'Game Programming',
-    subtitle:
-      'You have a great art, we make it alive',
+    subtitle: 'You have a great art, we make it alive',
     icon: (
       <svg
         height={24}
@@ -76,8 +73,7 @@ const mock = [
   },
   {
     title: 'Animation',
-    subtitle:
-      'You have static images, we make them dancing',
+    subtitle: 'You have static images, we make them dancing',
     icon: (
       <svg
         height={24}
@@ -201,16 +197,19 @@ const Services = () => {
                 >
                   {item.icon}
                 </Box>
-                <Typography variant={'h6'} gutterBottom sx={{ fontWeight: 500 }}>
+                <Typography
+                  variant={'h6'}
+                  gutterBottom
+                  sx={{ fontWeight: 500 }}
+                >
                   {item.title}
                 </Typography>
                 <Typography color="text.secondary">{item.subtitle}</Typography>
               </Box>
             </Box>
           </Grid>
-        ))
-        }
-      </Grid >
+        ))}
+      </Grid>
     </Container>
   );
 };

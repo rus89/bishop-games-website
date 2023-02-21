@@ -181,9 +181,7 @@ const Stats = () => {
                     {item.icon}
                   </Box>
                   <VisibilitySensor
-                    onChange={(isVisible) =>
-                      setViewPortVisibility(isVisible)
-                    }
+                    onChange={(isVisible) => setViewPortVisibility(isVisible)}
                     delayedCall
                   >
                     <Typography

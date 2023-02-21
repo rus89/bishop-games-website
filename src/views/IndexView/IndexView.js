@@ -12,7 +12,7 @@ import {
   Reviews,
   Stats,
   Team,
-  Faq
+  Faq,
 } from './components';
 
 const IndexView = () => {
@@ -28,20 +28,21 @@ const IndexView = () => {
         }}
       >
         <StaticImage
-          src='../../images/hero/hero.webp'
-          alt='hero image'
-          loading='eager'
-          objectFit='cover'
+          src="../../images/hero/hero.webp"
+          alt="hero image"
+          loading="eager"
+          objectFit="cover"
           style={{
             width: '100%',
             minHeight: '80vh',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
-          }} />
+          }}
+        />
         <Box
-          padding={{xs: '2rem', sm: '4rem', md: '8rem'}}
-          maxWidth={{xs: 1, lg: '50%'}}
+          padding={{ xs: '2rem', sm: '4rem', md: '8rem' }}
+          maxWidth={{ xs: 1, lg: '50%' }}
           sx={{
             position: 'absolute',
             top: '0%',
@@ -51,69 +52,65 @@ const IndexView = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'baseline',
-          }}>
+          }}
+        >
           <Hero />
         </Box>
       </Box>
 
       {/* Services */}
-      <Container
-        id='services'
-        paddingTop={'0 !important'} >
+      <Container id="services" paddingTop={'0 !important'}>
         <Services />
       </Container>
 
       {/* Portfolio */}
       <Container
-        id='portfolio'
+        id="portfolio"
         maxWidth={1}
         paddingTop={'0 !important'}
         sx={{
-          backgroundColor: theme.palette.alternate.main
-        }}>
+          backgroundColor: theme.palette.alternate.main,
+        }}
+      >
         <Portfolio />
       </Container>
 
       {/* Workflow */}
-      <Container
-        id='workflow'
-        paddingTop={'0 !important'}>
+      <Container id="workflow" paddingTop={'0 !important'}>
         <Workflow />
       </Container>
 
       {/* Testimonials */}
       <Container
-        id='testimonials'
+        id="testimonials"
         maxWidth={1}
         paddingTop={'0 !important'}
         sx={{
-          backgroundColor: theme.palette.alternate.main
-        }}>
+          backgroundColor: theme.palette.alternate.main,
+        }}
+      >
         <Reviews />
       </Container>
 
       {/* Stats */}
-      <Container
-        id='stats'
-        paddingTop={'0 !important'}>
+      <Container id="stats" paddingTop={'0 !important'}>
         <Stats />
       </Container>
 
       {/* Our Team */}
       <Container
-        id='ourTeam'
+        id="ourTeam"
         maxWidth={1}
         paddingTop={'0 !important'}
         sx={{
-          backgroundColor: theme.palette.alternate.main
-        }}>
+          backgroundColor: theme.palette.alternate.main,
+        }}
+      >
         <Team />
       </Container>
 
       {/* FAQ */}
-      <Container
-        id='faq'
-        paddingTop={'0 !important'}>
+      <Container id="faq" paddingTop={'0 !important'}>
         <Faq />
       </Container>
 
@@ -126,8 +123,8 @@ const IndexView = () => {
         paddingY={{ xs: 4, sm: 6, md: 8 }}
         sx={{
           backgroundImage: `linear-gradient(0deg, ${theme.palette.text.primary}, transparent)`,
-        }}>
-      </Box>
+        }}
+      ></Box>
     </Main>
   );
 };

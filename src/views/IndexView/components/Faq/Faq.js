@@ -12,43 +12,55 @@ import Container from 'components/Container';
 const faqs = [
   {
     question: 'What services does your Unity game development studio offer?',
-    answer: 'We provide Unity game development services that cover all aspects of game development, from concept to deployment. Our team is experienced in creating games that are visually stunning and have engaging gameplay that keeps players coming back for more.'
+    answer:
+      'We provide Unity game development services that cover all aspects of game development, from concept to deployment. Our team is experienced in creating games that are visually stunning and have engaging gameplay that keeps players coming back for more.',
   },
   {
-    question: 'Can you provide examples of previous projects you have worked on?',
-    answer: 'Yes, we have worked on a variety of projects ranging from small hyper-casual games to larger, more complex games. Please feel free to take a look at our portfolio or references from our previous clients.'
+    question:
+      'Can you provide examples of previous projects you have worked on?',
+    answer:
+      'Yes, we have worked on a variety of projects ranging from small hyper-casual games to larger, more complex games. Please feel free to take a look at our portfolio or references from our previous clients.',
   },
   {
     question: 'What is your process for game development projects?',
-    answer: 'Our process typically involves an initial consultation, project planning, development, testing and deployment. Our team works closely with clients to ensure that the project is delivered on time and within budget.'
+    answer:
+      'Our process typically involves an initial consultation, project planning, development, testing and deployment. Our team works closely with clients to ensure that the project is delivered on time and within budget.',
   },
   {
     question: 'How do you manage communication and collaboration with clients?',
-    answer: 'We use project management tools as Notion and regular check-ins to ensure effective communication and collaboration with clients. Our team is also available for virtual meetings and updates as needed.'
+    answer:
+      'We use project management tools as Notion and regular check-ins to ensure effective communication and collaboration with clients. Our team is also available for virtual meetings and updates as needed.',
   },
   {
     question: 'Can you handle projects with tight deadlines?',
-    answer: 'Yes, we have a track record of delivering projects on time and can handle tight deadlines by utilizing our team of experienced game developers.'
+    answer:
+      'Yes, we have a track record of delivering projects on time and can handle tight deadlines by utilizing our team of experienced game developers.',
   },
   {
     question: 'What is your pricing structure for game development projects?',
-    answer: 'Our pricing structure is based on the scope and complexity of the project. We offer competitive rates and are flexible with our pricing to meet the needs of our clients. Our mission is to create a great value.'
+    answer:
+      'Our pricing structure is based on the scope and complexity of the project. We offer competitive rates and are flexible with our pricing to meet the needs of our clients. Our mission is to create a great value.',
   },
   {
     question: 'How do you ensure the quality of your work?',
-    answer: 'We have a rigorous quality control process in place, which includes regular testing and quality assurance checks throughout the development process. Our team is also dedicated to delivering high-quality work and ensuring client satisfaction.'
+    answer:
+      'We have a rigorous quality control process in place, which includes regular testing and quality assurance checks throughout the development process. Our team is also dedicated to delivering high-quality work and ensuring client satisfaction.',
   },
   {
     question: 'Can you provide after-sales support for the games you develop?',
-    answer: 'Yes, we offer after-sales support and maintenance services for the games we develop. Our team is available for any updates or modifications that may be required post-deployment.'
+    answer:
+      'Yes, we offer after-sales support and maintenance services for the games we develop. Our team is available for any updates or modifications that may be required post-deployment.',
   },
   {
     question: 'How do you handle intellectual property and confidentiality?',
-    answer: 'We take intellectual property and confidentiality very seriously and have strict policies in place to ensure that client information is kept confidential.'
+    answer:
+      'We take intellectual property and confidentiality very seriously and have strict policies in place to ensure that client information is kept confidential.',
   },
   {
-    question: 'Can you provide references or case studies from previous clients?',
-    answer: 'Yes, we are happy to provide references or case studies from previous clients upon request. Our goal is to build long-term relationships with our clients and deliver high-quality work that exceeds their expectations.'
+    question:
+      'Can you provide references or case studies from previous clients?',
+    answer:
+      'Yes, we are happy to provide references or case studies from previous clients upon request. Our goal is to build long-term relationships with our clients and deliver high-quality work that exceeds their expectations.',
   },
 ];
 
@@ -101,7 +113,6 @@ FaqGroupItem.propTypes = {
 const Faq = () => {
   const theme = useTheme();
 
-
   return (
     <Container data-aos={'fade-up'}>
       <Box marginBottom={8}>
@@ -133,16 +144,12 @@ const Faq = () => {
             FAQ
           </Typography>
           <Typography variant="h6" align={'center'} color={'text.secondary'}>
-            You ask, we answer - it&apos;s like having a cheat sheet for game development!
+            You ask, we answer - it&apos;s like having a cheat sheet for game
+            development!
           </Typography>
         </Box>
-        <Box
-          marginBottom={6}
-          data-aos={'fade-up'}
-          data-aos-delay={100}>
-          <FaqGroupItem
-            items={faqs}
-          />
+        <Box marginBottom={6} data-aos={'fade-up'} data-aos-delay={100}>
+          <FaqGroupItem items={faqs} />
         </Box>
       </Box>
     </Container>

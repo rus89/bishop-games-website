@@ -6,34 +6,27 @@ import styled from '@emotion/styled';
 import getTheme from 'theme';
 
 const NavItem = ({ title, id }) => {
-
   const theme = getTheme();
 
   const NavItemStyle = styled.div`
-  display: flex;
-  align-items: center;
-  a {
-    text-decoration: none;
-    font-weight: 400;
-    color: ${theme.palette.text.primary};
-    cursor: pointer;
-    &:hover {
-      font-weight: 1000;
-      color: ${theme.palette.primary.main};
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      font-weight: 400;
+      color: ${theme.palette.text.primary};
+      cursor: pointer;
+      &:hover {
+        font-weight: 1000;
+        color: ${theme.palette.primary.main};
       }
     }
   `;
 
   return (
-    <Box
-      aria-describedby={id}
-      marginLeft={2}
-      marginRight={2}
-    >
+    <Box aria-describedby={id} marginLeft={2} marginRight={2}>
       <NavItemStyle>
-        <AnchorLink
-          to={'/#' + id}
-          title={title}>
+        <AnchorLink to={'/#' + id} title={title}>
           {title}
         </AnchorLink>
       </NavItemStyle>

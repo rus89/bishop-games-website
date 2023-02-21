@@ -13,17 +13,17 @@ const Topbar = ({ onSidebarOpen }) => {
   const theme = useTheme();
 
   const data = useStaticQuery(graphql`
-query {
-  site {
-    siteMetadata {
-      description
-      email
-      siteUrl
-      title
+    query {
+      site {
+        siteMetadata {
+          description
+          email
+          siteUrl
+          title
+        }
+      }
     }
-  }
-}
-`);
+  `);
 
   return (
     <Box
@@ -32,17 +32,12 @@ query {
       alignItems={'center'}
       width={1}
     >
-      <Box
-        display={'flex'}
-        width={{ xs: 100, md: 120 }}
-      >
-        <AnchorLink
-          to={'/#hero'}
-          title={'Bishop Games'}>
+      <Box display={'flex'} width={{ xs: 100, md: 120 }}>
+        <AnchorLink to={'/#hero'} title={'Bishop Games'}>
           <StaticImage
-            src='../../../../images/logo/logo.webp'
-            alt='logo'
-            loading='eager'
+            src="../../../../images/logo/logo.webp"
+            alt="logo"
+            loading="eager"
             style={{
               width: '48px',
             }}
@@ -51,38 +46,14 @@ query {
       </Box>
       {/* //TODO: ovo treba napraviti dinamicki mozda da se itemi i id povlace iz nekog fajla kako se kod ne bi menjao svaki put kada se doda ili oduzme neka komponenta */}
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <NavItem
-          title={'Services'}
-          id={'services'}
-        />
-        <NavItem
-          title={'Portfolio'}
-          id={'portfolio'}
-        />
-        <NavItem
-          title={'Workflow'}
-          id={'workflow'}
-        />
-        <NavItem
-          title={'Testimonials'}
-          id={'testimonials'}
-        />
-        <NavItem
-          title={'Stats'}
-          id={'stats'}
-        />
-        <NavItem
-          title={'Team'}
-          id={'ourTeam'}
-        />
-        <NavItem
-          title={'FAQ'}
-          id={'faq'}
-        />
-        <NavItem
-          title={'Blog'}
-          id={'blog'}
-        />
+        <NavItem title={'Services'} id={'services'} />
+        <NavItem title={'Portfolio'} id={'portfolio'} />
+        <NavItem title={'Workflow'} id={'workflow'} />
+        <NavItem title={'Testimonials'} id={'testimonials'} />
+        <NavItem title={'Stats'} id={'stats'} />
+        <NavItem title={'Team'} id={'ourTeam'} />
+        <NavItem title={'FAQ'} id={'faq'} />
+        <NavItem title={'Blog'} id={'blog'} />
         <Box marginLeft={4}>
           <Button
             variant="contained"

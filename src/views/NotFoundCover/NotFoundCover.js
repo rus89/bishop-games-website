@@ -16,17 +16,17 @@ const NotFoundCover = () => {
     defaultMatches: true,
   });
   const data = useStaticQuery(graphql`
-query {
-  site {
-    siteMetadata {
-      description
-      email
-      siteUrl
-      title
+    query {
+      site {
+        siteMetadata {
+          description
+          email
+          siteUrl
+          title
+        }
+      }
     }
-  }
-}
-`);
+  `);
 
   return (
     <Main>
@@ -70,7 +70,8 @@ query {
                     If you think this is a problem with us, please{' '}
                     <Link
                       href={'mailto:' + data.site.siteMetadata.email}
-                      underline="none">
+                      underline="none"
+                    >
                       tell us
                     </Link>
                   </Typography>

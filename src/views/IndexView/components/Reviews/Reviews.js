@@ -20,20 +20,24 @@ const mock = [
       'We brought Anica into a small team on a project that had a very strongly defined art style and goals and she nearly instantly picked up the right tone, quality level and was highly productive from the very start. Her ability to adapt to our processes, structure and project meant that we lost almost no time at all onboarding her and she was very quickly producing exceptionally high quality assets that would could just plug into the game straight away. She communicates well, is highly professional and very flexible - all in all a huge boost to any team lucky to have her talents!',
     name: 'Callum Godfrey',
     title: 'Head of Casual Mobile Games at Kwalee',
-    avatar: 'https://media.licdn.com/dms/image/C5603AQHJSEbt13Yy1Q/profile-displayphoto-shrink_800_800/0/1652286766669?e=1680739200&v=beta&t=PpW88MJJvmSz0v83RRyJaXQZUW01JwN76XLCPf3wl94',
+    avatar:
+      'https://media.licdn.com/dms/image/C5603AQHJSEbt13Yy1Q/profile-displayphoto-shrink_800_800/0/1652286766669?e=1680739200&v=beta&t=PpW88MJJvmSz0v83RRyJaXQZUW01JwN76XLCPf3wl94',
   },
   {
-    feedback: 'I\'ve known Milan for several years now, and I can honestly say that it\'s a real privilege to call him a friend. We first met when he came to the company where I was the team leader. He was a fresh and promising Unity developer at the time, and even though we never cooperated directly on a project I knew for sure that he was a talented professional. He worked closely as a consultant with the lead developer from my team, and helped him with several Unity projects. Even then, he exhibited traits that a good leader should possess. He is a true professional in his respective field, he has integrity and patience necessary for coping with the team leader duties. I was thrilled to hear that he was offered a well deserved position in the company, and not at all surprised, since he is a logical choice for such a responsible job. Milan is one of the most organized and disciplined people I know, and yet manages to retain a cheerful spirit and a playful disposition. He is a necessary ingredient for a successful team and therefore successful company. In my humble opinion, anyone who hires him is a lucky person. ',
+    feedback:
+      'I\'ve known Milan for several years now, and I can honestly say that it\'s a real privilege to call him a friend. We first met when he came to the company where I was the team leader. He was a fresh and promising Unity developer at the time, and even though we never cooperated directly on a project I knew for sure that he was a talented professional. He worked closely as a consultant with the lead developer from my team, and helped him with several Unity projects. Even then, he exhibited traits that a good leader should possess. He is a true professional in his respective field, he has integrity and patience necessary for coping with the team leader duties. I was thrilled to hear that he was offered a well deserved position in the company, and not at all surprised, since he is a logical choice for such a responsible job. Milan is one of the most organized and disciplined people I know, and yet manages to retain a cheerful spirit and a playful disposition. He is a necessary ingredient for a successful team and therefore successful company. In my humble opinion, anyone who hires him is a lucky person. ',
     name: 'Aleksandra Stankovic',
     title: 'ASO Consultant at Phiture',
-    avatar: 'https://media.licdn.com/dms/image/C4E03AQF4ZXwtPBkrdQ/profile-displayphoto-shrink_100_100/0/1533649910197?e=1681344000&v=beta&t=JAqYgluzt-n07O-wDILn0V5RI3j5VbEXw-3BxgQXcVY',
+    avatar:
+      'https://media.licdn.com/dms/image/C4E03AQF4ZXwtPBkrdQ/profile-displayphoto-shrink_100_100/0/1533649910197?e=1681344000&v=beta&t=JAqYgluzt-n07O-wDILn0V5RI3j5VbEXw-3BxgQXcVY',
   },
   {
     feedback:
       'Anica is a very skilled and hard-working illustrator. She impressed us with her vision, skills and communication. Looking forward to work on our next concepts together, thanks!',
     name: 'Serhiy Kozachuk',
     title: 'CEO at Virede Games',
-    avatar: 'https://www.upwork.com/profile-portraits/c1KYSjDeHkX_LrgJE4SIILKqwEGPMGmda05x6AhwheEk0SbNbLdcziUsOygc9jQ3BZ',
+    avatar:
+      'https://www.upwork.com/profile-portraits/c1KYSjDeHkX_LrgJE4SIILKqwEGPMGmda05x6AhwheEk0SbNbLdcziUsOygc9jQ3BZ',
   },
 ];
 
@@ -41,10 +45,7 @@ const Reviews = () => {
   const theme = useTheme();
 
   return (
-    <Container
-      data-aos={'fade-up'}
-      data-aos-delay={500}
-    >
+    <Container data-aos={'fade-up'} data-aos-delay={500}>
       <Box marginBottom={8}>
         <Box>
           <Box display={'flex'} justifyContent={'center'}>
@@ -114,7 +115,8 @@ const Reviews = () => {
                       alt={item.name}
                       imgProps={{
                         loading: 'lazy',
-                      }}/>
+                      }}
+                    />
                   </ListItemAvatar>
                   <ListItemText
                     sx={{ margin: 0 }}
@@ -126,9 +128,7 @@ const Reviews = () => {
                     }}
                     secondaryTypographyProps={{
                       color:
-                        i === 1
-                          ? theme.palette.common.white
-                          : 'text.secondary',
+                        i === 1 ? theme.palette.common.white : 'text.secondary',
                     }}
                   />
                 </ListItem>

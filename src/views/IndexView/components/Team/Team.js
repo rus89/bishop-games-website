@@ -31,7 +31,7 @@ const mock = [
     linkedin: 'https://www.linkedin.com/in/rusimovmilan/',
     facebook: 'https://www.facebook.com/milan.rusimov',
     instagram: 'https://www.instagram.com/rus89__/',
-  }
+  },
 ];
 
 const Team = () => {
@@ -69,7 +69,8 @@ const Team = () => {
               Team
             </Typography>
             <Typography variant="h6" align={'center'} color={'text.secondary'}>
-              We may be small, but our team packs a punch with their skills and dedication.
+              We may be small, but our team packs a punch with their skills and
+              dedication.
             </Typography>
           </Box>
         </Box>
@@ -92,10 +93,7 @@ const Team = () => {
               data-aos-offset={100}
               data-aos-duration={600}
             >
-              <Box
-                component={Card}
-                boxShadow={0}
-                bgcolor={'transparent'}>
+              <Box component={Card} boxShadow={0} bgcolor={'transparent'}>
                 <Box
                   component={CardMedia}
                   borderRadius={2}
@@ -103,8 +101,8 @@ const Team = () => {
                   height={1}
                   minHeight={320}
                   image={item.avatar}
-                  loading='lazy'
-                  alt='item.name'
+                  loading="lazy"
+                  alt="item.name"
                 />
                 <CardContent>
                   <ListItemText
@@ -113,7 +111,7 @@ const Team = () => {
                     primaryTypographyProps={{ fontWeight: 700 }}
                   />
                   <Box marginTop={1}>
-                    <a href={item.linkedin} target='_blank' rel='noreferrer'>
+                    <a href={item.linkedin} target="_blank" rel="noreferrer">
                       <IconButton
                         aria-label="linkedin"
                         size={'small'}
@@ -122,7 +120,7 @@ const Team = () => {
                         <LinkedInIcon />
                       </IconButton>
                     </a>
-                    <a href={item.facebook} target='_blank' rel='noreferrer'>
+                    <a href={item.facebook} target="_blank" rel="noreferrer">
                       <IconButton
                         aria-label="facebook"
                         size={'small'}
@@ -131,7 +129,7 @@ const Team = () => {
                         <FacebookIcon />
                       </IconButton>
                     </a>
-                    <a href={item.instagram} target='_blank' rel='noreferrer'>
+                    <a href={item.instagram} target="_blank" rel="noreferrer">
                       <IconButton
                         aria-label="instagram"
                         size={'small'}

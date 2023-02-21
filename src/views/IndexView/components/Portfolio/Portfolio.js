@@ -39,7 +39,7 @@ const mockLeftGrid = [
     description:
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem',
     title: 'Eiusmod tempor incididunt',
-  }
+  },
 ];
 const mockMiddleGrid = [
   {
@@ -63,7 +63,7 @@ const mockMiddleGrid = [
     image: Portfolio8,
     description: 'Quos dolores et quas molestias excepturi',
     title: 'Accusantium doloremque',
-  }
+  },
 ];
 const mockRightGrid = [
   {

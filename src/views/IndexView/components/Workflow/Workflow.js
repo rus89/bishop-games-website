@@ -19,7 +19,8 @@ import { List } from '@mui/material';
 const steps = [
   {
     label: 'Ideation & Conceptualization',
-    description: '- Collaborative effort between you and us at the start of game development process' +
+    description:
+      '- Collaborative effort between you and us at the start of game development process' +
       '- Vital for you to be involved in generating and evaluating game ideas' +
       '- Opportunity for you to share vision and provide input on game features' +
       '- High level game concept created to serve as roadmap for rest of development process' +
@@ -141,10 +142,7 @@ const Workflow = () => {
           </Typography>
         </Box>
       </Box>
-      <Box width={1}
-        component={Card}
-        borderRadius={2}
-      >
+      <Box width={1} component={Card} borderRadius={2}>
         <Stepper nonLinear activeStep={activeStep}>
           {steps.map((step, index) => (
             <Step
@@ -185,9 +183,10 @@ const Workflow = () => {
                       height: 0,
                       borderTop: `${theme.spacing(3)} solid transparent`,
                       borderBottom: `${theme.spacing(3)} solid transparent`,
-                      borderLeft: `${theme.spacing(2)} solid ${activeStep === index
-                        ? theme.palette.primary.main
-                        : theme.palette.alternate.main
+                      borderLeft: `${theme.spacing(2)} solid ${
+                        activeStep === index
+                          ? theme.palette.primary.main
+                          : theme.palette.alternate.main
                       }`,
                       transform: `translateX(${theme.spacing(0)})`,
                       zIndex: 2,
@@ -200,42 +199,54 @@ const Workflow = () => {
         </Stepper>
         <div>
           <React.Fragment>
-            <Box sx={{ mt: 2, mb: 1, p: 2 }} justifyContent={'center'} align={'center'}>
+            <Box
+              sx={{ mt: 2, mb: 1, p: 2 }}
+              justifyContent={'center'}
+              align={'center'}
+            >
               <Grid container spacing={1} component={List}>
-                {steps[activeStep].description.split('-').slice(1).map((item, i) => (
-                  <Grid item xs={12} sm={6} key={i}
-                    component={ListItem}
-                    width={'auto'}
-                    padding={0}>
-                    <Box
-                      component={ListItemAvatar}
-                      minWidth={'auto !important'}
-                      marginRight={2}
+                {steps[activeStep].description
+                  .split('-')
+                  .slice(1)
+                  .map((item, i) => (
+                    <Grid
+                      item
+                      xs={12}
+                      sm={6}
+                      key={i}
+                      component={ListItem}
+                      width={'auto'}
+                      padding={0}
                     >
                       <Box
-                        component={Avatar}
-                        bgcolor={theme.palette.warning.light}
-                        width={20}
-                        height={20}
+                        component={ListItemAvatar}
+                        minWidth={'auto !important'}
+                        marginRight={2}
                       >
-                        <svg
-                          width={12}
-                          height={12}
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
+                        <Box
+                          component={Avatar}
+                          bgcolor={theme.palette.warning.light}
+                          width={20}
+                          height={20}
                         >
-                          <path
-                            fillRule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                          <svg
+                            width={12}
+                            height={12}
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </Box>
                       </Box>
-                    </Box>
-                    <ListItemText primary={item} />
-                  </Grid>
-                ))}
+                      <ListItemText primary={item} />
+                    </Grid>
+                  ))}
               </Grid>
             </Box>
           </React.Fragment>

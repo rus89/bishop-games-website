@@ -9,18 +9,17 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 //TODO: srediti ovo
 const Footer = () => {
-
   const data = useStaticQuery(graphql`
-  query {
-    site {
-      siteMetadata {
-        description
-        email
-        siteUrl
-        title
+    query {
+      site {
+        siteMetadata {
+          description
+          email
+          siteUrl
+          title
+        }
       }
     }
-  }
   `);
 
   return (
@@ -33,16 +32,11 @@ const Footer = () => {
           width={1}
           flexDirection={{ xs: 'column', sm: 'row' }}
         >
-          <Box
-            display={'flex'}
-            width={{ xs: 100, md: 120 }}
-          >
-            <AnchorLink
-              to={'/#hero'}
-              title={'Bishop Games'}>
+          <Box display={'flex'} width={{ xs: 100, md: 120 }}>
+            <AnchorLink to={'/#hero'} title={'Bishop Games'}>
               <StaticImage
-                src='../../../../images/logo/logo.webp'
-                alt='logo'
+                src="../../../../images/logo/logo.webp"
+                alt="logo"
                 style={{
                   width: '48px',
                 }}
@@ -72,7 +66,8 @@ const Footer = () => {
           color="alternate.main"
           gutterBottom
         >
-          &copy; {data.site.siteMetadata.title} | {new Date().getFullYear()} | All Rights Reserved
+          &copy; {data.site.siteMetadata.title} | {new Date().getFullYear()} |
+          All Rights Reserved
         </Typography>
       </Grid>
     </Grid>
