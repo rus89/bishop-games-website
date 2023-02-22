@@ -31,7 +31,7 @@ export default function TopLayout(props) {
         {/* TODO: promeniti ovo */}
         <meta
           property="og:image"
-          content="https://assets.maccarianagency.com/screenshots/the-front/social.png"
+          content="../../src/images/og/og.webp"
         />
         <meta
           property="og:title"
