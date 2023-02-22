@@ -35,12 +35,10 @@ const Topbar = ({ onSidebarOpen }) => {
       <Box display={'flex'} width={{ xs: 100, md: 120 }}>
         <AnchorLink to={'/#hero'} title={'Bishop Games'}>
           <StaticImage
-            src="../../../../images/logo/logo.webp"
-            alt="logo"
-            loading="eager"
-            style={{
-              width: '48px',
-            }}
+            src='../../../../images/logo/logo.webp'
+            alt='logo'
+            loading='eager'
+            width='48'
           />
         </AnchorLink>
       </Box>

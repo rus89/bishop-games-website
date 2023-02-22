@@ -36,10 +36,8 @@ const Footer = () => {
             <AnchorLink to={'/#hero'} title={'Bishop Games'}>
               <StaticImage
                 src="../../../../images/logo/logo.webp"
-                alt="logo"
-                style={{
-                  width: '48px',
-                }}
+                alt='logo'
+                width='48'
               />
             </AnchorLink>
           </Box>
