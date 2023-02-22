@@ -43,16 +43,16 @@ export default function TopLayout(props) {
         />
         <meta
           property="og:url"
-          content="https://www.bishop.games"
+          content="https://bishop.games"
         />
         <meta name="twitter:title" content="Bishop Games - Your favorite game development studio" />
         <meta name="twitter:description" content="A full-service game development studio specializing in Unity game programming, game art, and the complete game development lifecycle" />
-        <meta name="twitter:url" content="https://www.bishop.games/?src=twitter" />
-        <meta name="twitter:image:src" content="http://www.bishop.games/image/all.png" />
+        <meta name="twitter:url" content="https://bishop.games/?src=twitter" />
+        <meta name="twitter:image:src" content="http://bishop.games/image/all.png" />
         <meta name="twitter:image:alt" content="Best game development studio" />
         <meta name="twitter:creator" content="@rusimovmilan" />
         <meta name="twitter:site" content="@bishopgames" />
-        <link rel="canonical" href="https://www.bishop.games" />
+        <link rel="canonical" href="https://bishop.games" />
       </Helmet>
       <Page>
         {props.children}

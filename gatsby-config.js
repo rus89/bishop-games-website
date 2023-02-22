@@ -59,8 +59,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.bishop.games',
-        sitemap: 'https://www.bishop.games/sitemap.xml',
+        host: 'https://bishop.games',
+        sitemap: 'https://bishop.games/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }, { userAgent: '*', disallow: ['/accounts', '/admin'] }]
       }
     },
@@ -74,7 +74,7 @@ module.exports = {
   ],
   siteMetadata: {
     title: 'Bishop Games - Your favorite game development studio',
-    siteUrl: 'https://www.bishop.games',
+    siteUrl: 'https://bishop.games',
     email: 'office@bishop.games',
     description: 'A full-service game development studio specializing in Unity game programming, game art, and the complete game development lifecycle'
   },
