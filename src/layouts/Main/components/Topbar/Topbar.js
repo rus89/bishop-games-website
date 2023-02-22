@@ -9,6 +9,41 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { StaticImage } from 'gatsby-plugin-image';
 
+const TopBarNavigationLinks = [
+  {
+    title: 'Services',
+    id: 'services',
+  },
+  {
+    title: 'Portfolio',
+    id: 'portfolio',
+  },
+  {
+    title: 'Workflow',
+    id: 'workflow',
+  },
+  {
+    title: 'Testimonials',
+    id: 'testimonials',
+  },
+  {
+    title: 'Stats',
+    id: 'stats',
+  },
+  {
+    title: 'Team',
+    id: 'team',
+  },
+  {
+    title: 'FAQ',
+    id: 'faq',
+  },
+  {
+    title: 'Blog',
+    id: 'blog',
+  },
+];
+
 const Topbar = ({ onSidebarOpen }) => {
   const theme = useTheme();
 
@@ -44,14 +79,9 @@ const Topbar = ({ onSidebarOpen }) => {
       </Box>
       {/* //TODO: ovo treba napraviti dinamicki mozda da se itemi i id povlace iz nekog fajla kako se kod ne bi menjao svaki put kada se doda ili oduzme neka komponenta */}
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <NavItem title={'Services'} id={'services'} />
-        <NavItem title={'Portfolio'} id={'portfolio'} />
-        <NavItem title={'Workflow'} id={'workflow'} />
-        <NavItem title={'Testimonials'} id={'testimonials'} />
-        <NavItem title={'Stats'} id={'stats'} />
-        <NavItem title={'Team'} id={'ourTeam'} />
-        <NavItem title={'FAQ'} id={'faq'} />
-        <NavItem title={'Blog'} id={'blog'} />
+        {TopBarNavigationLinks.map((item, index) =>
+          <NavItem title={item.title} id={item.id} key={index} />
+        )}
         <Box marginLeft={4}>
           <Button
             variant="contained"

@@ -99,7 +99,7 @@ const IndexView = () => {
 
       {/* Our Team */}
       <Container
-        id="ourTeam"
+        id="team"
         maxWidth={1}
         paddingTop={'0 !important'}
         sx={{

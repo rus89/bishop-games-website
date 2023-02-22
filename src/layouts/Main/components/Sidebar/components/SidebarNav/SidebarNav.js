@@ -6,6 +6,42 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { StaticImage } from 'gatsby-plugin-image';
 
+const SideBarNavigationLinks = [
+  {
+    title: 'Services',
+    id: 'services',
+  },
+  {
+    title: 'Portfolio',
+    id: 'portfolio',
+  },
+  {
+    title: 'Workflow',
+    id: 'workflow',
+  },
+  {
+    title: 'Testimonials',
+    id: 'testimonials',
+  },
+  {
+    title: 'Stats',
+    id: 'stats',
+  },
+  {
+    title: 'Team',
+    id: 'team',
+  },
+  {
+    title: 'FAQ',
+    id: 'faq',
+  },
+  {
+    title: 'Blog',
+    id: 'blog',
+  },
+];
+
+
 const SidebarNav = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -34,14 +70,9 @@ const SidebarNav = () => {
         </Box>
       </Box>
       <Box paddingX={2} paddingY={2}>
-        <NavItem title={'Services'} id={'services'} />
-        <NavItem title={'Portfolio'} id={'portfolio'} />
-        <NavItem title={'Workflow'} id={'workflow'} />
-        <NavItem title={'Testimonials'} id={'testimonials'} />
-        <NavItem title={'Stats'} id={'stats'} />
-        <NavItem title={'Team'} id={'ourTeam'} />
-        <NavItem title={'FAQ'} id={'faq'} />
-        <NavItem title={'Blog'} id={'blog'} />
+        {SideBarNavigationLinks.map((item, index) =>
+          <NavItem title={item.title} id={item.id} key={index} />
+        )}
         <Box marginTop={1}>
           <Button
             size={'large'}
