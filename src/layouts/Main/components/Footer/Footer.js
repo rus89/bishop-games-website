@@ -6,9 +6,64 @@ import Typography from '@mui/material/Typography';
 import { useStaticQuery, graphql } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { StaticImage } from 'gatsby-plugin-image';
+import styled from '@emotion/styled';
+import getTheme from 'theme';
+
+const FooterNavigationLinks = [
+  {
+    title: 'Services',
+    id: 'services',
+  },
+  {
+    title: 'Portfolio',
+    id: 'portfolio',
+  },
+  {
+    title: 'Workflow',
+    id: 'workflow',
+  },
+  {
+    title: 'Testimonials',
+    id: 'testimonials',
+  },
+  {
+    title: 'Stats',
+    id: 'stats',
+  },
+  {
+    title: 'Team',
+    id: 'team',
+  },
+  {
+    title: 'FAQ',
+    id: 'faq',
+  },
+  {
+    title: 'Blog',
+    id: 'blog',
+  },
+];
+
 
 //TODO: srediti ovo
 const Footer = () => {
+  const theme = getTheme();
+
+  const NavItemStyle = styled.div`
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      font-weight: 400;
+      color: ${theme.palette.background.default};
+      cursor: pointer;
+      &:hover {
+        font-weight: 1000;
+        color: ${theme.palette.primary.main};
+      }
+    }
+  `;
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -42,6 +97,16 @@ const Footer = () => {
             </AnchorLink>
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
+            {FooterNavigationLinks.map((item, index) =>
+              <Box marginTop={1} marginLeft={2} marginRight={2} key={index}>
+                <NavItemStyle>
+                  <AnchorLink to={'/#' + item.id} title={item.title}>
+                    {item.title}
+                  </AnchorLink>
+                </NavItemStyle>
+              </Box>
+            )}
+
             <Box marginTop={1}>
               <Button
                 component={'a'}
