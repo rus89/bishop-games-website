@@ -3,7 +3,6 @@ import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import ListItemText from '@mui/material/ListItemText';
@@ -95,12 +94,11 @@ const Team = () => {
             >
               <Box component={Card} boxShadow={0} bgcolor={'transparent'}>
                 <Box
-                  component={CardMedia}
+                  component={'img'}
                   borderRadius={2}
                   width={1}
                   height={1}
-                  minHeight={320}
-                  image={item.avatar}
+                  src={item.avatar}
                   loading="lazy"
                   alt="item.name"
                 />
