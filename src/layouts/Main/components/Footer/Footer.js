@@ -92,7 +92,7 @@ const Footer = () => {
               <StaticImage
                 src="../../../../images/logo/logo.webp"
                 alt='logo'
-                width='48'
+                width={48}
               />
             </AnchorLink>
           </Box>

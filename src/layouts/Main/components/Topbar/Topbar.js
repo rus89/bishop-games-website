@@ -73,7 +73,7 @@ const Topbar = ({ onSidebarOpen }) => {
             src='../../../../images/logo/logo.webp'
             alt='logo'
             loading='eager'
-            width='48'
+            width={48}
           />
         </AnchorLink>
       </Box>
