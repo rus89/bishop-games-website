@@ -2,6 +2,8 @@
 
 Codebase for the [Bishop Games Website](https://bishop.games/)
 
+---
+
 ## Built with
 
 - React
