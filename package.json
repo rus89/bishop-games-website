@@ -34,6 +34,7 @@
     ]
   },
   "dependencies": {
+    "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.0",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.0",
@@ -41,9 +42,10 @@
     "@mui/icons-material": "^5.15.0",
     "@mui/material": "^5.15.0",
     "aos": "^2.3.4",
+    "babel-plugin-styled-components": "^2.1.4",
     "card-validator": "^8.1.1",
     "formik": "^2.4.0",
-    "gatsby": "^4.11.0",
+    "gatsby": "^5.13.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-google-gtag": "^5.13.0",
     "gatsby-plugin-image": "^3.13.0",
@@ -53,9 +55,11 @@
     "gatsby-plugin-offline": "^6.13.0",
     "gatsby-plugin-page-creator": "^5.13.0",
     "gatsby-plugin-preact": "^7.13.0",
+    "gatsby-plugin-resolve-src": "^2.1.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.13.0",
     "gatsby-plugin-sitemap": "^6.13.0",
+    "gatsby-plugin-styled-components": "^6.15.0",
     "gatsby-source-filesystem": "^5.13.0",
     "gatsby-transformer-sharp": "^5.13.0",
     "install": "^0.13.0",
@@ -70,6 +74,7 @@
     "react-syntax-highlighter": "^15.5.0",
     "react-visibility-sensor": "^5.1.1",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.19",
     "yup": "^1.1.0"
   },
   "resolutions": {
