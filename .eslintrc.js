@@ -13,12 +13,17 @@ module.exports = {
       'version': 'detect',
     },
   },
+  'parser': '@babel/eslint-parser',
   'parserOptions': {
     'ecmaFeatures': {
       'jsx': true,
     },
     'ecmaVersion': 12,
     'sourceType': 'module',
+    'requireConfigFile': false,
+    'babelOptions': {
+      'presets': ['@babel/preset-react'],
+    },
   },
   'plugins': [
     'react',
