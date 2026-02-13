@@ -9,6 +9,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { graphql, useStaticQuery } from 'gatsby';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
+import notFoundBg from 'images/404-background.jpg';
 
 const NotFoundCover = () => {
   const theme = useTheme();
@@ -144,9 +145,7 @@ const NotFoundCover = () => {
                       <Box
                         component={'img'}
                         loading="lazy"
-                        src={
-                          'https://assets.maccarianagency.com/backgrounds/img23.jpg'
-                        }
+                        src={notFoundBg}
                         height={{ xs: 'auto', md: 1 }}
                         maxHeight={{ xs: 300, md: 1 }}
                         width={1}

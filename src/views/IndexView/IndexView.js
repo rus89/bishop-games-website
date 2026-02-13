@@ -13,6 +13,7 @@ import {
   Stats,
   Team,
   Faq,
+  Contact,
 } from './components';
 
 const IndexView = () => {
@@ -114,7 +115,19 @@ const IndexView = () => {
         <Faq />
       </Container>
 
-      {/* Box between FAQ and Footer */}
+      {/* Contact */}
+      <Container
+        id="contact"
+        maxWidth={1}
+        paddingTop={'0 !important'}
+        sx={{
+          backgroundColor: theme.palette.alternate.main,
+        }}
+      >
+        <Contact />
+      </Container>
+
+      {/* Box between Contact and Footer */}
       <Box
         maxWidth={1}
         width={1}

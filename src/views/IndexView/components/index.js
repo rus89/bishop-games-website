@@ -6,3 +6,4 @@ export { default as Reviews } from './Reviews';
 export { default as Stats } from './Stats';
 export { default as Team } from './Team';
 export { default as Faq } from './Faq';
+export { default as Contact } from './Contact';

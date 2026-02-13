@@ -5,24 +5,24 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from '@emotion/styled';
 import getTheme from 'theme';
 
-const NavItem = ({ title, id }) => {
-  const theme = getTheme();
+const theme = getTheme();
 
-  const NavItemStyle = styled.div`
-    display: flex;
-    align-items: center;
-    a {
-      text-decoration: none;
-      font-weight: 400;
-      color: ${theme.palette.text.primary};
-      cursor: pointer;
-      &:hover {
-        font-weight: 1000;
-        color: ${theme.palette.primary.main};
-      }
+const NavItemStyle = styled.div`
+  display: flex;
+  align-items: center;
+  a {
+    text-decoration: none;
+    font-weight: 400;
+    color: ${theme.palette.text.primary};
+    cursor: pointer;
+    &:hover {
+      font-weight: 1000;
+      color: ${theme.palette.primary.main};
     }
-  `;
+  }
+`;
 
+const NavItem = ({ title, id }) => {
   return (
     <Box aria-describedby={id} marginTop={2} marginBottom={2}>
       <NavItemStyle>

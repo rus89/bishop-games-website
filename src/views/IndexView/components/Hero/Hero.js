@@ -5,26 +5,13 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { useStaticQuery, graphql } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const Hero = () => {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
-
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          description
-          email
-          siteUrl
-          title
-        }
-      }
-    }
-  `);
 
   return (
     <Box>
@@ -62,17 +49,16 @@ const Hero = () => {
         flexDirection={{ xs: 'column', sm: 'row' }}
         alignItems={{ xs: 'stretched', sm: 'flex-start' }}
       >
-        <Button
-          component={'a'}
-          variant="contained"
-          color="primary"
-          size="large"
-          fullWidth={isMd ? false : true}
-          href={'mailto:' + data.site.siteMetadata.email}
-          target={'_blank'}
-        >
-          Contact Us
-        </Button>
+        <AnchorLink to={'/#contact'} title={'Start Your Project'} style={{ textDecoration: 'none' }}>
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            fullWidth={isMd ? false : true}
+          >
+            Start Your Project
+          </Button>
+        </AnchorLink>
       </Box>
     </Box>
   );
