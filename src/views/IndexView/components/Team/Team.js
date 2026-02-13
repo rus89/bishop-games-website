@@ -2,15 +2,14 @@ import React from 'react';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import ListItemText from '@mui/material/ListItemText';
 import Container from 'components/Container';
+import SectionHeader from 'components/SectionHeader';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { useTheme } from '@mui/material/styles';
 import Anica from 'images/team/Anica.webp';
 import Milan from 'images/team/Milan.webp';
 
@@ -34,45 +33,13 @@ const mock = [
 ];
 
 const Team = () => {
-  const theme = useTheme();
-
   return (
     <Container data-aos={'fade-up'}>
       <Box zIndex={2} position={'relative'}>
-        <Box marginBottom={8}>
-          <Box>
-            <Box display={'flex'} justifyContent={'center'}>
-              {[1, 2, 3, 4, 5].map((item) => (
-                <Box key={item} color={theme.palette.warning.light}>
-                  <svg
-                    width={18}
-                    height={18}
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                </Box>
-              ))}
-            </Box>
-            <Typography
-              variant="h2"
-              color="text.primary"
-              align={'center'}
-              gutterBottom
-              sx={{
-                fontWeight: 700,
-              }}
-            >
-              Team
-            </Typography>
-            <Typography variant="body1" fontSize={'1.25rem'} fontWeight={500} fontStyle={'italic'} align={'center'} color={'text.secondary'}>
-              We may be small, but our team packs a punch with their skills and
-              dedication.
-            </Typography>
-          </Box>
-        </Box>
+        <SectionHeader
+          title="Team"
+          subtitle="We may be small, but our team packs a punch with their skills and dedication."
+        />
         <Grid
           container
           spacing={2}
@@ -100,7 +67,7 @@ const Team = () => {
                   height={1}
                   src={item.avatar}
                   loading="lazy"
-                  alt="item.name"
+                  alt={item.name}
                 />
                 <CardContent>
                   <ListItemText

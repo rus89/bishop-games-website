@@ -3,67 +3,35 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import { useStaticQuery, graphql } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { StaticImage } from 'gatsby-plugin-image';
 import styled from '@emotion/styled';
 import getTheme from 'theme';
+import navigationLinks from 'data/navigation';
 
-const FooterNavigationLinks = [
-  {
-    title: 'Services',
-    id: 'services',
-  },
-  {
-    title: 'Portfolio',
-    id: 'portfolio',
-  },
-  {
-    title: 'Workflow',
-    id: 'workflow',
-  },
-  {
-    title: 'Testimonials',
-    id: 'testimonials',
-  },
-  {
-    title: 'Stats',
-    id: 'stats',
-  },
-  {
-    title: 'Team',
-    id: 'team',
-  },
-  {
-    title: 'FAQ',
-    id: 'faq',
-  },
-  {
-    title: 'Blog',
-    id: 'blog',
-  },
-];
+const theme = getTheme();
 
-
-//TODO: srediti ovo
-const Footer = () => {
-  const theme = getTheme();
-
-  const NavItemStyle = styled.div`
-    display: flex;
-    align-items: center;
-    a {
-      text-decoration: none;
-      font-weight: 400;
-      color: ${theme.palette.background.default};
-      cursor: pointer;
-      &:hover {
-        font-weight: 1000;
-        color: ${theme.palette.primary.main};
-      }
+const NavItemStyle = styled.div`
+  display: flex;
+  align-items: center;
+  a {
+    text-decoration: none;
+    font-weight: 400;
+    color: ${theme.palette.background.default};
+    cursor: pointer;
+    &:hover {
+      font-weight: 1000;
+      color: ${theme.palette.primary.main};
     }
-  `;
+  }
+`;
 
+const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -97,7 +65,7 @@ const Footer = () => {
             </AnchorLink>
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
-            {FooterNavigationLinks.map((item, index) =>
+            {navigationLinks.map((item, index) =>
               <Box marginTop={1} marginLeft={2} marginRight={2} key={index}>
                 <NavItemStyle>
                   <AnchorLink to={'/#' + item.id} title={item.title}>
@@ -108,21 +76,37 @@ const Footer = () => {
             )}
 
             <Box marginTop={1}>
-              <Button
-                component={'a'}
-                variant="contained"
-                color="primary"
-                size="large"
-                href={'mailto:' + data.site.siteMetadata.email}
-                target={'_blank'}
-              >
-                Contact Us
-              </Button>
+              <AnchorLink to={'/#contact'} title={"Let's Talk"} style={{ textDecoration: 'none' }}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                >
+                  Let&apos;s Talk
+                </Button>
+              </AnchorLink>
             </Box>
           </Box>
         </Box>
       </Grid>
       <Grid item xs={12}>
+        <Box display={'flex'} justifyContent={'center'} marginBottom={1}>
+          <a href="https://www.linkedin.com/company/bishop-games" target="_blank" rel="noreferrer">
+            <IconButton aria-label="linkedin" size={'small'} color={'primary'}>
+              <LinkedInIcon />
+            </IconButton>
+          </a>
+          <a href="https://www.facebook.com/bishopgamesstudio" target="_blank" rel="noreferrer">
+            <IconButton aria-label="facebook" size={'small'} color={'primary'}>
+              <FacebookIcon />
+            </IconButton>
+          </a>
+          <a href="https://www.instagram.com/bishop.games/" target="_blank" rel="noreferrer">
+            <IconButton aria-label="instagram" size={'small'} color={'primary'}>
+              <InstagramIcon />
+            </IconButton>
+          </a>
+        </Box>
         <Typography
           align={'center'}
           variant={'subtitle2'}
