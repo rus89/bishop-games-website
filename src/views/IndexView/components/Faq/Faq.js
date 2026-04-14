@@ -1,3 +1,5 @@
+// ABOUTME: FAQ section with accordion-style expandable question and answer items.
+// ABOUTME: Addresses common questions about the studio's services and process.
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';

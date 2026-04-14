@@ -1,3 +1,5 @@
+// ABOUTME: Portfolio section displaying the studio's game and art projects.
+// ABOUTME: Supports category filtering and featured project highlighting.
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';

@@ -1,3 +1,5 @@
+// ABOUTME: Workflow section explaining the studio's production process steps.
+// ABOUTME: Presents the step-by-step collaboration model for prospective clients.
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';

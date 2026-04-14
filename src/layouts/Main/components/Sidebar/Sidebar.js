@@ -1,3 +1,5 @@
+// ABOUTME: Mobile sidebar navigation drawer controlled by Topbar menu button.
+// ABOUTME: Slides in from the left with navigation links and theme toggle.
 import React from 'react';
 import PropTypes from 'prop-types';
 import Drawer from '@mui/material/Drawer';

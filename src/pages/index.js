@@ -1,3 +1,5 @@
+// ABOUTME: Home page entry point and SEO Head export.
+// ABOUTME: Renders IndexView and defines all meta, OG, and Twitter tags.
 import React from 'react';
 import IndexView from 'views/IndexView';
 

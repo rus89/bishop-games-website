@@ -1,3 +1,5 @@
+// ABOUTME: Contact section with email CTA and social media links.
+// ABOUTME: Reads the studio contact email from Gatsby siteMetadata.
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';

@@ -1,3 +1,5 @@
+// ABOUTME: Gatsby top-level layout plugin that wraps the app in the Page component.
+// ABOUTME: Loads global CSS for AOS scroll animations.
 import React from 'react';
 import PropTypes from 'prop-types';
 

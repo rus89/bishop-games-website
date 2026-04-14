@@ -1,3 +1,5 @@
+// ABOUTME: Gatsby SSR plugin that sets up the MUI Emotion cache.
+// ABOUTME: Ensures consistent style injection order during server-side rendering.
 
 /* eslint-disable import/prefer-default-export */
 import * as React from 'react';

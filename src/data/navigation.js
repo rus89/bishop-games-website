@@ -1,3 +1,5 @@
+// ABOUTME: Centralized navigation link definitions for the site.
+// ABOUTME: Single source of truth consumed by Topbar, Sidebar, and Footer.
 const navigationLinks = [
   { title: 'Services', id: 'services' },
   { title: 'Portfolio', id: 'portfolio' },

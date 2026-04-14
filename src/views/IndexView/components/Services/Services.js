@@ -1,3 +1,5 @@
+// ABOUTME: Services section listing the studio's six core service offerings.
+// ABOUTME: Displays service cards with icons, titles, and descriptions.
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';

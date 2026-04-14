@@ -1,3 +1,5 @@
+// ABOUTME: Custom shadow definitions for the MUI theme.
+// ABOUTME: Provides a 25-level shadow array used across all elevations.
 import { alpha } from '@mui/material/styles';
 const shadows = (themeMode = 'light') => {
   const rgb = themeMode === 'light' ? '#8c98a4' : '#000000';

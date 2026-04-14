@@ -1,3 +1,5 @@
+// ABOUTME: Shared heading block used at the top of each page section.
+// ABOUTME: Renders a star row, section title, and subtitle from props.
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';

@@ -1,3 +1,5 @@
+// ABOUTME: Primary layout shell with sticky topbar, mobile sidebar, and footer.
+// ABOUTME: Wraps all page content between the header and footer.
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';

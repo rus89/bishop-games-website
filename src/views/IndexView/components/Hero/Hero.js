@@ -1,3 +1,5 @@
+// ABOUTME: Hero section with studio tagline, description, and primary CTA.
+// ABOUTME: First visible section of the landing page.
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { useTheme } from '@mui/material/styles';

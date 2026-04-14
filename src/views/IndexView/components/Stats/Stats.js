@@ -1,3 +1,5 @@
+// ABOUTME: Stats section displaying key studio metrics and achievements.
+// ABOUTME: Shows quantitative highlights such as projects shipped and years active.
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';

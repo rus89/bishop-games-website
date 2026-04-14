@@ -1,3 +1,5 @@
+// ABOUTME: MUI theme factory with responsive font sizes and component overrides.
+// ABOUTME: Exports getTheme(mode, themeToggler) consumed by the Page component.
 import { responsiveFontSizes } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import shadows from './shadows';

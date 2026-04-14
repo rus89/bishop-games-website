@@ -1,3 +1,5 @@
+// ABOUTME: Team section displaying studio members with photos and roles.
+// ABOUTME: Shows the core team behind Bishop Games.
 import React from 'react';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
