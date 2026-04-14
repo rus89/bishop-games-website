@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from '@emotion/styled';
-import { useTheme } from '@mui/material/styles';
-
-const theme = useTheme();
 
 const NavItemStyle = styled.div`
   display: flex;
@@ -13,11 +10,11 @@ const NavItemStyle = styled.div`
   a {
     text-decoration: none;
     font-weight: 400;
-    color: ${theme.palette.text.primary};
+    color: ${({ theme }) => theme.palette.text.primary};
     cursor: pointer;
     &:hover {
       font-weight: 1000;
-      color: ${theme.palette.primary.main};
+      color: ${({ theme }) => theme.palette.primary.main};
     }
   }
 `;

@@ -11,10 +11,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { StaticImage } from 'gatsby-plugin-image';
 import styled from '@emotion/styled';
-import { useTheme } from '@mui/material/styles';
 import navigationLinks from 'data/navigation';
-
-const theme = useTheme();
 
 const NavItemStyle = styled.div`
   display: flex;
@@ -22,11 +19,11 @@ const NavItemStyle = styled.div`
   a {
     text-decoration: none;
     font-weight: 400;
-    color: ${theme.palette.background.default};
+    color: ${({ theme }) => theme.palette.background.default};
     cursor: pointer;
     &:hover {
       font-weight: 1000;
-      color: ${theme.palette.primary.main};
+      color: ${({ theme }) => theme.palette.primary.main};
     }
   }
 `;
