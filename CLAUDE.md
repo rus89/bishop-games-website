@@ -8,7 +8,7 @@ Deployed as static assets to Cloudflare Workers from `./public/`.
 - **Framework**: Gatsby 5, file-based routing
 - **UI**: MUI 5 + Emotion (structural/theme-aware); styled-components also in use
 - **Font**: Ubuntu via `@fontsource`; theme config in `src/theme/`
-- **Animations**: AOS (scroll), react-slick (carousels)
+- **Animations**: AOS (scroll)
 - **Prod renderer**: Preact (`gatsby-plugin-preact`) — avoid React internals not shimmed by Preact
 - **Package manager**: yarn 4.1.0 (berry) — use `yarn`, not `npm`
 - **Node**: >=18.0.0 required
@@ -46,7 +46,7 @@ public/         # Build output (gitignored), deployed to Cloudflare
   root — write `import X from 'components/...'`, not `../../components/...`
 - **Lockfile**: `package-lock.json` exists in the repo but is a relic — always use `yarn`. Running `npm install` will break the yarn 4 setup.
 - **Local plugins**: `./plugins/gatsby-plugin-top-layout` wraps the app in
-  `<Page>` and loads global CSS (slick, AOS). `./plugins/gatsby-plugin-mui-emotion`
+  `<Page>` and loads global CSS (AOS). `./plugins/gatsby-plugin-mui-emotion`
   sets up the Emotion SSR cache for MUI. Both live in `./plugins/`, not
   `node_modules/`.
 - **Dual styling**: Use MUI `sx` prop or `@emotion/styled` for theme-aware
