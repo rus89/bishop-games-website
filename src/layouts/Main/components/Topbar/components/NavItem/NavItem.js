@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from '@emotion/styled';
-import getTheme from 'theme';
+import { useTheme } from '@mui/material/styles';
 
-const theme = getTheme();
+const theme = useTheme();
 
 const NavItemStyle = styled.div`
   display: flex;
