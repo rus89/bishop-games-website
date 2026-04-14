@@ -32,7 +32,7 @@ const mock = [
   },
   {
     title: 'Game Art',
-    subtitle: 'You have a great code, we provide a great art',
+    subtitle: 'You have great code, we provide great art',
     icon: (
       <svg
         height={24}
@@ -53,7 +53,7 @@ const mock = [
   },
   {
     title: 'Game Programming',
-    subtitle: 'You have a great art, we make it alive',
+    subtitle: 'You have great art, we bring it to life',
     icon: (
       <svg
         height={24}
@@ -74,7 +74,7 @@ const mock = [
   },
   {
     title: 'Animation',
-    subtitle: 'You have static images, we make them dancing',
+    subtitle: 'You have static images, we make them dance',
     icon: (
       <svg
         height={24}
@@ -95,7 +95,7 @@ const mock = [
   },
   {
     title: 'Consulting',
-    subtitle: 'You need someone to keep your back, we are here',
+    subtitle: 'You need someone to have your back, we are here',
     icon: (
       <svg
         height={24}
@@ -117,7 +117,7 @@ const mock = [
   {
     title: 'Live Ops',
     subtitle:
-      'You made unexpectedly successful game, we support new content creation',
+      'You made an unexpectedly successful game, we support new content creation',
     icon: (
       <svg
         height={24}
