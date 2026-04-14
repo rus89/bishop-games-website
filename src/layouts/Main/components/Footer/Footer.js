@@ -1,3 +1,5 @@
+// ABOUTME: Site footer with navigation links, social links, and copyright info.
+// ABOUTME: Shares the centralized navigationLinks data with Topbar and Sidebar.
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';

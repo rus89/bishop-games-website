@@ -1,3 +1,5 @@
+// ABOUTME: Navigation link item for the top navigation bar.
+// ABOUTME: Renders an anchor-linked item with active hover styling from the MUI theme.
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';

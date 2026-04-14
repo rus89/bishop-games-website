@@ -1,3 +1,5 @@
+// ABOUTME: Navigation link item for the mobile sidebar navigation.
+// ABOUTME: Renders an anchor-linked item with hover styling from the MUI theme.
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
