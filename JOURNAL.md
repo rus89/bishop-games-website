@@ -78,3 +78,32 @@ The deleted files defined this shape — recreate when wiring into Portfolio.js:
   Remove the Contact entry from navigationLinks when refactoring nav in Phase 2.
 - The `SectionHeader` has a hardcoded `marginBottom={8}` — fine for now but may need
   a prop override if any section needs tighter spacing.
+
+### Phase 2 audit — comprehensive project review
+
+Full three-angle audit (infra, components, security/perf) found 30 actionable issues.
+Plan saved at `.claude/plans/shimmering-imagining-kahn.md`.
+
+**Key decisions made by Milan:**
+- Schema logo: copy `src/images/logo/logo.webp` to `static/logo.webp`
+- OG image: convert WebP → JPG for social platform compatibility
+- Brand color: darken `primary.main` (#f16a22) everywhere to pass WCAG AA 4.5:1
+- Dependencies: approved removal of styled-components, react-visibility-sensor;
+  downgrade preact-render-to-string to v5; clean up eslint/ajv/cross-env
+
+**Critical findings:**
+- `gatsby-ssr.js:9` references non-existent `static/logo.webp` (404 in prod)
+- No security headers (CSP, HSTS, etc.) configured for Cloudflare
+- `preact-render-to-string` v6 vs plugin peer dep v5 mismatch
+- FAQ marginBottom bug: `item.length` on a plain object is always undefined
+
+**Notable discovery:** The `imgProps` → `slotProps` fix from commit c3832b0 was
+deliberately reverted in commit 2c90c84 ("avoids deprecation noise on older MUI
+versions"). Not a regression — conscious choice. Left as-is.
+
+**Deferred items (YAGNI):**
+- gatsby-plugin-offline stale cache risk (no reports yet)
+- Dark mode palette (no UI toggle exists)
+- Portfolio/Team/Review images bypassing gatsby-image pipeline (big refactor)
+- gatsby-plugin-mui-emotion SSR renderToString + Preact alias (works currently)
+- Double-nested Containers in IndexView (functional, minor padding diff)
