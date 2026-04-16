@@ -8,7 +8,6 @@ const navigationLinks = [
   { title: 'Stats', id: 'stats' },
   { title: 'Team', id: 'team' },
   { title: 'FAQ', id: 'faq' },
-  { title: 'Contact', id: 'contact' },
 ];
 
 export default navigationLinks;

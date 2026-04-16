@@ -11,22 +11,27 @@ import SectionHeader from 'components/SectionHeader';
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
 
     try {
-      await fetch('https://formspree.io/f/xpwzgkpz', {
+      const response = await fetch('https://formspree.io/f/xvzdkpjb', {
         method: 'POST',
         body: formData,
         headers: {
           Accept: 'application/json',
         },
       });
-      setSubmitted(true);
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
     } catch {
-      setSubmitted(true);
+      setError(true);
     }
   };
 
@@ -44,6 +49,15 @@ const Contact = () => {
             </Typography>
             <Typography color="text.secondary">
               We&apos;ve received your message and will get back to you soon.
+            </Typography>
+          </Box>
+        ) : error ? (
+          <Box textAlign={'center'} padding={4}>
+            <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
+              Something went wrong.
+            </Typography>
+            <Typography color="text.secondary">
+              Please try again or email us directly.
             </Typography>
           </Box>
         ) : (

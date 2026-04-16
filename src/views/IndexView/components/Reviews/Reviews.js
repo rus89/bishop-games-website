@@ -30,7 +30,7 @@ const mock = [
   },
   {
     feedback:
-      'I\'ve known Milan for several years now, and I can honestly say that it\'s a real privilege to call him a friend. We first met when he came to the company where I was the team leader. He was a fresh and promising Unity developer at the time, and even though we never cooperated directly on a project I knew for sure that he was a talented professional. He worked closely as a consultant with the lead developer from my team, and helped him with several Unity projects. Even then, he exhibited traits that a good leader should possess. He is a true professional in his respective field, he has integrity and patience necessary for coping with the team leader duties. I was thrilled to hear that he was offered a well deserved position in the company, and not at all surprised, since he is a logical choice for such a responsible job. Milan is one of the most organized and disciplined people I know, and yet manages to retain a cheerful spirit and a playful disposition. He is a necessary ingredient for a successful team and therefore successful company. In my humble opinion, anyone who hires him is a lucky person. ',
+      "I've known Milan for several years now, and I can honestly say that it's a real privilege to call him a friend. We first met when he came to the company where I was the team leader. He was a fresh and promising Unity developer at the time, and even though we never cooperated directly on a project I knew for sure that he was a talented professional. He worked closely as a consultant with the lead developer from my team, and helped him with several Unity projects. Even then, he exhibited traits that a good leader should possess. He is a true professional in his respective field, he has integrity and patience necessary for coping with the team leader duties. I was thrilled to hear that he was offered a well deserved position in the company, and not at all surprised, since he is a logical choice for such a responsible job. Milan is one of the most organized and disciplined people I know, and yet manages to retain a cheerful spirit and a playful disposition. He is a necessary ingredient for a successful team and therefore successful company. In my humble opinion, anyone who hires him is a lucky person. ",
     name: 'Aleksandra Stankovic',
     title: 'ASO Consultant at Phiture',
     avatar: avatarAleksandra,
@@ -90,9 +90,7 @@ const Reviews = () => {
                         width: '48px',
                         height: '48px',
                       }}
-                      slotProps={{
-                        img: { loading: 'lazy' },
-                      }}
+                      imgProps={{ loading: 'lazy' }}
                     />
                   </ListItemAvatar>
                   <ListItemText
