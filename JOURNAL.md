@@ -41,3 +41,40 @@ Added two gotchas identified during quality audit:
 ### Hook misconfiguration fixed
 `.claude/hooks/session_start.sh` contained a Flutter command (`flutter analyze --fatal-lints ...`) copied from a different project. This was the source of recurring "Could not find an option named --fatal-lints" non-blocking hook errors. Replaced with an empty script.
 Note: `.claude/` is gitignored in this project — hook changes are local only.
+
+### Yarn 4 / corepack situation (2026-04-14)
+The shell Claude Code runs in has Homebrew Node v25.8.2 + global yarn 1.22.22.
+Corepack is not in PATH on this machine (Homebrew's Node doesn't include it).
+Yarn 1.x refuses to run because of the `"packageManager": "yarn@4.1.0"` field in `package.json`.
+Workaround: download `@yarnpkg/cli-dist@4.1.0` from npm, extract it to `/tmp/yarn-4/`,
+and invoke via `node /tmp/yarn-4/package/bin/yarn.js <command>`.
+This is fragile — Milan should investigate enabling corepack or adding the yarn 4
+binary to `.yarn/releases/` so it's self-contained.
+
+---
+
+## 2026-04-16
+
+### Phase 1 refactoring — code review findings and fixes
+
+Code review (3 specialist agents) found two merge blockers:
+1. `imgProps` → `slotProps` in `Reviews.js` — was missed in Task 2, now fixed.
+2. `src/data/portfolio.js` and `src/data/categories.js` — created in Task 7 but never
+   wired into `Portfolio.js` (which still uses inline mock grids). YAGNI violation.
+   Decision: deleted both files. Deferred to Phase 2.
+
+### Portfolio data model (deleted, deferred to Phase 2)
+
+The deleted files defined this shape — recreate when wiring into Portfolio.js:
+- `projects` array: `{ id, title, description, category, image, featured }`
+- `categories` array: `{ id, label }` — ids: 'all', 'full-game', 'art-animation', 'live-ops'
+- `filterProjects(projectList, categoryId)` helper
+- `getFeaturedProjects(projectList)` helper
+- Images go in `src/images/portfolio/1.webp` … `12.webp`
+
+### Other review notes (non-blocking, for Phase 2 awareness)
+- `navigationLinks` in `src/data/navigation.js` includes a `Contact` entry that creates
+  duplicate contact links (the CTA button in each consumer already handles it).
+  Remove the Contact entry from navigationLinks when refactoring nav in Phase 2.
+- The `SectionHeader` has a hardcoded `marginBottom={8}` — fine for now but may need
+  a prop override if any section needs tighter spacing.
