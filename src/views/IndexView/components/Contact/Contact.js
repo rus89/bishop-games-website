@@ -12,6 +12,11 @@ import SectionHeader from 'components/SectionHeader';
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
+  const [fields, setFields] = useState({ name: '', email: '', message: '' });
+
+  const handleChange = (e) => {
+    setFields((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -70,6 +75,8 @@ const Contact = () => {
                   variant="outlined"
                   fullWidth
                   required
+                  value={fields.name}
+                  onChange={handleChange}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -80,6 +87,8 @@ const Contact = () => {
                   variant="outlined"
                   fullWidth
                   required
+                  value={fields.email}
+                  onChange={handleChange}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -91,6 +100,8 @@ const Contact = () => {
                   multiline
                   rows={4}
                   required
+                  value={fields.message}
+                  onChange={handleChange}
                 />
               </Grid>
               <Grid item xs={12}>
