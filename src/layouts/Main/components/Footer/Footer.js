@@ -1,3 +1,5 @@
+// ABOUTME: Site footer with navigation links, social links, and copyright info.
+// ABOUTME: Shares the centralized navigationLinks data with Topbar and Sidebar.
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -11,10 +13,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { StaticImage } from 'gatsby-plugin-image';
 import styled from '@emotion/styled';
-import getTheme from 'theme';
 import navigationLinks from 'data/navigation';
-
-const theme = getTheme();
 
 const NavItemStyle = styled.div`
   display: flex;
@@ -22,11 +21,11 @@ const NavItemStyle = styled.div`
   a {
     text-decoration: none;
     font-weight: 400;
-    color: ${theme.palette.background.default};
+    color: ${({ theme }) => theme.palette.background.default};
     cursor: pointer;
     &:hover {
       font-weight: 1000;
-      color: ${theme.palette.primary.main};
+      color: ${({ theme }) => theme.palette.primary.main};
     }
   }
 `;

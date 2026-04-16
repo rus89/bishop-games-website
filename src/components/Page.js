@@ -1,3 +1,5 @@
+// ABOUTME: Root component that wraps the app with ThemeProvider and CssBaseline.
+// ABOUTME: Manages dark/light mode via localStorage and initializes AOS.
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from '@mui/material/styles';

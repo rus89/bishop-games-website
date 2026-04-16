@@ -1,3 +1,5 @@
+// ABOUTME: Client testimonials section with a scrollable review list.
+// ABOUTME: Displays feedback from past clients with avatar and star rating.
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
@@ -88,8 +90,8 @@ const Reviews = () => {
                         width: '48px',
                         height: '48px',
                       }}
-                      imgProps={{
-                        loading: 'lazy',
+                      slotProps={{
+                        img: { loading: 'lazy' },
                       }}
                     />
                   </ListItemAvatar>

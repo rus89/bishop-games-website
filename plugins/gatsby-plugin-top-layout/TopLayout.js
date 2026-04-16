@@ -1,10 +1,10 @@
+// ABOUTME: Gatsby top-level layout plugin that wraps the app in the Page component.
+// ABOUTME: Loads global CSS for AOS scroll animations.
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import Page from '../../src/components/Page';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import 'aos/dist/aos.css';
 
 export default function TopLayout(props) {

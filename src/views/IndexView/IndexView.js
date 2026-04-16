@@ -1,3 +1,5 @@
+// ABOUTME: Main landing page view composing all section components in order.
+// ABOUTME: Sets section IDs for anchor navigation and alternates background colors.
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';

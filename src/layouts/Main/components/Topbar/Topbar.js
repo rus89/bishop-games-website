@@ -1,3 +1,5 @@
+// ABOUTME: Sticky top navigation bar with logo, nav links, and mobile menu toggle.
+// ABOUTME: Renders primary navigation for both desktop and mobile viewports.
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';

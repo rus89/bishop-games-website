@@ -1,3 +1,5 @@
+// ABOUTME: Color palette definitions for the MUI theme.
+// ABOUTME: Defines primary (orange), secondary (red), and background colors.
 export const light = {
   mode: 'light',
   cardShadow: 'rgba(23, 70, 161, .11)',

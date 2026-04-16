@@ -1,3 +1,5 @@
+// ABOUTME: Re-exports all IndexView section components.
+// ABOUTME: Follows the project's two-file component convention.
 export { default as Hero } from './Hero';
 export { default as Services } from './Services';
 export { default as Workflow } from './Workflow';

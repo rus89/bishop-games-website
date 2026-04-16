@@ -1,3 +1,5 @@
+// ABOUTME: Navigation link list rendered inside the mobile sidebar drawer.
+// ABOUTME: Consumes centralized navigationLinks data shared with Topbar and Footer.
 import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
