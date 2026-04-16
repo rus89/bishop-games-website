@@ -90,8 +90,8 @@ const Reviews = () => {
                         width: '48px',
                         height: '48px',
                       }}
-                      imgProps={{
-                        loading: 'lazy',
+                      slotProps={{
+                        img: { loading: 'lazy' },
                       }}
                     />
                   </ListItemAvatar>
