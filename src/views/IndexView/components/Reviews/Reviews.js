@@ -18,7 +18,6 @@ import Container from 'components/Container';
 import SectionHeader from 'components/SectionHeader';
 import avatarCallum from 'images/reviews/callum-godfrey.jpg';
 import avatarAleksandra from 'images/reviews/aleksandra-stankovic.png';
-import avatarSerhiy from 'images/reviews/serhiy-kozachuk.jpg';
 
 const mock = [
   {
@@ -40,7 +39,6 @@ const mock = [
       'Anica is a very skilled and hard-working illustrator. She impressed us with her vision, skills and communication. Looking forward to work on our next concepts together, thanks!',
     name: 'Serhiy Kozachuk',
     title: 'CEO at Virede Games',
-    avatar: avatarSerhiy,
   },
 ];
 
