@@ -90,6 +90,14 @@ src/views/IndexView/components/Hero/
 Config in `wrangler.jsonc`. Site is at https://bishop.games.
 Run `wrangler deploy` to push `./public/` to Cloudflare Workers.
 
+- Workers Static Assets natively supports `_headers` and `_redirects` files (same as Pages) — place in `static/` so Gatsby copies to `./public/`. Only Early Hints is Pages-only.
+
+## Claim Verification
+
+- Any claim about external systems (Cloudflare, Gatsby, MUI, Preact, deps) ranked HIGH/CRITICAL must cite a source in the same message: doc URL (Context7), grep output, or command result. No citation = downgrade to "unverified hunch".
+- Label claims explicitly: `[verified: <source>]` or `[recollection, unverified]`. Never mix the two without labels.
+- If Milan replies "source?", stop and verify before proceeding.
+
 ## Testing
 
 - No automated test suite is currently configured.
