@@ -21,11 +21,15 @@ const NavItemStyle = styled.div`
   }
 `;
 
-const NavItem = ({ title, id }) => {
+const NavItem = ({ title, id, onNavigate }) => {
   return (
     <Box aria-describedby={id} marginTop={2} marginBottom={2}>
       <NavItemStyle>
-        <AnchorLink to={'/#' + id} title={title}>
+        <AnchorLink
+          to={'/#' + id}
+          title={title}
+          onAnchorLinkClick={onNavigate}
+        >
           {title}
         </AnchorLink>
       </NavItemStyle>
@@ -36,6 +40,7 @@ const NavItem = ({ title, id }) => {
 NavItem.propTypes = {
   title: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  onNavigate: PropTypes.func.isRequired,
 };
 
 export default NavItem;

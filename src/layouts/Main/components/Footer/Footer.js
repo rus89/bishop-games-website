@@ -77,6 +77,7 @@ const Footer = () => {
             <Box marginTop={1}>
               <AnchorLink to={'/#contact'} title={"Let's Talk"} style={{ textDecoration: 'none' }}>
                 <Button
+                  component="span"
                   variant="contained"
                   color="primary"
                   size="large"

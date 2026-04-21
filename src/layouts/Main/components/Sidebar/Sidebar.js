@@ -26,14 +26,14 @@ const Sidebar = ({ open, variant, onClose }) => {
           padding: 1,
         }}
       >
-        <SidebarNav />
+        <SidebarNav onClose={onClose} />
       </Box>
     </Drawer>
   );
 };
 
 Sidebar.propTypes = {
-  onClose: PropTypes.func,
+  onClose: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
   variant: PropTypes.string.isRequired,
 };

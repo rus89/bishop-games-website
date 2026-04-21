@@ -38,6 +38,7 @@ const Topbar = ({ onSidebarOpen }) => {
         <Box marginLeft={4}>
           <AnchorLink to={'/#contact'} title={'Contact Us'} style={{ textDecoration: 'none' }}>
             <Button
+              component="span"
               variant="contained"
               color="primary"
               size="large"
@@ -67,7 +68,7 @@ const Topbar = ({ onSidebarOpen }) => {
 };
 
 Topbar.propTypes = {
-  onSidebarOpen: PropTypes.func,
+  onSidebarOpen: PropTypes.func.isRequired,
 };
 
 export default Topbar;

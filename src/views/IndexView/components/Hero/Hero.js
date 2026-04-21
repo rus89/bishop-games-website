@@ -54,6 +54,7 @@ const Hero = () => {
       >
         <AnchorLink to={'/#contact'} title={'Start Your Project'} style={{ textDecoration: 'none' }}>
           <Button
+            component="span"
             variant="contained"
             color="primary"
             size="large"
