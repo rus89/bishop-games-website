@@ -4,7 +4,6 @@ module.exports = {
     'gatsby-plugin-preact',
     'gatsby-plugin-top-layout',
     'gatsby-plugin-mui-emotion',
-    'gatsby-plugin-styled-components',
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
