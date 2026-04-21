@@ -6,7 +6,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
     '@type': 'Organization',
     name: 'Bishop Games',
     url: 'https://bishop.games',
-    logo: 'https://bishop.games/static/logo.webp',
+    logo: 'https://bishop.games/logo.webp',
     description:
       'A full-service game development studio specializing in Unity game programming, game art, and the complete game development lifecycle',
     email: 'office@bishop.games',

@@ -69,6 +69,13 @@ const Column = ({ data }) => {
                   opacity: 1,
                 },
               },
+              '@media (prefers-reduced-motion: reduce)': {
+                '&:hover': {
+                  '& img': {
+                    transform: 'none',
+                  },
+                },
+              },
             }}
           >
             <Box
@@ -85,6 +92,9 @@ const Column = ({ data }) => {
                 objectFit: 'cover',
                 filter:
                   theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
+                '@media (prefers-reduced-motion: reduce)': {
+                  transition: 'none !important',
+                },
               }}
             />
             <Box
@@ -98,6 +108,9 @@ const Column = ({ data }) => {
                 padding: 2,
                 opacity: 0,
                 transition: 'opacity 0.3s ease',
+                '@media (prefers-reduced-motion: reduce)': {
+                  transition: 'none',
+                },
               }}
             >
               <Typography

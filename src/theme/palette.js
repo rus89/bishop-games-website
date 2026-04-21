@@ -5,9 +5,10 @@ export const light = {
   cardShadow: 'rgba(23, 70, 161, .11)',
   divider: 'rgba(0, 0, 0, 0.12)',
   primary: {
-    light: '#f4814e',
-    main: '#f16a22',
-    dark: '#dd5317',
+    light: '#d96432',
+    main: '#b85510',
+    dark: '#8f4008',
+    heroAccent: '#f49361',
     contrastText: '#fff',
   },
   secondary: {

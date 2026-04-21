@@ -1,7 +1,7 @@
 // ABOUTME: Stats section displaying key studio metrics and achievements.
 // ABOUTME: Shows quantitative highlights such as projects shipped and years active.
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
@@ -10,8 +10,8 @@ import Avatar from '@mui/material/Avatar';
 import { useTheme } from '@mui/material/styles';
 import Container from 'components/Container';
 import SectionHeader from 'components/SectionHeader';
-import VisibilitySensor from 'react-visibility-sensor';
 import CountUp from 'react-countup';
+import useInViewport from 'hooks/useInViewport';
 
 const mock = [
   {
@@ -21,6 +21,7 @@ const mock = [
     subtitle: 'We worked on over 100+ different projects.',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"
@@ -44,6 +45,7 @@ const mock = [
     subtitle: 'We had over 50+ happy clients.',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"
@@ -67,6 +69,7 @@ const mock = [
     subtitle: 'Our clients are 100% happy with our work',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"
@@ -92,6 +95,7 @@ const mock = [
     subtitle: 'We have separate experiences but best work combined.',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"
@@ -112,14 +116,7 @@ const mock = [
 
 const Stats = () => {
   const theme = useTheme();
-  const [viewPortEntered, setViewPortEntered] = useState(false);
-  const setViewPortVisibility = (isVisible) => {
-    if (viewPortEntered) {
-      return;
-    }
-
-    setViewPortEntered(isVisible);
-  };
+  const [statsRef, hasEntered] = useInViewport();
 
   return (
     <Container data-aos={'fade-up'}>
@@ -127,7 +124,7 @@ const Stats = () => {
         title="Our numbers speak for us"
         subtitle="Our stats speak for themselves, we're the real deal!"
       />
-      <Box>
+      <Box ref={statsRef}>
         <Grid container spacing={4}>
           {mock.map((item, i) => (
             <Grid item xs={12} sm={6} md={3} key={i}>
@@ -154,25 +151,25 @@ const Stats = () => {
                   >
                     {item.icon}
                   </Box>
-                  <VisibilitySensor
-                    onChange={(isVisible) => setViewPortVisibility(isVisible)}
-                    delayedCall
+                  <Typography
+                    variant={'h4'}
+                    color={'primary'}
+                    gutterBottom
+                    sx={{ fontWeight: 700 }}
                   >
-                    <Typography
-                      variant={'h4'}
-                      color={'primary'}
-                      gutterBottom
-                      sx={{ fontWeight: 700 }}
-                    >
-                      <CountUp
-                        duration={1}
-                        end={viewPortEntered ? item.number : 0}
-                        start={0}
-                        suffix={item.suffix}
-                      />
-                    </Typography>
-                  </VisibilitySensor>
-                  <Typography variant="body1" fontSize={'1.25rem'} fontWeight={500} color={'text.secondary'}>
+                    <CountUp
+                      duration={1}
+                      end={hasEntered ? item.number : 0}
+                      start={0}
+                      suffix={item.suffix}
+                    />
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    fontSize={'1.25rem'}
+                    fontWeight={500}
+                    color={'text.secondary'}
+                  >
                     {item.title}
                   </Typography>
                   <Typography color="text.secondary">

@@ -24,20 +24,25 @@ const Topbar = ({ onSidebarOpen }) => {
       <Box display={'flex'} width={{ xs: 100, md: 120 }}>
         <AnchorLink to={'/#hero'} title={'Bishop Games'}>
           <StaticImage
-            src='../../../../images/logo/logo.webp'
-            alt='logo'
-            loading='eager'
+            src="../../../../images/logo/logo.webp"
+            alt="logo"
+            loading="eager"
             width={48}
           />
         </AnchorLink>
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        {navigationLinks.map((item, index) =>
+        {navigationLinks.map((item, index) => (
           <NavItem title={item.title} id={item.id} key={index} />
-        )}
+        ))}
         <Box marginLeft={4}>
-          <AnchorLink to={'/#contact'} title={'Contact Us'} style={{ textDecoration: 'none' }}>
+          <AnchorLink
+            to={'/#contact'}
+            title={'Contact Us'}
+            style={{ textDecoration: 'none' }}
+          >
             <Button
+              component="span"
               variant="contained"
               color="primary"
               size="large"
@@ -67,7 +72,7 @@ const Topbar = ({ onSidebarOpen }) => {
 };
 
 Topbar.propTypes = {
-  onSidebarOpen: PropTypes.func,
+  onSidebarOpen: PropTypes.func.isRequired,
 };
 
 export default Topbar;

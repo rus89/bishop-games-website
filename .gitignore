@@ -38,6 +38,9 @@ yarn-error.log*
 .eslintcache
 .vscode
 
+# yarn is the only supported package manager
+package-lock.json
+
 # yarn 4
 
 .yarn/*

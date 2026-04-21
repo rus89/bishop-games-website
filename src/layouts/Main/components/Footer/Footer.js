@@ -24,8 +24,8 @@ const NavItemStyle = styled.div`
     color: ${({ theme }) => theme.palette.background.default};
     cursor: pointer;
     &:hover {
-      font-weight: 1000;
-      color: ${({ theme }) => theme.palette.primary.main};
+      font-weight: 700;
+      text-decoration: underline;
     }
   }
 `;
@@ -58,13 +58,13 @@ const Footer = () => {
             <AnchorLink to={'/#hero'} title={'Bishop Games'}>
               <StaticImage
                 src="../../../../images/logo/logo.webp"
-                alt='logo'
+                alt="logo"
                 width={48}
               />
             </AnchorLink>
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
-            {navigationLinks.map((item, index) =>
+            {navigationLinks.map((item, index) => (
               <Box marginTop={1} marginLeft={2} marginRight={2} key={index}>
                 <NavItemStyle>
                   <AnchorLink to={'/#' + item.id} title={item.title}>
@@ -72,11 +72,16 @@ const Footer = () => {
                   </AnchorLink>
                 </NavItemStyle>
               </Box>
-            )}
+            ))}
 
             <Box marginTop={1}>
-              <AnchorLink to={'/#contact'} title={"Let's Talk"} style={{ textDecoration: 'none' }}>
+              <AnchorLink
+                to={'/#contact'}
+                title={"Let's Talk"}
+                style={{ textDecoration: 'none' }}
+              >
                 <Button
+                  component="span"
                   variant="contained"
                   color="primary"
                   size="large"
@@ -90,17 +95,29 @@ const Footer = () => {
       </Grid>
       <Grid item xs={12}>
         <Box display={'flex'} justifyContent={'center'} marginBottom={1}>
-          <a href="https://www.linkedin.com/company/bishop-games" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.linkedin.com/company/bishop-games"
+            target="_blank"
+            rel="noreferrer"
+          >
             <IconButton aria-label="linkedin" size={'small'} color={'primary'}>
               <LinkedInIcon />
             </IconButton>
           </a>
-          <a href="https://www.facebook.com/bishopgamesstudio" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.facebook.com/bishopgamesstudio"
+            target="_blank"
+            rel="noreferrer"
+          >
             <IconButton aria-label="facebook" size={'small'} color={'primary'}>
               <FacebookIcon />
             </IconButton>
           </a>
-          <a href="https://www.instagram.com/bishop.games/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.instagram.com/bishop.games/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <IconButton aria-label="instagram" size={'small'} color={'primary'}>
               <InstagramIcon />
             </IconButton>

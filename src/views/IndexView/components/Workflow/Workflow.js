@@ -135,7 +135,7 @@ const Workflow = () => {
                   position: 'relative',
                   bgcolor:
                     activeStep === index ? 'primary.main' : 'alternate.main',
-                  color: activeStep === index ? 'text.primary' : 'common.white',
+                  color: 'common.white',
                   height: theme.spacing(6),
                   padding: theme.spacing(0, 3),
                   zIndex: 1,
@@ -152,7 +152,7 @@ const Workflow = () => {
               }}
             >
               <React.Fragment>
-                <StepButton onClick={handleStep(index)} alt={step.label}>
+                <StepButton onClick={handleStep(index)} aria-label={step.label}>
                   {isMd ? step.label : ''}
                 </StepButton>
                 {index === steps.length - 1 ? null : (
@@ -185,44 +185,45 @@ const Workflow = () => {
             >
               <Grid container spacing={1} component={List}>
                 {steps[activeStep].description.map((item, i) => (
-                    <Grid
-                      item
-                      xs={12}
-                      sm={6}
-                      key={i}
-                      component={ListItem}
-                      width={'auto'}
-                      padding={0}
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    key={i}
+                    component={ListItem}
+                    width={'auto'}
+                    padding={0}
+                  >
+                    <Box
+                      component={ListItemAvatar}
+                      minWidth={'auto !important'}
+                      marginRight={2}
                     >
                       <Box
-                        component={ListItemAvatar}
-                        minWidth={'auto !important'}
-                        marginRight={2}
+                        component={Avatar}
+                        bgcolor={theme.palette.warning.light}
+                        width={20}
+                        height={20}
                       >
-                        <Box
-                          component={Avatar}
-                          bgcolor={theme.palette.warning.light}
-                          width={20}
-                          height={20}
+                        <svg
+                          aria-hidden="true"
+                          width={12}
+                          height={12}
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
                         >
-                          <svg
-                            width={12}
-                            height={12}
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </Box>
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
                       </Box>
-                      <ListItemText primary={item} />
-                    </Grid>
-                  ))}
+                    </Box>
+                    <ListItemText primary={item} />
+                  </Grid>
+                ))}
               </Grid>
             </Box>
           </React.Fragment>

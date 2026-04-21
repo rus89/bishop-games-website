@@ -20,6 +20,7 @@ const Hero = () => {
       <Box marginBottom={2}>
         <Typography
           variant="h2"
+          component="h1"
           color="background.level2"
           sx={{
             fontWeight: 700,
@@ -29,7 +30,7 @@ const Hero = () => {
           <Typography
             component={'span'}
             variant={'inherit'}
-            color={'primary.light'}
+            color={'primary.heroAccent'}
           >
             idea into a full-potential game.
           </Typography>
@@ -51,8 +52,13 @@ const Hero = () => {
         flexDirection={{ xs: 'column', sm: 'row' }}
         alignItems={{ xs: 'stretched', sm: 'flex-start' }}
       >
-        <AnchorLink to={'/#contact'} title={'Start Your Project'} style={{ textDecoration: 'none' }}>
+        <AnchorLink
+          to={'/#contact'}
+          title={'Start Your Project'}
+          style={{ textDecoration: 'none' }}
+        >
           <Button
+            component="span"
             variant="contained"
             color="primary"
             size="large"

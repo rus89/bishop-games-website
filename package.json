@@ -6,17 +6,12 @@
   "private": true,
   "scripts": {
     "develop": "gatsby develop",
-    "build": "cross-env GENERATE_SOURCEMAP=false gatsby build",
+    "build": "gatsby build",
     "clean": "gatsby clean",
     "prettier:fix": "prettier './src/**/*.js' --write",
     "eslint:fix": "eslint ./src --fix",
     "codeStyle:fix": "npm run prettier:fix && npm run eslint:fix",
     "clear-all": "rimraf ./node_modules ./.cache ./public"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
   },
   "browserslist": {
     "production": [
@@ -41,10 +36,7 @@
     "@fontsource/ubuntu": "^5.0.0",
     "@mui/icons-material": "^5.15.0",
     "@mui/material": "^5.15.0",
-    "ajv": "^8.12.0",
-    "ajv-keywords": "^5.1.0",
     "aos": "^2.3.4",
-    "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.13.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-google-gtag": "^5.13.0",
@@ -58,17 +50,14 @@
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.13.0",
     "gatsby-plugin-sitemap": "^6.13.0",
-    "gatsby-plugin-styled-components": "^6.13.0",
     "gatsby-source-filesystem": "^5.13.0",
     "gatsby-transformer-sharp": "^5.13.0",
     "preact": "^10.13.2",
-    "preact-render-to-string": "^6.0.2",
+    "preact-render-to-string": "^6.5.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-countup": "^6.4.2",
-    "react-dom": "^18.2.0",
-    "react-visibility-sensor": "^5.1.1",
-    "styled-components": "^6.1.19"
+    "react-dom": "^18.2.0"
   },
   "overrides": {
     "lmdb": "2.5.2",
@@ -86,7 +75,6 @@
     "@babel/eslint-parser": "^7.21.3",
     "@babel/plugin-syntax-flow": "^7.21.4",
     "@babel/plugin-transform-react-jsx": "^7.21.0",
-    "cross-env": "^7.0.3",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
     "prettier": "^2.8.7",
