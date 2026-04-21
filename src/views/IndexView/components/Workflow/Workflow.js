@@ -152,7 +152,7 @@ const Workflow = () => {
               }}
             >
               <React.Fragment>
-                <StepButton onClick={handleStep(index)} alt={step.label}>
+                <StepButton onClick={handleStep(index)} aria-label={step.label}>
                   {isMd ? step.label : ''}
                 </StepButton>
                 {index === steps.length - 1 ? null : (

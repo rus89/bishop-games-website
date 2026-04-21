@@ -61,7 +61,7 @@ const Reviews = () => {
               display={'flex'}
               flexDirection={'column'}
               boxShadow={i === 1 ? 4 : 0}
-              bgcolor={i === 1 ? 'primary.main' : 'none'}
+              bgcolor={i === 1 ? 'primary.main' : 'transparent'}
             >
               <CardContent
                 sx={{

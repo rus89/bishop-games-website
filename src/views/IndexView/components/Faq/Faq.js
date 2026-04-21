@@ -77,7 +77,7 @@ const FaqGroupItem = ({ items }) => {
             component={Accordion}
             key={i}
             padding={1}
-            marginBottom={i === item.length - 1 ? 0 : 2}
+            marginBottom={i === items.length - 1 ? 0 : 2}
             borderRadius={`${theme.spacing(1)} !important`}
             sx={{
               '&::before': {
@@ -88,12 +88,12 @@ const FaqGroupItem = ({ items }) => {
             <Box
               component={AccordionSummary}
               expandIcon={<ExpandMoreIcon />}
-              aria-controls={item.question}
+              aria-controls={`faq-panel-${i}`}
               id={`panel1a-header--${i}`}
             >
               <Typography fontWeight={600}>{item.question}</Typography>
             </Box>
-            <AccordionDetails>
+            <AccordionDetails id={`faq-panel-${i}`}>
               <Typography color="text.secondary">{item.answer}</Typography>
             </AccordionDetails>
           </Box>
@@ -104,7 +104,6 @@ const FaqGroupItem = ({ items }) => {
 };
 
 FaqGroupItem.propTypes = {
-  title: PropTypes.string,
   items: PropTypes.array.isRequired,
 };
 
