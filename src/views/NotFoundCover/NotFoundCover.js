@@ -57,11 +57,7 @@ const NotFoundCover = () => {
               tell us
             </Link>
           </Typography>
-          <Box
-            marginTop={4}
-            display="flex"
-            justifyContent="center"
-          >
+          <Box marginTop={4} display="flex" justifyContent="center">
             <Button
               component={Link}
               variant="contained"
