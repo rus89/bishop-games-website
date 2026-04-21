@@ -31,8 +31,11 @@ export function Head() {
       <meta property="og:type" content="website" />
       <meta
         property="og:image"
-        content="https://bishop.games/og.webp"
+        content="https://bishop.games/og.jpg"
       />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/jpeg" />
       <meta
         property="og:title"
         content="Bishop Games - Your favorite game development studio"
@@ -45,10 +48,11 @@ export function Head() {
         property="og:url"
         content="https://bishop.games"
       />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Bishop Games - Your favorite game development studio" />
       <meta name="twitter:description" content="A full-service game development studio specializing in Unity game programming, game art, and the complete game development lifecycle" />
       <meta name="twitter:url" content="https://bishop.games/?src=twitter" />
-      <meta name="twitter:image:src" content="https://bishop.games/og.webp" />
+      <meta name="twitter:image:src" content="https://bishop.games/og.jpg" />
       <meta name="twitter:image:alt" content="Best game development studio" />
       <meta name="twitter:creator" content="@rusimovmilan" />
       <meta name="twitter:site" content="@bishopgames" />

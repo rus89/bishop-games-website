@@ -20,6 +20,7 @@ const Hero = () => {
       <Box marginBottom={2}>
         <Typography
           variant="h2"
+          component="h1"
           color="background.level2"
           sx={{
             fontWeight: 700,
