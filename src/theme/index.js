@@ -14,7 +14,7 @@ const getTheme = (mode) =>
       palette: light,
       shadows: shadows(mode),
       typography: {
-        fontFamily: '"Ubuntu", sans-serif;',
+        fontFamily: '"Ubuntu", sans-serif',
         button: {
           textTransform: 'none',
           fontWeight: 'medium',

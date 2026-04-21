@@ -89,11 +89,14 @@ const FaqGroupItem = ({ items }) => {
               component={AccordionSummary}
               expandIcon={<ExpandMoreIcon />}
               aria-controls={`faq-panel-${i}`}
-              id={`panel1a-header--${i}`}
+              id={`faq-header-${i}`}
             >
               <Typography fontWeight={600}>{item.question}</Typography>
             </Box>
-            <AccordionDetails id={`faq-panel-${i}`}>
+            <AccordionDetails
+              id={`faq-panel-${i}`}
+              aria-labelledby={`faq-header-${i}`}
+            >
               <Typography color="text.secondary">{item.answer}</Typography>
             </AccordionDetails>
           </Box>
