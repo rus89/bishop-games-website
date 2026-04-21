@@ -135,7 +135,7 @@ const Workflow = () => {
                   position: 'relative',
                   bgcolor:
                     activeStep === index ? 'primary.main' : 'alternate.main',
-                  color: activeStep === index ? 'text.primary' : 'common.white',
+                  color: 'common.white',
                   height: theme.spacing(6),
                   padding: theme.spacing(0, 3),
                   zIndex: 1,
@@ -206,6 +206,7 @@ const Workflow = () => {
                           height={20}
                         >
                           <svg
+                            aria-hidden="true"
                             width={12}
                             height={12}
                             xmlns="http://www.w3.org/2000/svg"

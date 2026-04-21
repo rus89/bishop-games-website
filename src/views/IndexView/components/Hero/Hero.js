@@ -30,7 +30,7 @@ const Hero = () => {
           <Typography
             component={'span'}
             variant={'inherit'}
-            color={'primary.light'}
+            color={'primary.heroAccent'}
           >
             idea into a full-potential game.
           </Typography>

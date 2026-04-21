@@ -21,6 +21,7 @@ const mock = [
     subtitle: 'We worked on over 100+ different projects.',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"
@@ -44,6 +45,7 @@ const mock = [
     subtitle: 'We had over 50+ happy clients.',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"
@@ -67,6 +69,7 @@ const mock = [
     subtitle: 'Our clients are 100% happy with our work',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"
@@ -92,6 +95,7 @@ const mock = [
     subtitle: 'We have separate experiences but best work combined.',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"

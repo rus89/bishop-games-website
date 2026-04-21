@@ -12,7 +12,11 @@ export default function Page({ children }) {
   const [mounted, setMounted] = useState(false);
 
   React.useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches;
     AOS.init({
+      disable: prefersReducedMotion,
       once: true,
       delay: 0,
       duration: 800,

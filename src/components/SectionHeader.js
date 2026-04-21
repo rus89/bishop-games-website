@@ -16,6 +16,7 @@ const SectionHeader = ({ title, subtitle }) => {
           {[1, 2, 3, 4, 5].map((item) => (
             <Box key={item} color={theme.palette.warning.light}>
               <svg
+                aria-hidden="true"
                 width={18}
                 height={18}
                 xmlns="http://www.w3.org/2000/svg"

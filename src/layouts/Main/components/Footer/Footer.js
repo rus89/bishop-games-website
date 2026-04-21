@@ -24,8 +24,8 @@ const NavItemStyle = styled.div`
     color: ${({ theme }) => theme.palette.background.default};
     cursor: pointer;
     &:hover {
-      font-weight: 1000;
-      color: ${({ theme }) => theme.palette.primary.main};
+      font-weight: 700;
+      text-decoration: underline;
     }
   }
 `;

@@ -32,7 +32,7 @@ module.exports = {
         lang: 'en',
         start_url: '/',
         background_color: '#ffffff',
-        theme_color: '#f16a22',
+        theme_color: '#b85510',
         display: 'minimal-ui',
         icon: 'src/images/icon/icon.png',
       },
@@ -49,7 +49,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: '#f16a22',
+        color: '#b85510',
       },
     },
     {

@@ -15,7 +15,7 @@ const NavItemStyle = styled.div`
     color: ${({ theme }) => theme.palette.text.primary};
     cursor: pointer;
     &:hover {
-      font-weight: 1000;
+      font-weight: 700;
       color: ${({ theme }) => theme.palette.primary.main};
     }
   }

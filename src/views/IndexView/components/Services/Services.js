@@ -16,6 +16,7 @@ const mock = [
     subtitle: 'You have an idea, we create a real game',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"
@@ -37,6 +38,7 @@ const mock = [
     subtitle: 'You have great code, we provide great art',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"
@@ -58,6 +60,7 @@ const mock = [
     subtitle: 'You have great art, we bring it to life',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"
@@ -79,6 +82,7 @@ const mock = [
     subtitle: 'You have static images, we make them dance',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"
@@ -100,6 +104,7 @@ const mock = [
     subtitle: 'You need someone to have your back, we are here',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"
@@ -122,6 +127,7 @@ const mock = [
       'You made an unexpectedly successful game, we support new content creation',
     icon: (
       <svg
+        aria-hidden="true"
         height={24}
         width={24}
         xmlns="http://www.w3.org/2000/svg"
