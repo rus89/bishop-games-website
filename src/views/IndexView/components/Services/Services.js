@@ -177,7 +177,12 @@ const Services = () => {
                 >
                   {item.icon}
                 </Box>
-                <Typography variant="body1" fontSize={'1.25rem'} fontWeight={500} color={'text.secondary'} gutterBottom
+                <Typography
+                  variant="body1"
+                  fontSize={'1.25rem'}
+                  fontWeight={500}
+                  color={'text.secondary'}
+                  gutterBottom
                 >
                   {item.title}
                 </Typography>

@@ -35,21 +35,21 @@ const SidebarNav = ({ onClose }) => {
           >
             <StaticImage
               src="../../../../../../images/logo/logo.webp"
-              alt='logo'
+              alt="logo"
               width={48}
             />
           </AnchorLink>
         </Box>
       </Box>
       <Box paddingX={2} paddingY={2}>
-        {navigationLinks.map((item, index) =>
+        {navigationLinks.map((item, index) => (
           <NavItem
             title={item.title}
             id={item.id}
             key={index}
             onNavigate={() => handleNavigate(item.id)}
           />
-        )}
+        ))}
         <Box marginTop={1}>
           <AnchorLink
             to={'/#contact'}

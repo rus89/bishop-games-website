@@ -25,11 +25,7 @@ const NavItem = ({ title, id, onNavigate }) => {
   return (
     <Box aria-describedby={id} marginTop={2} marginBottom={2}>
       <NavItemStyle>
-        <AnchorLink
-          to={'/#' + id}
-          title={title}
-          onAnchorLinkClick={onNavigate}
-        >
+        <AnchorLink to={'/#' + id} title={title} onAnchorLinkClick={onNavigate}>
           {title}
         </AnchorLink>
       </NavItemStyle>

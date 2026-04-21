@@ -52,7 +52,11 @@ const Hero = () => {
         flexDirection={{ xs: 'column', sm: 'row' }}
         alignItems={{ xs: 'stretched', sm: 'flex-start' }}
       >
-        <AnchorLink to={'/#contact'} title={'Start Your Project'} style={{ textDecoration: 'none' }}>
+        <AnchorLink
+          to={'/#contact'}
+          title={'Start Your Project'}
+          style={{ textDecoration: 'none' }}
+        >
           <Button
             component="span"
             variant="contained"
